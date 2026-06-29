@@ -1,0 +1,6 @@
+11:29:12 PM [vite] (client) error while updating dependencies:
+Error: EPERM: operation not permitted, rename 'C:\Users\Deekshith n\OneDrive\Desktop\Autonomous Research Agent\autonomous-research-agent\frontend\node_modules\.vite\deps_temp_4cdb83d6' -> 'C:\Users\Deekshith n\OneDrive\Desktop\Autonomous Research Agent\autonomous-research-agent\frontend\node_modules\.vite\deps'
+11:29:30 PM [vite] (client) error while updating dependencies:
+Error: EPERM: operation not permitted, rename 'C:\Users\Deekshith n\OneDrive\Desktop\Autonomous Research Agent\autonomous-research-agent\frontend\node_modules\.vite\deps_temp_896f7610' -> 'C:\Users\Deekshith n\OneDrive\Desktop\Autonomous Research Agent\autonomous-research-agent\frontend\node_modules\.vite\deps'
+11:48:53 PM [vite] (client) error while updating dependencies:
+Error: EPERM: operation not permitted, rename 'C:\Users\Deekshith n\OneDrive\Desktop\Autonomous Research Agent\autonomous-research-agent\frontend\node_modules\.vite\deps_temp_6d5de903' -> 'C:\Users\Deekshith n\OneDrive\Desktop\Autonomous Research Agent\autonomous-research-agent\frontend\node_modules\.vite\deps'

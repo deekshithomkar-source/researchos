@@ -1,0 +1,20 @@
+
+> autonomous-research-agent-frontend@1.0.0 dev
+> vite --host 127.0.0.1
+
+
+  VITE v8.1.0  ready in 1198 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+11:41:53 PM [vite] (client) page reload src/components/ResearchForm.jsx
+11:41:54 PM [vite] (client) page reload src/components/ResearchResult.jsx
+11:41:54 PM [vite] (client) page reload src/components/HistoryPanel.jsx
+11:41:54 PM [vite] (client) page reload src/pages/App.jsx
+11:41:55 PM [vite] (client) page reload src/services/api.js
+11:41:57 PM [vite] (client) page reload src/components/HistoryPanel.jsx
+11:41:57 PM [vite] (client) page reload src/services/api.js
+11:41:57 PM [vite] (client) page reload src/components/ResearchResult.jsx
+11:41:57 PM [vite] (client) page reload src/pages/App.jsx
+11:41:57 PM [vite] (client) page reload src/components/ResearchForm.jsx
+11:43:05 PM [vite] (client) hmr update /src/styles.css
+11:43:07 PM [vite] (client) hmr update /src/styles.css
