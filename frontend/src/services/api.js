@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-export const apiBaseUrl = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
-export const apiRootUrl = apiBaseUrl.replace(/\/api\/?$/, '');
+const configuredApiUrl = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+
+export const apiRootUrl = configuredApiUrl.replace(/\/api\/?$/, '').replace(/\/$/, '');
+export const apiBaseUrl = `${apiRootUrl}/api`;
 
 const api = axios.create({
   baseURL: apiBaseUrl,
