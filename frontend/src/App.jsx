@@ -3,7 +3,7 @@ import Dashboard from "./pages/Dashboard";
 import ResearchWorkflow from "./components/ResearchWorkflow";
 
 function App() {
-  const path = window.location.pathname;
+  const path = window.location.pathname.replace(/\/+$/, "") || "/";
 
   if (path === "/auth") {
     return <AuthPage />;
