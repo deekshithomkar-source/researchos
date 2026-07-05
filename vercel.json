@@ -1,7 +1,14 @@
 {
-  "installCommand": "cd frontend && npm install",
-  "buildCommand": "cd frontend && npm run build",
-  "outputDirectory": "frontend/dist",
+  "experimentalServices": [
+    {
+      "name": "frontend",
+      "framework": "vite",
+      "rootDirectory": "frontend",
+      "installCommand": "npm install",
+      "buildCommand": "npm run build",
+      "outputDirectory": "dist"
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
