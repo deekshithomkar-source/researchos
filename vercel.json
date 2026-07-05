@@ -1,18 +1,20 @@
 {
-  "experimentalServices": [
-    {
-      "name": "frontend",
+  "experimentalServices": {
+    "frontend": {
       "framework": "vite",
-      "rootDirectory": "frontend",
+      "root": "frontend",
       "installCommand": "npm install",
       "buildCommand": "npm run build",
       "outputDirectory": "dist"
     }
-  ],
+  },
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": {
+        "type": "service",
+        "service": "frontend"
+      }
     }
   ]
 }
