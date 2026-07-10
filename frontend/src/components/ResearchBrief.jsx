@@ -31,7 +31,7 @@ export default function ResearchBrief({ onSubmit, loading }) {
   }
 
   return (
-    <form className="panel form" onSubmit={handleSubmit}>
+    <form className="panel form dashboard-pop" data-dashboard-motion onSubmit={handleSubmit}>
       <div className="panel-heading">
         <div>
           <span className="eyebrow">New run</span>
@@ -91,7 +91,7 @@ export default function ResearchBrief({ onSubmit, loading }) {
         </div>
       </div>
 
-      <div className="segmented" aria-label="Citation style">
+      <div className="segmented landscape-tabs" aria-label="Citation style">
         {['apa', 'ieee'].map((style) => (
           <button
             className={citationStyle === style ? 'active' : ''}
@@ -105,7 +105,7 @@ export default function ResearchBrief({ onSubmit, loading }) {
       </div>
 
       <label htmlFor="source-limit">Source target</label>
-      <div className="source-options" id="source-limit">
+      <div className="source-options landscape-tabs" id="source-limit">
         {sourceTargets.map((target) => (
           <button
             className={sourceLimit === target ? 'active' : ''}

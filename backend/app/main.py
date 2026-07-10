@@ -2,10 +2,15 @@ import os
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy.exc import SQLAlchemyError
+from app.api.auth_routes import router as auth_router
 from app.api.research_routes import router as research_router
 from app.db.database import Base, engine
 
-Base.metadata.create_all(bind=engine)
+try:
+    Base.metadata.create_all(bind=engine)
+except SQLAlchemyError as error:
+    print(f"Research database startup skipped: {error}")
 
 allowed_origins = [
     origin.strip()
@@ -22,11 +27,13 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
+    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1|192\.168\.\d+\.\d+):\d+",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+app.include_router(auth_router, prefix="/api/auth", tags=["Auth"])
 app.include_router(research_router, prefix="/api/research", tags=["Research"])
 
 

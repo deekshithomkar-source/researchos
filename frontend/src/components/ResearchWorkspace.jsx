@@ -7,7 +7,7 @@ export default function ResearchWorkspace({ result, loading }) {
 
   if (loading && !result) {
     return (
-      <section className="workspace loading-state">
+      <section className="workspace loading-state dashboard-pop" data-dashboard-motion>
         <div className="spinner" />
         <h2>Collecting scholarly evidence</h2>
         <p>Planning questions, retrieving sources, scoring metadata, and drafting the report.</p>
@@ -17,7 +17,7 @@ export default function ResearchWorkspace({ result, loading }) {
 
   if (!result) {
     return (
-      <section className="workspace empty-state">
+      <section className="workspace empty-state dashboard-pop" data-dashboard-motion>
         <div className="empty-visual">
           <span />
           <span />
@@ -49,7 +49,7 @@ export default function ResearchWorkspace({ result, loading }) {
   }
 
   return (
-    <section className="workspace">
+    <section className="workspace dashboard-pop" data-dashboard-motion>
       <div className="workspace-header">
         <div>
           <span className="eyebrow">Session #{result.id}</span>
@@ -80,7 +80,7 @@ export default function ResearchWorkspace({ result, loading }) {
         <Metric value={highQualityCount} label="Strong signals" />
       </div>
 
-      <div className="tabs" role="tablist" aria-label="Research result sections">
+      <div className="tabs landscape-tabs" role="tablist" aria-label="Research result sections">
         {[
           ['overview', 'Overview'],
           ['sources', 'Sources'],

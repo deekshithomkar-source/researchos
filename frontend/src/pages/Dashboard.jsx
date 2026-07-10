@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ResearchBrief from '../components/ResearchBrief.jsx';
 import ResearchWorkspace from '../components/ResearchWorkspace.jsx';
 import ResearchHistory from '../components/ResearchHistory.jsx';
 import { apiRootUrl, checkApiHealth, getHistory, getResearchById, runResearch } from '../services/api.js';
 
 export default function Dashboard() {
+  const pageRef = useRef(null);
   const [result, setResult] = useState(null);
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -61,16 +62,14 @@ export default function Dashboard() {
     boot();
   }, []);
 
+  useDashboardScrollMotion(pageRef);
+
   return (
-    <main className="app-shell">
+    <main className="app-shell dashboard-shell" ref={pageRef}>
       <header className="topbar">
-        <div className="brand-block">
-          <span className="brand-mark">R</span>
-          <div>
-            <p className="eyebrow">ResearchOS</p>
-            <h1>Autonomous Research Agent</h1>
-          </div>
-        </div>
+        <a className="dashboard-logo" href="/" aria-label="ResearchOS home">
+          <img src="/assets/researchos-logo.svg" alt="ResearchOS" />
+        </a>
         <div className="topbar-actions">
           <span className={`status-pill ${apiOnline ? 'online' : 'offline'}`}>
             <span aria-hidden="true" />
@@ -93,4 +92,56 @@ export default function Dashboard() {
       </section>
     </main>
   );
+}
+
+function useDashboardScrollMotion(pageRef) {
+  useEffect(() => {
+    const page = pageRef.current;
+    if (!page || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    function updateMotion() {
+      const motionItems = [...page.querySelectorAll('[data-dashboard-motion]')];
+      if (!motionItems.length) return;
+
+      const currentY = window.scrollY;
+      const direction = currentY > lastY ? 'down' : 'up';
+      page.dataset.scrollDirection = direction;
+      lastY = currentY;
+
+      const viewportCenter = window.innerHeight / 2;
+
+      motionItems.forEach((item) => {
+        const rect = item.getBoundingClientRect();
+        const visible = rect.bottom > 0 && rect.top < window.innerHeight;
+        const distance = Math.abs(rect.top + rect.height / 2 - viewportCenter);
+        const strength = Math.max(0, 1 - distance / window.innerHeight);
+        const lift = (direction === 'down' ? -10 : 10) * strength;
+
+        item.classList.toggle('is-dashboard-visible', visible);
+        item.style.setProperty('--dashboard-pop-y', `${lift.toFixed(2)}px`);
+        item.style.setProperty('--dashboard-pop-scale', (1 + strength * 0.012).toFixed(4));
+      });
+
+      ticking = false;
+    }
+
+    function requestUpdate() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateMotion);
+        ticking = true;
+      }
+    }
+
+    updateMotion();
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+
+    return () => {
+      window.removeEventListener('scroll', requestUpdate);
+      window.removeEventListener('resize', requestUpdate);
+    };
+  }, [pageRef]);
 }

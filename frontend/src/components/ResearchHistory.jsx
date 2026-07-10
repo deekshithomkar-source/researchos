@@ -1,6 +1,6 @@
 export default function ResearchHistory({ history, loading, onSelect }) {
   return (
-    <section className="panel history">
+    <section className="panel history dashboard-pop" data-dashboard-motion>
       <div className="panel-heading">
         <div>
           <span className="eyebrow">Saved work</span>
