@@ -1,0 +1,612 @@
+{
+  "topic": "Artificial Intelligence in Healthcare",
+  "basis": "Retained real provider evidence; settings replay, not 24 new retrievals",
+  "checks": [
+    {
+      "level": "Undergraduate",
+      "output": "academic_report",
+      "citation_style": "apa",
+      "depth": "foundations and guided interpretation",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Literature review",
+        "Key findings",
+        "Research gaps",
+        "Research limitations",
+        "Future scope"
+      ],
+      "citation_labels": [
+        "(Aditya Shastry, 2024)",
+        "(Ahmed Al Kuwaiti et al., 2023)",
+        "(Man\u00e0s Dave & Neil Patel, 2023)",
+        "(Shrivaastava, 2024)",
+        "(Thomas H. Davenport & Ravi Kalakota, 2019)"
+      ]
+    },
+    {
+      "level": "Undergraduate",
+      "output": "academic_report",
+      "citation_style": "ieee",
+      "depth": "foundations and guided interpretation",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Literature review",
+        "Key findings",
+        "Research gaps",
+        "Research limitations",
+        "Future scope"
+      ],
+      "citation_labels": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]",
+        "[5]"
+      ]
+    },
+    {
+      "level": "Undergraduate",
+      "output": "literature_review",
+      "citation_style": "apa",
+      "depth": "foundations and guided interpretation",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Search and selection",
+        "Literature review",
+        "Methods comparison",
+        "Research gaps",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "(Aditya Shastry, 2024)",
+        "(Ahmed Al Kuwaiti et al., 2023)",
+        "(Man\u00e0s Dave & Neil Patel, 2023)",
+        "(Shrivaastava, 2024)",
+        "(Thomas H. Davenport & Ravi Kalakota, 2019)"
+      ]
+    },
+    {
+      "level": "Undergraduate",
+      "output": "literature_review",
+      "citation_style": "ieee",
+      "depth": "foundations and guided interpretation",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Search and selection",
+        "Literature review",
+        "Methods comparison",
+        "Research gaps",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]",
+        "[5]"
+      ]
+    },
+    {
+      "level": "Undergraduate",
+      "output": "project_proposal",
+      "citation_style": "apa",
+      "depth": "foundations and guided interpretation",
+      "paper_count": 5,
+      "sections": [
+        "Research objective",
+        "Research questions",
+        "Literature review",
+        "Research gaps",
+        "Analysis approach",
+        "Proposed Solution",
+        "Evaluation protocol",
+        "Milestones",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "(Aditya Shastry, 2024)",
+        "(Ahmed Al Kuwaiti et al., 2023)",
+        "(Man\u00e0s Dave & Neil Patel, 2023)",
+        "(Shrivaastava, 2024)",
+        "(Thomas H. Davenport & Ravi Kalakota, 2019)"
+      ]
+    },
+    {
+      "level": "Undergraduate",
+      "output": "project_proposal",
+      "citation_style": "ieee",
+      "depth": "foundations and guided interpretation",
+      "paper_count": 5,
+      "sections": [
+        "Research objective",
+        "Research questions",
+        "Literature review",
+        "Research gaps",
+        "Analysis approach",
+        "Proposed Solution",
+        "Evaluation protocol",
+        "Milestones",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]",
+        "[5]"
+      ]
+    },
+    {
+      "level": "MCA",
+      "output": "academic_report",
+      "citation_style": "apa",
+      "depth": "critical applied implementation and evaluation",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Literature review",
+        "Methods comparison",
+        "Key findings",
+        "Research gaps",
+        "Research limitations",
+        "Future scope"
+      ],
+      "citation_labels": [
+        "(Aditya Shastry, 2024)",
+        "(Ahmed Al Kuwaiti et al., 2023)",
+        "(Man\u00e0s Dave & Neil Patel, 2023)",
+        "(Shrivaastava, 2024)",
+        "(Thomas H. Davenport & Ravi Kalakota, 2019)"
+      ]
+    },
+    {
+      "level": "MCA",
+      "output": "academic_report",
+      "citation_style": "ieee",
+      "depth": "critical applied implementation and evaluation",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Literature review",
+        "Methods comparison",
+        "Key findings",
+        "Research gaps",
+        "Research limitations",
+        "Future scope"
+      ],
+      "citation_labels": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]",
+        "[5]"
+      ]
+    },
+    {
+      "level": "MCA",
+      "output": "literature_review",
+      "citation_style": "apa",
+      "depth": "critical applied implementation and evaluation",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Search and selection",
+        "Literature review",
+        "Methods comparison",
+        "Research gaps",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "(Aditya Shastry, 2024)",
+        "(Ahmed Al Kuwaiti et al., 2023)",
+        "(Man\u00e0s Dave & Neil Patel, 2023)",
+        "(Shrivaastava, 2024)",
+        "(Thomas H. Davenport & Ravi Kalakota, 2019)"
+      ]
+    },
+    {
+      "level": "MCA",
+      "output": "literature_review",
+      "citation_style": "ieee",
+      "depth": "critical applied implementation and evaluation",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Search and selection",
+        "Literature review",
+        "Methods comparison",
+        "Research gaps",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]",
+        "[5]"
+      ]
+    },
+    {
+      "level": "MCA",
+      "output": "project_proposal",
+      "citation_style": "apa",
+      "depth": "critical applied implementation and evaluation",
+      "paper_count": 5,
+      "sections": [
+        "Research objective",
+        "Research questions",
+        "Literature review",
+        "Research gaps",
+        "Analysis approach",
+        "Proposed Solution",
+        "Evaluation protocol",
+        "Milestones",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "(Aditya Shastry, 2024)",
+        "(Ahmed Al Kuwaiti et al., 2023)",
+        "(Man\u00e0s Dave & Neil Patel, 2023)",
+        "(Shrivaastava, 2024)",
+        "(Thomas H. Davenport & Ravi Kalakota, 2019)"
+      ]
+    },
+    {
+      "level": "MCA",
+      "output": "project_proposal",
+      "citation_style": "ieee",
+      "depth": "critical applied implementation and evaluation",
+      "paper_count": 5,
+      "sections": [
+        "Research objective",
+        "Research questions",
+        "Literature review",
+        "Research gaps",
+        "Analysis approach",
+        "Proposed Solution",
+        "Evaluation protocol",
+        "Milestones",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]",
+        "[5]"
+      ]
+    },
+    {
+      "level": "Master's",
+      "output": "academic_report",
+      "citation_style": "apa",
+      "depth": "critical comparison of methods and robustness",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Literature review",
+        "Methods comparison",
+        "Key findings",
+        "Research gaps",
+        "Research limitations",
+        "Future scope"
+      ],
+      "citation_labels": [
+        "(Aditya Shastry, 2024)",
+        "(Ahmed Al Kuwaiti et al., 2023)",
+        "(Man\u00e0s Dave & Neil Patel, 2023)",
+        "(Shrivaastava, 2024)",
+        "(Thomas H. Davenport & Ravi Kalakota, 2019)"
+      ]
+    },
+    {
+      "level": "Master's",
+      "output": "academic_report",
+      "citation_style": "ieee",
+      "depth": "critical comparison of methods and robustness",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Literature review",
+        "Methods comparison",
+        "Key findings",
+        "Research gaps",
+        "Research limitations",
+        "Future scope"
+      ],
+      "citation_labels": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]",
+        "[5]"
+      ]
+    },
+    {
+      "level": "Master's",
+      "output": "literature_review",
+      "citation_style": "apa",
+      "depth": "critical comparison of methods and robustness",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Search and selection",
+        "Literature review",
+        "Methods comparison",
+        "Research gaps",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "(Aditya Shastry, 2024)",
+        "(Ahmed Al Kuwaiti et al., 2023)",
+        "(Man\u00e0s Dave & Neil Patel, 2023)",
+        "(Shrivaastava, 2024)",
+        "(Thomas H. Davenport & Ravi Kalakota, 2019)"
+      ]
+    },
+    {
+      "level": "Master's",
+      "output": "literature_review",
+      "citation_style": "ieee",
+      "depth": "critical comparison of methods and robustness",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Search and selection",
+        "Literature review",
+        "Methods comparison",
+        "Research gaps",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]",
+        "[5]"
+      ]
+    },
+    {
+      "level": "Master's",
+      "output": "project_proposal",
+      "citation_style": "apa",
+      "depth": "critical comparison of methods and robustness",
+      "paper_count": 5,
+      "sections": [
+        "Research objective",
+        "Research questions",
+        "Literature review",
+        "Research gaps",
+        "Analysis approach",
+        "Proposed Solution",
+        "Evaluation protocol",
+        "Milestones",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "(Aditya Shastry, 2024)",
+        "(Ahmed Al Kuwaiti et al., 2023)",
+        "(Man\u00e0s Dave & Neil Patel, 2023)",
+        "(Shrivaastava, 2024)",
+        "(Thomas H. Davenport & Ravi Kalakota, 2019)"
+      ]
+    },
+    {
+      "level": "Master's",
+      "output": "project_proposal",
+      "citation_style": "ieee",
+      "depth": "critical comparison of methods and robustness",
+      "paper_count": 5,
+      "sections": [
+        "Research objective",
+        "Research questions",
+        "Literature review",
+        "Research gaps",
+        "Analysis approach",
+        "Proposed Solution",
+        "Evaluation protocol",
+        "Milestones",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]",
+        "[5]"
+      ]
+    },
+    {
+      "level": "PhD",
+      "output": "academic_report",
+      "citation_style": "apa",
+      "depth": "critical novelty, validity and falsifiability",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Literature review",
+        "Methods comparison",
+        "Key findings",
+        "Research gaps",
+        "Research limitations",
+        "Future scope"
+      ],
+      "citation_labels": [
+        "(Aditya Shastry, 2024)",
+        "(Ahmed Al Kuwaiti et al., 2023)",
+        "(Man\u00e0s Dave & Neil Patel, 2023)",
+        "(Shrivaastava, 2024)",
+        "(Thomas H. Davenport & Ravi Kalakota, 2019)"
+      ]
+    },
+    {
+      "level": "PhD",
+      "output": "academic_report",
+      "citation_style": "ieee",
+      "depth": "critical novelty, validity and falsifiability",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Literature review",
+        "Methods comparison",
+        "Key findings",
+        "Research gaps",
+        "Research limitations",
+        "Future scope"
+      ],
+      "citation_labels": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]",
+        "[5]"
+      ]
+    },
+    {
+      "level": "PhD",
+      "output": "literature_review",
+      "citation_style": "apa",
+      "depth": "critical novelty, validity and falsifiability",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Search and selection",
+        "Literature review",
+        "Methods comparison",
+        "Research gaps",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "(Aditya Shastry, 2024)",
+        "(Ahmed Al Kuwaiti et al., 2023)",
+        "(Man\u00e0s Dave & Neil Patel, 2023)",
+        "(Shrivaastava, 2024)",
+        "(Thomas H. Davenport & Ravi Kalakota, 2019)"
+      ]
+    },
+    {
+      "level": "PhD",
+      "output": "literature_review",
+      "citation_style": "ieee",
+      "depth": "critical novelty, validity and falsifiability",
+      "paper_count": 5,
+      "sections": [
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Search and selection",
+        "Literature review",
+        "Methods comparison",
+        "Research gaps",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]",
+        "[5]"
+      ]
+    },
+    {
+      "level": "PhD",
+      "output": "project_proposal",
+      "citation_style": "apa",
+      "depth": "critical novelty, validity and falsifiability",
+      "paper_count": 5,
+      "sections": [
+        "Research objective",
+        "Research questions",
+        "Literature review",
+        "Research gaps",
+        "Analysis approach",
+        "Proposed Solution",
+        "Evaluation protocol",
+        "Milestones",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "(Aditya Shastry, 2024)",
+        "(Ahmed Al Kuwaiti et al., 2023)",
+        "(Man\u00e0s Dave & Neil Patel, 2023)",
+        "(Shrivaastava, 2024)",
+        "(Thomas H. Davenport & Ravi Kalakota, 2019)"
+      ]
+    },
+    {
+      "level": "PhD",
+      "output": "project_proposal",
+      "citation_style": "ieee",
+      "depth": "critical novelty, validity and falsifiability",
+      "paper_count": 5,
+      "sections": [
+        "Research objective",
+        "Research questions",
+        "Literature review",
+        "Research gaps",
+        "Analysis approach",
+        "Proposed Solution",
+        "Evaluation protocol",
+        "Milestones",
+        "Research limitations"
+      ],
+      "citation_labels": [
+        "[1]",
+        "[2]",
+        "[3]",
+        "[4]",
+        "[5]"
+      ]
+    }
+  ]
+}

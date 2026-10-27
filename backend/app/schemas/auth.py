@@ -1,46 +1,37 @@
-from pydantic import BaseModel, Field, field_validator
-
-
-class SignupRequest(BaseModel):
-    name: str = Field(..., min_length=2, max_length=120)
-    email: str = Field(..., min_length=5, max_length=255)
-    password: str = Field(..., min_length=6, max_length=128)
-
-    @field_validator("name", "email")
-    @classmethod
-    def strip_text(cls, value: str) -> str:
-        return value.strip()
-
-    @field_validator("email")
-    @classmethod
-    def normalize_email(cls, value: str) -> str:
-        cleaned = value.strip().lower()
-        if "@" not in cleaned or "." not in cleaned.rsplit("@", 1)[-1]:
-            raise ValueError("Enter a valid email address.")
-        return cleaned
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 
 class LoginRequest(BaseModel):
-    email: str = Field(..., min_length=5, max_length=255)
-    password: str = Field(..., min_length=1, max_length=128)
+    model_config = ConfigDict(extra='forbid')
+    email: str = Field(min_length=5, max_length=255)
+    password: str = Field(min_length=1, max_length=128)
 
-    @field_validator("email")
+    @field_validator('email', mode='before')
     @classmethod
-    def normalize_email(cls, value: str) -> str:
-        return value.strip().lower()
+    def normalize_email(cls, value):
+        return value.strip().lower() if isinstance(value, str) else value
 
 
-class ResetPasswordRequest(BaseModel):
-    email: str = Field(..., min_length=5, max_length=255)
-    password: str = Field(..., min_length=6, max_length=128)
+class SignupRequest(LoginRequest):
+    name: str = Field(min_length=2, max_length=120)
+    password: str = Field(min_length=12, max_length=128)
 
-    @field_validator("email")
+    @field_validator('name', mode='before')
     @classmethod
-    def normalize_email(cls, value: str) -> str:
-        return value.strip().lower()
+    def clean_name(cls, value):
+        return value.strip() if isinstance(value, str) else value
+
+    @field_validator('email')
+    @classmethod
+    def validate_email(cls, value):
+        if '@' not in value or '.' not in value.rsplit('@', 1)[-1] or any(c.isspace() for c in value):
+            raise ValueError('Enter a valid email address.')
+        return value
 
 
 class AuthUserResponse(BaseModel):
+    id: str
     name: str
     email: str
+    csrf_token: str
     message: str

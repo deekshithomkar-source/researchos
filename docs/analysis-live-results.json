@@ -1,0 +1,1743 @@
+{
+  "verified_at": "2026-10-26T13:02:15.985162+00:00",
+  "provider_checks": [
+    {
+      "provider": "OpenAlex",
+      "status": "SUCCESS",
+      "papers": [
+        {
+          "id": "https://openalex.org/W2895763047",
+          "title": "Artificial intelligence in healthcare",
+          "authors": [
+            "Kun\u2010Hsing Yu",
+            "Andrew L. Beam",
+            "Isaac S. Kohane"
+          ],
+          "year": 2018,
+          "abstract": "",
+          "doi": "10.1038/s41551-018-0305-z",
+          "url": "https://doi.org/10.1038/s41551-018-0305-z",
+          "venue": "Nature Biomedical Engineering",
+          "provider": "OpenAlex",
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "citation_count": 2811,
+          "open_access_pdf": null,
+          "snippet": "No abstract was supplied by the source.",
+          "source_type": "article",
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W2953532875",
+          "title": "The potential for artificial intelligence in healthcare",
+          "authors": [
+            "Thomas H. Davenport",
+            "Ravi Kalakota"
+          ],
+          "year": 2019,
+          "abstract": "The complexity and rise of data in healthcare means that artificial intelligence (AI) will increasingly be applied within the field. Several types of AI are already being employed by payers and providers of care, and life sciences companies. The key categories of applications involve diagnosis and treatment recommendations, patient engagement and adherence, and administrative activities. Although there are many instances in which AI can perform healthcare tasks as well or better than humans, implementation factors will prevent large-scale automation of healthcare professional jobs for a considerable period. Ethical issues in the application of AI to healthcare are also discussed.",
+          "doi": "10.7861/futurehosp.6-2-94",
+          "url": "https://doi.org/10.7861/futurehosp.6-2-94",
+          "venue": "Future Healthcare Journal",
+          "provider": "OpenAlex",
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "citation_count": 3795,
+          "open_access_pdf": "https://www.rcpjournals.org/content/futurehosp/6/2/94.full.pdf",
+          "snippet": "The complexity and rise of data in healthcare means that artificial intelligence (AI) will increasingly be applied within the field. Several types of AI are already being employed by payers and providers of care, and life sciences companies. The key categories of applications involve diagnosis and treatment recommendations, patient engagement and adherence, and administrative activities. Although there are many insta",
+          "source_type": "article",
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W3038004684",
+          "title": "The rise of artificial intelligence in healthcare applications",
+          "authors": [
+            "Adam Bohr",
+            "Kaveh Memarzadeh"
+          ],
+          "year": 2020,
+          "abstract": "",
+          "doi": "10.1016/b978-0-12-818438-7.00002-2",
+          "url": "https://doi.org/10.1016/b978-0-12-818438-7.00002-2",
+          "venue": "Elsevier eBooks",
+          "provider": "OpenAlex",
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "citation_count": 1541,
+          "open_access_pdf": null,
+          "snippet": "No abstract was supplied by the source.",
+          "source_type": "book-chapter",
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4379470483",
+          "title": "A Review of the Role of Artificial Intelligence in Healthcare",
+          "authors": [
+            "Ahmed Al Kuwaiti",
+            "Khalid Nazer",
+            "Abdullah H. Alreedy",
+            "Shaher D AlShehri",
+            "Afnan Almuhanna",
+            "Arun Vijay Subbarayalu",
+            "Dhoha Al Muhanna",
+            "Fahad Al\u2010Muhanna"
+          ],
+          "year": 2023,
+          "abstract": "Artificial intelligence (AI) applications have transformed healthcare. This study is based on a general literature review uncovering the role of AI in healthcare and focuses on the following key aspects: (i) medical imaging and diagnostics, (ii) virtual patient care, (iii) medical research and drug discovery, (iv) patient engagement and compliance, (v) rehabilitation, and (vi) other administrative applications. The impact of AI is observed in detecting clinical conditions in medical imaging and diagnostic services, controlling the outbreak of coronavirus disease 2019 (COVID-19) with early diagnosis, providing virtual patient care using AI-powered tools, managing electronic health records, augmenting patient engagement and compliance with the treatment plan, reducing the administrative workload of healthcare professionals (HCPs), discovering new drugs and vaccines, spotting medical prescription errors, extensive data storage and analysis, and technology-assisted rehabilitation. Nevertheless, this science pitch meets several technical, ethical, and social challenges, including privacy, safety, the right to decide and try, costs, information and consent, access, and efficacy, while integrating AI into healthcare. The governance of AI applications is crucial for patient safety and accountability and for raising HCPs' belief in enhancing acceptance and boosting significant health consequences. Effective governance is a prerequisite to precisely address regulatory, ethical, and trust issues while advancing the acceptance and implementation of AI. Since COVID-19 hit the global health system, the concept of AI has created a revolution in healthcare, and such an uprising could be another step forward to meet future healthcare needs.",
+          "doi": "10.3390/jpm13060951",
+          "url": "https://doi.org/10.3390/jpm13060951",
+          "venue": "Journal of Personalized Medicine",
+          "provider": "OpenAlex",
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "citation_count": 907,
+          "open_access_pdf": "https://www.mdpi.com/2075-4426/13/6/951/pdf?version=1685933257",
+          "snippet": "Artificial intelligence (AI) applications have transformed healthcare. This study is based on a general literature review uncovering the role of AI in healthcare and focuses on the following key aspects: (i) medical imaging and diagnostics, (ii) virtual patient care, (iii) medical research and drug discovery, (iv) patient engagement and compliance, (v) rehabilitation, and (vi) other administrative applications. The i",
+          "source_type": "article",
+          "is_demo": false
+        },
+        {
+          "id": "https://openalex.org/W4378470061",
+          "title": "Artificial intelligence in healthcare and education",
+          "authors": [
+            "Man\u00e0s Dave",
+            "Neil Patel"
+          ],
+          "year": 2023,
+          "abstract": "Artificial intelligence (AI) is rapidly transforming the healthcare and medical and dental education sectors. With advancements in AI technology and its integration into routine tasks, the field of healthcare and education is rapidly evolving. This article aims to provide an in-depth analysis of the impact of AI in these sectors and to discuss the advantages and disadvantages of its integration. The article will begin by examining the use of AI in healthcare, including its impact on patient care, diagnosis and treatment, and the benefits it brings to medical professionals and patients alike. The article will then delve into the use of AI in medical and dental education, exploring its impact on student learning and teaching practices, and the benefits and challenges it presents for educators and students. Additionally, this article will also cover the impact of AI on the publishing of scientific articles in journals. With the increasing volume of submissions and the need for more efficient management, AI is being utilised to streamline the peer-review process and improve the quality of peer-review. The article will also delve into the possibility of AI enabling new forms of publication and supporting reproducibility, helping to improve the overall quality of scientific publications. Furthermore, the authors of this article have written it using AI, making it a landmark paper that showcases the true technological power of AI in the field of writing.",
+          "doi": "10.1038/s41415-023-5845-2",
+          "url": "https://doi.org/10.1038/s41415-023-5845-2",
+          "venue": "BDJ",
+          "provider": "OpenAlex",
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "citation_count": 338,
+          "open_access_pdf": "https://www.nature.com/articles/s41415-023-5845-2.pdf",
+          "snippet": "Artificial intelligence (AI) is rapidly transforming the healthcare and medical and dental education sectors. With advancements in AI technology and its integration into routine tasks, the field of healthcare and education is rapidly evolving. This article aims to provide an in-depth analysis of the impact of AI in these sectors and to discuss the advantages and disadvantages of its integration. The article will begi",
+          "source_type": "article",
+          "is_demo": false
+        }
+      ],
+      "diagnostics": [
+        {
+          "provider": "OpenAlex",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 1907,
+          "error_code": null,
+          "error_type": null
+        }
+      ]
+    },
+    {
+      "provider": "Crossref",
+      "status": "PARTIAL_RESULTS",
+      "papers": [
+        {
+          "id": "10.62830/mmj1-04-6",
+          "title": "Transforming Healthcare: The Role of Artificial Intelligence in Revolutionising Patient Care",
+          "authors": [],
+          "year": null,
+          "abstract": "",
+          "doi": "10.62830/mmj1-04-6",
+          "url": "https://doi.org/10.62830/mmj1-04-6",
+          "venue": "",
+          "provider": "Crossref",
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "citation_count": 0,
+          "open_access_pdf": null,
+          "snippet": "No abstract was supplied by the source.",
+          "source_type": "journal",
+          "is_demo": false
+        },
+        {
+          "id": "10.1201/9781003426073-1",
+          "title": "Artificial Intelligence for Healthcare Applications",
+          "authors": [
+            "K. Aditya Shastry"
+          ],
+          "year": 2024,
+          "abstract": "",
+          "doi": "10.1201/9781003426073-1",
+          "url": "https://doi.org/10.1201/9781003426073-1",
+          "venue": "Explainable Artificial Intelligence (XAI) in Healthcare",
+          "provider": "Crossref",
+          "author_details": [
+            {
+              "given": "K.",
+              "family": "Aditya Shastry"
+            }
+          ],
+          "volume": "",
+          "issue": "",
+          "pages": "1-29",
+          "citation_count": 6,
+          "open_access_pdf": null,
+          "snippet": "No abstract was supplied by the source.",
+          "source_type": "book-chapter",
+          "is_demo": false
+        }
+      ],
+      "diagnostics": [
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 3,
+          "rejection_reasons": {},
+          "duration_ms": 2878,
+          "error_code": null,
+          "error_type": null
+        }
+      ]
+    },
+    {
+      "provider": "Semantic Scholar",
+      "status": "RATE_LIMITED",
+      "papers": [],
+      "diagnostics": [
+        {
+          "provider": "Semantic Scholar",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 429,
+          "returned": 0,
+          "valid": 0,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 899,
+          "error_code": "RATE_LIMITED",
+          "error_type": "HTTP_429"
+        }
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "topic": "Artificial Intelligence in Healthcare",
+      "status": "completed",
+      "retrieval_status": "PARTIAL_RESULTS",
+      "returned": 20,
+      "valid": 19,
+      "rejected": 1,
+      "duplicates": 9,
+      "saved": 5,
+      "evidence_passages": 30,
+      "supported_findings": 0,
+      "supported_gaps": 0,
+      "missing_sections": [
+        "Key findings",
+        "Research gaps",
+        "Research limitations",
+        "Future scope"
+      ],
+      "diagnostics": [
+        {
+          "provider": "OpenAlex",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 1164,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 3,
+          "rejection_reasons": {},
+          "duration_ms": 1954,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "fa7bb9192a0b9ff7",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 5,
+          "rejection_reasons": {},
+          "duration_ms": 2626,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "4767a08b3f5b4854",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 4,
+          "rejected": 1,
+          "duplicates": 1,
+          "rejection_reasons": {
+            "not_eligible_scholarly_work": 1
+          },
+          "duration_ms": 3503,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Semantic Scholar",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 429,
+          "returned": 0,
+          "valid": 0,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 0,
+          "error_code": "RATE_LIMITED",
+          "error_type": "ResearchProviderError"
+        }
+      ],
+      "papers": [
+        {
+          "id": "https://openalex.org/W4379470483",
+          "title": "A Review of the Role of Artificial Intelligence in Healthcare",
+          "url": "https://doi.org/10.3390/jpm13060951",
+          "authors": [
+            "Ahmed Al Kuwaiti",
+            "Khalid Nazer",
+            "Abdullah H. Alreedy",
+            "Shaher D AlShehri",
+            "Afnan Almuhanna",
+            "Arun Vijay Subbarayalu",
+            "Dhoha Al Muhanna",
+            "Fahad Al\u2010Muhanna"
+          ],
+          "year": 2023,
+          "venue": "Journal of Personalized Medicine",
+          "abstract": "Artificial intelligence (AI) applications have transformed healthcare. This study is based on a general literature review uncovering the role of AI in healthcare and focuses on the following key aspects: (i) medical imaging and diagnostics, (ii) virtual patient care, (iii) medical research and drug discovery, (iv) patient engagement and compliance, (v) rehabilitation, and (vi) other administrative applications. The impact of AI is observed in detecting clinical conditions in medical imaging and diagnostic services, controlling the outbreak of coronavirus disease 2019 (COVID-19) with early diagnosis, providing virtual patient care using AI-powered tools, managing electronic health records, augmenting patient engagement and compliance with the treatment plan, reducing the administrative workload of healthcare professionals (HCPs), discovering new drugs and vaccines, spotting medical prescription errors, extensive data storage and analysis, and technology-assisted rehabilitation. Nevertheless, this science pitch meets several technical, ethical, and social challenges, including privacy, safety, the right to decide and try, costs, information and consent, access, and efficacy, while integrating AI into healthcare. The governance of AI applications is crucial for patient safety and accountability and for raising HCPs' belief in enhancing acceptance and boosting significant health consequences. Effective governance is a prerequisite to precisely address regulatory, ethical, and trust issues while advancing the acceptance and implementation of AI. Since COVID-19 hit the global health system, the concept of AI has created a revolution in healthcare, and such an uprising could be another step forward to meet future healthcare needs.",
+          "snippet": "Artificial intelligence (AI) applications have transformed healthcare. This study is based on a general literature review uncovering the role of AI in healthcare and focuses on the following key aspects: (i) medical imaging and diagnostics, (ii) virtual patient care, (iii) medical research and drug discovery, (iv) patient engagement and compliance, (v) rehabilitation, and (vi) other administrative applications. The i",
+          "citation_count": 907,
+          "doi": "10.3390/jpm13060951",
+          "open_access_pdf": "https://www.mdpi.com/2075-4426/13/6/951/pdf?version=1685933257",
+          "provider": "OpenAlex",
+          "is_demo": false,
+          "credibility_score": 100,
+          "credibility_label": "High",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available",
+            "Publication venue identified",
+            "Open-access copy available",
+            "Cited by 907 works"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.5,
+            "credibility": 1.0,
+            "recency": 0.625,
+            "evidence_availability": 1.0,
+            "total": 0.8625,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "article",
+          "origins": [
+            {
+              "provider": "OpenAlex",
+              "provider_paper_id": "https://openalex.org/W4379470483",
+              "url": "https://doi.org/10.3390/jpm13060951"
+            }
+          ],
+          "paper_id": "https://openalex.org/W4379470483",
+          "journal": "Journal of Personalized Medicine",
+          "source_provider": "OpenAlex"
+        },
+        {
+          "id": "10.14293/s2199-1006.1.sor-.ppvry8k.v1",
+          "title": "Applications of Artificial Intelligence (AI) in healthcare: A review",
+          "url": "https://doi.org/10.14293/s2199-1006.1.sor-.ppvry8k.v1",
+          "authors": [
+            "Mohammed Yousef Shaheen"
+          ],
+          "year": 2021,
+          "venue": "",
+          "abstract": "Artificial intelligence is revolutionizing \u2014 and strengthening \u2014 modern healthcare through technologies that can predict, grasp, learn, and act, whether it's employed to identify new relationships between genetic codes or to control surgery-assisting robots. It can detect minor patterns that humans would completely overlook. This study explores and discusses the various modern applications of AI in the health sector. Particularly, the study focuses on three most emerging areas of AI-powered healthcare: AI-led drug discovery, clinical trials, and patient care. The findings suggest that pharmaceutical firms have benefited from AI in healthcare by speeding up their drug discovery process and automating target identification. Artificial Intelligence (AI) can help also to eliminate time-consuming data monitoring methods. The findings also indicate that AI-assisted clinical trials are capable of handling massive volumes of data and producing highly accurate results. Medical AI companies develop systems that assist patients at every level. Patients' medical data is also analyzed by clinical intelligence, which provides insights to assist them improve their quality of life.",
+          "snippet": "Artificial intelligence is revolutionizing \u2014 and strengthening \u2014 modern healthcare through technologies that can predict, grasp, learn, and act, whether it's employed to identify new relationships between genetic codes or to control surgery-assisting robots. It can detect minor patterns that humans would completely overlook. This study explores and discusses the various modern applications of AI in the health sector.",
+          "citation_count": 183,
+          "doi": "10.14293/s2199-1006.1.sor-.ppvry8k.v1",
+          "open_access_pdf": null,
+          "provider": "Crossref",
+          "is_demo": false,
+          "credibility_score": 84,
+          "credibility_label": "High",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available",
+            "Cited by 183 works"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.5,
+            "credibility": 0.84,
+            "recency": 0.5,
+            "evidence_availability": 1.0,
+            "total": 0.8260000000000001,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [
+            {
+              "given": "Mohammed Yousef",
+              "family": "Shaheen"
+            }
+          ],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "posted-content",
+          "origins": [
+            {
+              "provider": "Crossref",
+              "provider_paper_id": "10.14293/s2199-1006.1.sor-.ppvry8k.v1",
+              "url": "https://doi.org/10.14293/s2199-1006.1.sor-.ppvry8k.v1"
+            }
+          ],
+          "paper_id": "10.14293/s2199-1006.1.sor-.ppvry8k.v1",
+          "journal": "",
+          "source_provider": "Crossref"
+        },
+        {
+          "id": "https://openalex.org/W4378470061",
+          "title": "Artificial intelligence in healthcare and education",
+          "url": "https://doi.org/10.1038/s41415-023-5845-2",
+          "authors": [
+            "Man\u00e0s Dave",
+            "Neil Patel"
+          ],
+          "year": 2023,
+          "venue": "BDJ",
+          "abstract": "Artificial intelligence (AI) is rapidly transforming the healthcare and medical and dental education sectors. With advancements in AI technology and its integration into routine tasks, the field of healthcare and education is rapidly evolving. This article aims to provide an in-depth analysis of the impact of AI in these sectors and to discuss the advantages and disadvantages of its integration. The article will begin by examining the use of AI in healthcare, including its impact on patient care, diagnosis and treatment, and the benefits it brings to medical professionals and patients alike. The article will then delve into the use of AI in medical and dental education, exploring its impact on student learning and teaching practices, and the benefits and challenges it presents for educators and students. Additionally, this article will also cover the impact of AI on the publishing of scientific articles in journals. With the increasing volume of submissions and the need for more efficient management, AI is being utilised to streamline the peer-review process and improve the quality of peer-review. The article will also delve into the possibility of AI enabling new forms of publication and supporting reproducibility, helping to improve the overall quality of scientific publications. Furthermore, the authors of this article have written it using AI, making it a landmark paper that showcases the true technological power of AI in the field of writing.",
+          "snippet": "Artificial intelligence (AI) is rapidly transforming the healthcare and medical and dental education sectors. With advancements in AI technology and its integration into routine tasks, the field of healthcare and education is rapidly evolving. This article aims to provide an in-depth analysis of the impact of AI in these sectors and to discuss the advantages and disadvantages of its integration. The article will begi",
+          "citation_count": 338,
+          "doi": "10.1038/s41415-023-5845-2",
+          "open_access_pdf": "https://www.nature.com/articles/s41415-023-5845-2.pdf",
+          "provider": "OpenAlex",
+          "is_demo": false,
+          "credibility_score": 100,
+          "credibility_label": "High",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available",
+            "Publication venue identified",
+            "Open-access copy available",
+            "Cited by 338 works"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.25,
+            "credibility": 1.0,
+            "recency": 0.625,
+            "evidence_availability": 1.0,
+            "total": 0.8125,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "article",
+          "origins": [
+            {
+              "provider": "OpenAlex",
+              "provider_paper_id": "https://openalex.org/W4378470061",
+              "url": "https://doi.org/10.1038/s41415-023-5845-2"
+            }
+          ],
+          "paper_id": "https://openalex.org/W4378470061",
+          "journal": "BDJ",
+          "source_provider": "OpenAlex"
+        },
+        {
+          "id": "https://openalex.org/W2953532875",
+          "title": "The potential for artificial intelligence in healthcare",
+          "url": "https://doi.org/10.7861/futurehosp.6-2-94",
+          "authors": [
+            "Thomas H. Davenport",
+            "Ravi Kalakota"
+          ],
+          "year": 2019,
+          "venue": "Future Healthcare Journal",
+          "abstract": "The complexity and rise of data in healthcare means that artificial intelligence (AI) will increasingly be applied within the field. Several types of AI are already being employed by payers and providers of care, and life sciences companies. The key categories of applications involve diagnosis and treatment recommendations, patient engagement and adherence, and administrative activities. Although there are many instances in which AI can perform healthcare tasks as well or better than humans, implementation factors will prevent large-scale automation of healthcare professional jobs for a considerable period. Ethical issues in the application of AI to healthcare are also discussed.",
+          "snippet": "The complexity and rise of data in healthcare means that artificial intelligence (AI) will increasingly be applied within the field. Several types of AI are already being employed by payers and providers of care, and life sciences companies. The key categories of applications involve diagnosis and treatment recommendations, patient engagement and adherence, and administrative activities. Although there are many insta",
+          "citation_count": 3795,
+          "doi": "10.7861/futurehosp.6-2-94",
+          "open_access_pdf": "https://www.rcpjournals.org/content/futurehosp/6/2/94.full.pdf",
+          "provider": "OpenAlex",
+          "is_demo": false,
+          "credibility_score": 100,
+          "credibility_label": "High",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available",
+            "Publication venue identified",
+            "Open-access copy available",
+            "Cited by 3795 works"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.25,
+            "credibility": 1.0,
+            "recency": 0.4166666666666667,
+            "evidence_availability": 1.0,
+            "total": 0.7916666666666667,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "article",
+          "origins": [
+            {
+              "provider": "OpenAlex",
+              "provider_paper_id": "https://openalex.org/W2953532875",
+              "url": "https://doi.org/10.7861/futurehosp.6-2-94"
+            }
+          ],
+          "paper_id": "https://openalex.org/W2953532875",
+          "journal": "Future Healthcare Journal",
+          "source_provider": "OpenAlex"
+        },
+        {
+          "id": "10.1145/3433996.3434006",
+          "title": "Artificial Intelligence and Data Analytics Applications in Healthcare General Review and Case Studies",
+          "url": "https://doi.org/10.1145/3433996.3434006",
+          "authors": [
+            "Jieyuan Liu"
+          ],
+          "year": 2020,
+          "venue": "Proceedings of the 2020 Conference on Artificial Intelligence and Healthcare",
+          "abstract": "",
+          "snippet": "No abstract was supplied by the source.",
+          "citation_count": 14,
+          "doi": "10.1145/3433996.3434006",
+          "open_access_pdf": null,
+          "provider": "Crossref",
+          "is_demo": false,
+          "credibility_score": 72,
+          "credibility_label": "Moderate",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "DOI available",
+            "Publication venue identified",
+            "Cited by 14 works"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.5,
+            "credibility": 0.72,
+            "recency": 0.45454545454545453,
+            "evidence_availability": 0.0,
+            "total": 0.7034545454545454,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [
+            {
+              "given": "Jieyuan",
+              "family": "Liu"
+            }
+          ],
+          "volume": "",
+          "issue": "",
+          "pages": "49-53",
+          "source_type": "proceedings-article",
+          "origins": [
+            {
+              "provider": "Crossref",
+              "provider_paper_id": "10.1145/3433996.3434006",
+              "url": "https://doi.org/10.1145/3433996.3434006"
+            }
+          ],
+          "paper_id": "10.1145/3433996.3434006",
+          "journal": "Proceedings of the 2020 Conference on Artificial Intelligence and Healthcare",
+          "source_provider": "Crossref"
+        }
+      ],
+      "final_analysis_check": {
+        "evidence": 30,
+        "findings": [],
+        "gaps": [],
+        "traceability_valid": true
+      },
+      "initial_live_supported_gaps": 0
+    },
+    {
+      "topic": "Machine Learning in Education",
+      "status": "completed",
+      "retrieval_status": "PARTIAL_RESULTS",
+      "returned": 20,
+      "valid": 7,
+      "rejected": 13,
+      "duplicates": 1,
+      "saved": 5,
+      "evidence_passages": 0,
+      "supported_findings": 0,
+      "supported_gaps": 0,
+      "missing_sections": [
+        "Literature review",
+        "Key findings",
+        "Research gaps",
+        "Research limitations",
+        "Future scope"
+      ],
+      "diagnostics": [
+        {
+          "provider": "OpenAlex",
+          "query": "[redacted]",
+          "query_hash": "5ae3cfaeddb527f3",
+          "http_status": 429,
+          "returned": 0,
+          "valid": 0,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 447,
+          "error_code": "RATE_LIMITED",
+          "error_type": "HTTP_429"
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "5ae3cfaeddb527f3",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 1,
+          "rejected": 4,
+          "duplicates": 0,
+          "rejection_reasons": {
+            "not_eligible_scholarly_work": 2,
+            "unrelated_to_topic": 2
+          },
+          "duration_ms": 2301,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "1e649c39f9555d39",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 1,
+          "rejected": 4,
+          "duplicates": 1,
+          "rejection_reasons": {
+            "not_eligible_scholarly_work": 2,
+            "unrelated_to_topic": 2
+          },
+          "duration_ms": 2345,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "deb3edd2c1d9df97",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 1,
+          "rejected": 4,
+          "duplicates": 0,
+          "rejection_reasons": {
+            "unrelated_to_topic": 4
+          },
+          "duration_ms": 5155,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "1fca2d72e9d914cd",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 4,
+          "rejected": 1,
+          "duplicates": 0,
+          "rejection_reasons": {
+            "missing_title": 1
+          },
+          "duration_ms": 3198,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Semantic Scholar",
+          "query": "[redacted]",
+          "query_hash": "5ae3cfaeddb527f3",
+          "http_status": 429,
+          "returned": 0,
+          "valid": 0,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 0,
+          "error_code": "RATE_LIMITED",
+          "error_type": "ResearchProviderError"
+        }
+      ],
+      "papers": [
+        {
+          "id": "10.3102/ip.25.2192663",
+          "title": "A Scoping Review of Machine Learning Applications in Education Research (Poster 27)",
+          "url": "https://doi.org/10.3102/ip.25.2192663",
+          "authors": [
+            "Michael Broda"
+          ],
+          "year": 2025,
+          "venue": "AERA 2025",
+          "abstract": "",
+          "snippet": "No abstract was supplied by the source.",
+          "citation_count": 0,
+          "doi": "10.3102/ip.25.2192663",
+          "open_access_pdf": null,
+          "provider": "Crossref",
+          "is_demo": false,
+          "credibility_score": 65,
+          "credibility_label": "Moderate",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "DOI available",
+            "Publication venue identified"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.5,
+            "credibility": 0.65,
+            "recency": 0.8333333333333334,
+            "evidence_availability": 0.0,
+            "total": 0.7308333333333333,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [
+            {
+              "given": "Michael",
+              "family": "Broda"
+            }
+          ],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "proceedings-article",
+          "origins": [
+            {
+              "provider": "Crossref",
+              "provider_paper_id": "10.3102/ip.25.2192663",
+              "url": "https://doi.org/10.3102/ip.25.2192663"
+            }
+          ],
+          "paper_id": "10.3102/ip.25.2192663",
+          "journal": "AERA 2025",
+          "source_provider": "Crossref"
+        },
+        {
+          "id": "10.4324/9781003321538-13",
+          "title": "Impact of Machine Learning on Translator Education",
+          "url": "https://doi.org/10.4324/9781003321538-13",
+          "authors": [
+            "Peng Wang",
+            "David B. Sawyer"
+          ],
+          "year": 2023,
+          "venue": "Machine Learning in Translation",
+          "abstract": "",
+          "snippet": "No abstract was supplied by the source.",
+          "citation_count": 0,
+          "doi": "10.4324/9781003321538-13",
+          "open_access_pdf": null,
+          "provider": "Crossref",
+          "is_demo": false,
+          "credibility_score": 65,
+          "credibility_label": "Moderate",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "DOI available",
+            "Publication venue identified"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.0,
+            "credibility": 0.65,
+            "recency": 0.625,
+            "evidence_availability": 0.0,
+            "total": 0.61,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [
+            {
+              "given": "Peng",
+              "family": "Wang"
+            },
+            {
+              "given": "David B.",
+              "family": "Sawyer"
+            }
+          ],
+          "volume": "",
+          "issue": "",
+          "pages": "167-184",
+          "source_type": "book-chapter",
+          "origins": [
+            {
+              "provider": "Crossref",
+              "provider_paper_id": "10.4324/9781003321538-13",
+              "url": "https://doi.org/10.4324/9781003321538-13"
+            }
+          ],
+          "paper_id": "10.4324/9781003321538-13",
+          "journal": "Machine Learning in Translation",
+          "source_provider": "Crossref"
+        },
+        {
+          "id": "10.1007/978-981-95-2415-0_13",
+          "title": "Applying Machine Minds: Artificial Intelligence in Teaching and Learning",
+          "url": "https://doi.org/10.1007/978-981-95-2415-0_13",
+          "authors": [
+            "Xu Hao",
+            "Zu Yatong"
+          ],
+          "year": 2025,
+          "venue": "Teaching and Learning in Higher Education",
+          "abstract": "",
+          "snippet": "No abstract was supplied by the source.",
+          "citation_count": 0,
+          "doi": "10.1007/978-981-95-2415-0_13",
+          "open_access_pdf": null,
+          "provider": "Crossref",
+          "is_demo": false,
+          "credibility_score": 65,
+          "credibility_label": "Moderate",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "DOI available",
+            "Publication venue identified"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 0.75,
+            "objective_alignment": 0.0,
+            "credibility": 0.65,
+            "recency": 0.8333333333333334,
+            "evidence_availability": 0.0,
+            "total": 0.5183333333333333,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [
+            {
+              "given": "Xu",
+              "family": "Hao"
+            },
+            {
+              "given": "Zu",
+              "family": "Yatong"
+            }
+          ],
+          "volume": "",
+          "issue": "",
+          "pages": "205-217",
+          "source_type": "book-chapter",
+          "origins": [
+            {
+              "provider": "Crossref",
+              "provider_paper_id": "10.1007/978-981-95-2415-0_13",
+              "url": "https://doi.org/10.1007/978-981-95-2415-0_13"
+            }
+          ],
+          "paper_id": "10.1007/978-981-95-2415-0_13",
+          "journal": "Teaching and Learning in Higher Education",
+          "source_provider": "Crossref"
+        },
+        {
+          "id": "10.38007/978-1-80053-679-1",
+          "title": "Machine Learning\u2014\u2014Teaching and Learning",
+          "url": "https://doi.org/10.38007/978-1-80053-679-1",
+          "authors": [],
+          "year": 2025,
+          "venue": "",
+          "abstract": "",
+          "snippet": "No abstract was supplied by the source.",
+          "citation_count": 0,
+          "doi": "10.38007/978-1-80053-679-1",
+          "open_access_pdf": null,
+          "provider": "Crossref",
+          "is_demo": false,
+          "credibility_score": 55,
+          "credibility_label": "Moderate",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "DOI available"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 0.75,
+            "objective_alignment": 0.0,
+            "credibility": 0.55,
+            "recency": 0.8333333333333334,
+            "evidence_availability": 0.0,
+            "total": 0.5033333333333334,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "edited-book",
+          "origins": [
+            {
+              "provider": "Crossref",
+              "provider_paper_id": "10.38007/978-1-80053-679-1",
+              "url": "https://doi.org/10.38007/978-1-80053-679-1"
+            }
+          ],
+          "paper_id": "10.38007/978-1-80053-679-1",
+          "journal": "",
+          "source_provider": "Crossref"
+        },
+        {
+          "id": "10.1109/itre.2006.381526",
+          "title": "Learning to Understand Image Content: Machine Learning Versus Machine Teaching Alternative",
+          "url": "https://doi.org/10.1109/itre.2006.381526",
+          "authors": [
+            "Emanuel Diamant"
+          ],
+          "year": 2006,
+          "venue": "2006 International Conference on Information Technology: Research and Education",
+          "abstract": "",
+          "snippet": "No abstract was supplied by the source.",
+          "citation_count": 1,
+          "doi": "10.1109/itre.2006.381526",
+          "open_access_pdf": null,
+          "provider": "Crossref",
+          "is_demo": false,
+          "credibility_score": 67,
+          "credibility_label": "Moderate",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "DOI available",
+            "Publication venue identified",
+            "Cited by 1 works"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 0.75,
+            "objective_alignment": 0.0,
+            "credibility": 0.67,
+            "recency": 0.2,
+            "evidence_availability": 0.0,
+            "total": 0.458,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [
+            {
+              "given": "Emanuel",
+              "family": "Diamant"
+            }
+          ],
+          "volume": "",
+          "issue": "",
+          "pages": "26-29",
+          "source_type": "proceedings-article",
+          "origins": [
+            {
+              "provider": "Crossref",
+              "provider_paper_id": "10.1109/itre.2006.381526",
+              "url": "https://doi.org/10.1109/itre.2006.381526"
+            }
+          ],
+          "paper_id": "10.1109/itre.2006.381526",
+          "journal": "2006 International Conference on Information Technology: Research and Education",
+          "source_provider": "Crossref"
+        }
+      ],
+      "final_analysis_check": {
+        "evidence": 0,
+        "findings": [],
+        "gaps": [],
+        "traceability_valid": true
+      },
+      "initial_live_supported_gaps": 0
+    },
+    {
+      "topic": "Cybersecurity using Blockchain",
+      "status": "completed",
+      "retrieval_status": "PARTIAL_RESULTS",
+      "returned": 15,
+      "valid": 14,
+      "rejected": 1,
+      "duplicates": 1,
+      "saved": 5,
+      "evidence_passages": 33,
+      "supported_findings": 1,
+      "supported_gaps": 0,
+      "missing_sections": [
+        "Research gaps",
+        "Research limitations",
+        "Future scope"
+      ],
+      "diagnostics": [
+        {
+          "provider": "OpenAlex",
+          "query": "[redacted]",
+          "query_hash": "782c064ab284e451",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 2786,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "782c064ab284e451",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 4,
+          "rejected": 1,
+          "duplicates": 0,
+          "rejection_reasons": {
+            "not_eligible_scholarly_work": 1
+          },
+          "duration_ms": 3657,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "9759b7ddcb89e73a",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 1,
+          "rejection_reasons": {},
+          "duration_ms": 2405,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Semantic Scholar",
+          "query": "[redacted]",
+          "query_hash": "782c064ab284e451",
+          "http_status": 429,
+          "returned": 0,
+          "valid": 0,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 1,
+          "error_code": "RATE_LIMITED",
+          "error_type": "ResearchProviderError"
+        }
+      ],
+      "papers": [
+        {
+          "id": "https://openalex.org/W4392617176",
+          "title": "Collaborative Cybersecurity Using Blockchain: A Survey",
+          "url": "http://arxiv.org/abs/2403.04410",
+          "authors": [
+            "Miller, Lo\u00efc",
+            "Marc\u2010Oliver Pahl"
+          ],
+          "year": 2024,
+          "venue": "arXiv (Cornell University)",
+          "abstract": "Collaborative cybersecurity relies on organizations sharing information to boost security, but trust management is a key concern. Decentralized solutions like distributed ledgers, particularly blockchain, are crucial for eliminating single points of failure. However, the existing literature on blockchain-based collaborative cybersecurity is limited, lacking comprehensive insights. This paper addresses this gap by surveying blockchain's role in collaborative cybersecurity from 2016 to 2023. It explores various applications, trends, and the evolution of blockchain technology, focusing on access control, data validation policies, underlying tech, and consensus mechanisms. A key finding is the fragmentation of the field with no dominant research group or venue. Many recent projects poorly select consensus protocols for their blockchain. To aid researchers and practitioners, this paper offers guidelines for choosing the right blockchain for specific purposes and highlights open research areas and lessons learned from past blockchain applications in collaborative cybersecurity, encouraging further exploration in this field.",
+          "snippet": "Collaborative cybersecurity relies on organizations sharing information to boost security, but trust management is a key concern. Decentralized solutions like distributed ledgers, particularly blockchain, are crucial for eliminating single points of failure. However, the existing literature on blockchain-based collaborative cybersecurity is limited, lacking comprehensive insights. This paper addresses this gap by sur",
+          "citation_count": 6,
+          "doi": "10.48550/arxiv.2403.04410",
+          "open_access_pdf": "https://arxiv.org/pdf/2403.04410",
+          "provider": "OpenAlex",
+          "is_demo": false,
+          "credibility_score": 90,
+          "credibility_label": "High",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available",
+            "Publication venue identified",
+            "Open-access copy available",
+            "Cited by 6 works"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.25,
+            "credibility": 0.9,
+            "recency": 0.7142857142857143,
+            "evidence_availability": 1.0,
+            "total": 0.8064285714285715,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "preprint",
+          "origins": [
+            {
+              "provider": "OpenAlex",
+              "provider_paper_id": "https://openalex.org/W4392617176",
+              "url": "http://arxiv.org/abs/2403.04410"
+            }
+          ],
+          "paper_id": "https://openalex.org/W4392617176",
+          "journal": "arXiv (Cornell University)",
+          "source_provider": "OpenAlex"
+        },
+        {
+          "id": "https://openalex.org/W7222636597",
+          "title": "A Deep Learning-based Feature-level Privacy-preserving and Intrusion Detection Framework for Intelligent Cybersecurity Using Blockchain",
+          "url": "https://doi.org/10.22266/ijies2026.1130.73",
+          "authors": [
+            "Lamyaa Mohammed Kadhim",
+            "Waleed Kareem Ahmed",
+            "Mohammed Dheyaaldeen Taha",
+            "Wathiq Kareem Ahmed",
+            "Enas Mohammed Hussein Saeed",
+            "Rana Saad Mohammed"
+          ],
+          "year": 2026,
+          "venue": "International journal of intelligent engineering and systems",
+          "abstract": "The advent of the fast growth of interconnected digital infrastructures has increased the necessity of privacyconserving cybersecurity solutions that can detect network intrusions without revealing sensitive traffic data.Traditional intrusion detection systems (IDSs) typically analyse raw network traffic in a centralized manner, a practice that heightens the risk of data leakage and privacy breaches.This study proposes an IDS that preserves privacy at the feature level by coupling deep representation learning with encrypted, blockchain-based storage.The architecture suggested uses a hybrid Convolutional Neural Network and Bidirectional Long Short-Term Memory (CNN-BiLSTM) model for extracting compact and discriminative representations of network traffic flows.A multi-stage privacy pipeline comprising feature normalization, secret permutation, and AES-256-GCM encryption is proposed and empirically evaluated against membership-inference, reconstruction, and attribute-inference attacks before storage in a permissioned blockchain ledger.The suggested framework uses encrypted deep feature vectors, unlike current methods of storing raw traffic data or sharing model gradients, which significantly lowers the privacy attack surface and preserve detection.The framework was tested on four popular databases of intrusion detection, such as CICIDS2017, IoTIDS20, NSL-KDD, and TRAIN_TEST_NETWORK.Experimental results demonstrate strong detection performance, with accuracy exceeding 0.95 and reaching approximately 0.997, alongside high processing throughput and low computational overhead.The findings indicate that integrating deep feature learning, cryptographic protection, and blockchain-based storage achieves a favorable balance among privacy preservation, system efficiency, and detection accuracy.The proposed architecture could be scaled to privacy-sensitive environments, such as in IoT systems, healthcare systems, and enterprise security monitoring systems.",
+          "snippet": "The advent of the fast growth of interconnected digital infrastructures has increased the necessity of privacyconserving cybersecurity solutions that can detect network intrusions without revealing sensitive traffic data.Traditional intrusion detection systems (IDSs) typically analyse raw network traffic in a centralized manner, a practice that heightens the risk of data leakage and privacy breaches.This study propos",
+          "citation_count": 0,
+          "doi": "10.22266/ijies2026.1130.73",
+          "open_access_pdf": "https://doi.org/10.22266/ijies2026.1130.73",
+          "provider": "OpenAlex",
+          "is_demo": false,
+          "credibility_score": 85,
+          "credibility_label": "High",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available",
+            "Publication venue identified",
+            "Open-access copy available"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.0,
+            "credibility": 0.85,
+            "recency": 1.0,
+            "evidence_availability": 1.0,
+            "total": 0.7775000000000001,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "article",
+          "origins": [
+            {
+              "provider": "OpenAlex",
+              "provider_paper_id": "https://openalex.org/W7222636597",
+              "url": "https://doi.org/10.22266/ijies2026.1130.73"
+            }
+          ],
+          "paper_id": "https://openalex.org/W7222636597",
+          "journal": "International journal of intelligent engineering and systems",
+          "source_provider": "OpenAlex"
+        },
+        {
+          "id": "https://openalex.org/W7154938795",
+          "title": "Enhancing Energy Systems Cybersecurity using Blockchain (SBIR Final Phase I Report)",
+          "url": "https://doi.org/10.2172/1427571",
+          "authors": [
+            "USDOE Office of Fossil Energy (FE)",
+            "Paul Pazandak",
+            "Office of SBIR/STTR Programs (SBIR/STTR) USDOE Office of Science (SC)"
+          ],
+          "year": 2018,
+          "venue": "",
+          "abstract": "The goal of this SBIR research has been to investigate blockchain technology and its applications in the fossil fuel sector - with a focus on how this technology could be leveraged to improve the cybersecurity of these systems. The primary tasks that we carried out involved evaluating existing blockchain technology, identifying relevant and compelling use cases, researching the integration of blockchain technology into industrial systems, and the design and implementation of a proof of concept system. A key finding is that within industrial systems where many parties are involved, trust can be lacking. By providing technology that assures verifiable trust in the data, many processes may be able to be automated. We believe that verifiable trust in the data can only be provided if we trust the data from \"cradle to grave.\" This means that we need to secure the systems that are creating the data, moving the data, and storing the data. The last of these is provided by blockchain. Blockchain technology will not only improve security and trust within these systems, in some cases it will also be able increase the operational tempo of some processes significantly. We are vendors of commercial communications software that is based upon the Open Management Group (OMG) data distribution service (DDS) standard; it secures data in motion. In addition to many defense, transportation, and medical systems, it is running in oil, gas, and coal systems. Over the course of this effort we have come to believe that blockchain technology could be an important enabler for this sector: we have engaged with a number of our customers and identified several compelling use cases beyond cryptocurrencies, which we document further within this report. Furthermore, as it turns out, we believe that many of these use cases are relevant across a wide swath of industries. This analysis provides necessary and important foundational work that could lead to new ways of securing oil and gas processing, and coal mining infrastructure against cyber threats.",
+          "snippet": "The goal of this SBIR research has been to investigate blockchain technology and its applications in the fossil fuel sector - with a focus on how this technology could be leveraged to improve the cybersecurity of these systems. The primary tasks that we carried out involved evaluating existing blockchain technology, identifying relevant and compelling use cases, researching the integration of blockchain technology in",
+          "citation_count": 0,
+          "doi": "10.2172/1427571",
+          "open_access_pdf": null,
+          "provider": "OpenAlex",
+          "is_demo": false,
+          "credibility_score": 70,
+          "credibility_label": "Moderate",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.25,
+            "credibility": 0.7,
+            "recency": 0.3846153846153846,
+            "evidence_availability": 1.0,
+            "total": 0.7434615384615385,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "report",
+          "origins": [
+            {
+              "provider": "OpenAlex",
+              "provider_paper_id": "https://openalex.org/W7154938795",
+              "url": "https://doi.org/10.2172/1427571"
+            }
+          ],
+          "paper_id": "https://openalex.org/W7154938795",
+          "journal": "",
+          "source_provider": "OpenAlex"
+        },
+        {
+          "id": "https://openalex.org/W4292825784",
+          "title": "Enhancing Cybersecurity Using Blockchain Technology Based on IoT Data Fusion",
+          "url": "https://doi.org/10.1109/jiot.2022.3199735",
+          "authors": [
+            "Sung\u2010Jung Hsiao",
+            "Wen\u2010Tsai Sung"
+          ],
+          "year": 2022,
+          "venue": "IEEE Internet of Things Journal",
+          "abstract": "In this study, blockchain technology is used to strengthen the security of wireless sensing data in the network architecture of the Internet of Things. For many organic farms that contain crops with high unit prices, the environmental parameters of the crops grown on the farm are often regarded as confidential data. First, a wireless sensing network is used to transmit sensing data to the farm\u2019s front-end integrated microcontroller for fusion of the sensing data. After fusion of the sensing data is completed, the processed data is transmitted to the data processing center of the entire farm for encapsulation of the blockchain algorithm. Data are sent to the cloud database for storage after they are packaged by the system. At the same time, the data in the cloud database can be managed and analyzed by remote operators. Data encapsulation based on blockchain technology is used to effectively prevent any data from being stolen or destroyed by hackers. A complete blockchain encapsulation database system is implemented in the experimental stage, and the operator can use this system to encrypt the data that have been fused at the remote end for blockchain technology. In the encryption process of this blockchain, the security of data processing can be specifically enhanced by the system. Finally, each encapsulated block of data is securely stored in a private cloud database. There is a function to check whether the data in the cloud have been tampered with. A very innovative approach to using blockchain technology is proposed in this article to enhance the security of data processing.",
+          "snippet": "In this study, blockchain technology is used to strengthen the security of wireless sensing data in the network architecture of the Internet of Things. For many organic farms that contain crops with high unit prices, the environmental parameters of the crops grown on the farm are often regarded as confidential data. First, a wireless sensing network is used to transmit sensing data to the farm\u2019s front-end integrated ",
+          "citation_count": 29,
+          "doi": "10.1109/jiot.2022.3199735",
+          "open_access_pdf": null,
+          "provider": "OpenAlex",
+          "is_demo": false,
+          "credibility_score": 89,
+          "credibility_label": "High",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available",
+            "Publication venue identified",
+            "Cited by 29 works"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.0,
+            "credibility": 0.89,
+            "recency": 0.5555555555555556,
+            "evidence_availability": 1.0,
+            "total": 0.7390555555555556,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "article",
+          "origins": [
+            {
+              "provider": "OpenAlex",
+              "provider_paper_id": "https://openalex.org/W4292825784",
+              "url": "https://doi.org/10.1109/jiot.2022.3199735"
+            }
+          ],
+          "paper_id": "https://openalex.org/W4292825784",
+          "journal": "IEEE Internet of Things Journal",
+          "source_provider": "OpenAlex"
+        },
+        {
+          "id": "10.1002/9781394395958.ch3",
+          "title": "The Intersection of Blockchain and Cybersecurity",
+          "url": "https://doi.org/10.1002/9781394395958.ch3",
+          "authors": [],
+          "year": 2026,
+          "venue": "Cybersecurity Implications in Blockchain Architectures",
+          "abstract": "",
+          "snippet": "No abstract was supplied by the source.",
+          "citation_count": 0,
+          "doi": "10.1002/9781394395958.ch3",
+          "open_access_pdf": null,
+          "provider": "Crossref",
+          "is_demo": false,
+          "credibility_score": 65,
+          "credibility_label": "Moderate",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "DOI available",
+            "Publication venue identified"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.0,
+            "credibility": 0.65,
+            "recency": 1.0,
+            "evidence_availability": 0.0,
+            "total": 0.6475,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "45-65",
+          "source_type": "other",
+          "origins": [
+            {
+              "provider": "Crossref",
+              "provider_paper_id": "10.1002/9781394395958.ch3",
+              "url": "https://doi.org/10.1002/9781394395958.ch3"
+            }
+          ],
+          "paper_id": "10.1002/9781394395958.ch3",
+          "journal": "Cybersecurity Implications in Blockchain Architectures",
+          "source_provider": "Crossref"
+        }
+      ],
+      "final_analysis_check": {
+        "evidence": 33,
+        "findings": [
+          {
+            "finding_id": "3a46b12f08982f3924ff6bf2c66ec2bd",
+            "statement": "The advent of the fast growth of interconnected digital infrastructures has increased the necessity of privacyconserving cybersecurity solutions that can detect network intrusions without revealing sensitive traffic data.Traditional intrusion detection systems (IDSs) typically analyse raw network traffic in a centralized manner, a practice that heightens the risk of data leakage and privacy breaches.This study proposes an IDS that preserves privacy at the feature level by coupling deep representation learning with encrypted, blockchain-based storage.The architecture suggested uses a hybrid Convolutional Neural Network and Bidirectional Long Short-Term Memory (CNN-BiLSTM) model for extracting compact and discriminative representations of network traffic flows.A multi-stage privacy pipeline comprising feature normalization, secret permutation, and AES-256-GCM encryption is proposed and empirically evaluated against membership-inference, reconstruction, and attribute-inference attacks before storage in a permissioned blockchain ledger.The suggested framework uses encrypted deep feature vectors, unlike current methods of storing raw traffic data or sharing model gradients, which significantly lowers the privacy attack surface and preserve detection.The framework was tested on four popular databases of intrusion detection, such as CICIDS2017, IoTIDS20, NSL-KDD, and TRAIN_TEST_NETWORK.Experimental results demonstrate strong detection performance, with accuracy exceeding 0.95 and reaching approximately 0.997, alongside high processing throughput and low computational overhead.The findings indicate that integrating deep feature learning, cryptographic protection, and blockchain-based storage achieves a favorable balance among privacy preservation, system efficiency, and detection accuracy.The proposed architecture could be scaled to privacy-sensitive environments, such as in IoT systems, healthcare systems, and enterprise security monitoring systems.",
+            "evidence_ids": [
+              "e317cefe0fe8c041ca67a5e70a5abe68"
+            ],
+            "paper_ids": [
+              "https://openalex.org/W7222636597"
+            ],
+            "basis": "author_reported_excerpt"
+          }
+        ],
+        "gaps": [],
+        "traceability_valid": true
+      },
+      "initial_live_supported_gaps": 0
+    },
+    {
+      "topic": "AI adoption in Indian higher education",
+      "status": "completed",
+      "retrieval_status": "PARTIAL_RESULTS",
+      "returned": 10,
+      "valid": 10,
+      "rejected": 0,
+      "duplicates": 0,
+      "saved": 5,
+      "evidence_passages": 45,
+      "supported_findings": 1,
+      "supported_gaps": 1,
+      "missing_sections": [
+        "Research limitations"
+      ],
+      "diagnostics": [
+        {
+          "provider": "OpenAlex",
+          "query": "[redacted]",
+          "query_hash": "e192ebf5f2b752d3",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 1889,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "e192ebf5f2b752d3",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 2872,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Semantic Scholar",
+          "query": "[redacted]",
+          "query_hash": "e192ebf5f2b752d3",
+          "http_status": 429,
+          "returned": 0,
+          "valid": 0,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 0,
+          "error_code": "RATE_LIMITED",
+          "error_type": "ResearchProviderError"
+        }
+      ],
+      "papers": [
+        {
+          "id": "https://openalex.org/W7134985899",
+          "title": "Adoption of Generative AI Tools in Indian Higher Education: An Empirical Study on Faculty Readiness, Ethical Concerns, and Pedagogical Transformation",
+          "url": "https://doi.org/10.62656/sijss.v24i1.2315",
+          "authors": [
+            "Roopa Shettigar"
+          ],
+          "year": 2026,
+          "venue": "South India Journal of Social Sciences",
+          "abstract": "The rapid integration of Generative Artificial Intelligence (GenAI) into educational systems represents a significant turning point. This research aims to study the acceptance, benefits, ethical challenges, and pedagogical consequences of GenAI in Indian higher education. Employing a descriptive, cross-sectional approach, we distributed a structured questionnaire to 210 faculty members across multidisciplinary colleges and universities, ensuring the anonymity of respondents and the authenticity of data. The study used descriptive statistics, reliability analysis, and regression modeling to understand the dimensions of faculty readiness, perceived advantages, ethical issues, and pedagogical impacts in adopting GenAI. The results reveal a high level of awareness and moderate adoption, influenced by the perception of academic efficiency but restrained by ethical concerns, skills gap, and lack of institutional policy clarity. The findings emphasize the need for policy formulation, training, and ethical guidelines as India endeavors to achieve digitally empowered education. This study offers recent empirical evidence to the ongoing conversation on technology acceptance in academia, enriching the literature and informing the stakeholders of higher education institutions about the GenAI wave.",
+          "snippet": "The rapid integration of Generative Artificial Intelligence (GenAI) into educational systems represents a significant turning point. This research aims to study the acceptance, benefits, ethical challenges, and pedagogical consequences of GenAI in Indian higher education. Employing a descriptive, cross-sectional approach, we distributed a structured questionnaire to 210 faculty members across multidisciplinary colleg",
+          "citation_count": 1,
+          "doi": "10.62656/sijss.v24i1.2315",
+          "open_access_pdf": "https://journal.sijss.com/index.php/home/article/download/2315/448",
+          "provider": "OpenAlex",
+          "is_demo": false,
+          "credibility_score": 87,
+          "credibility_label": "High",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available",
+            "Publication venue identified",
+            "Open-access copy available",
+            "Cited by 1 works"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.5,
+            "credibility": 0.87,
+            "recency": 1.0,
+            "evidence_availability": 1.0,
+            "total": 0.8805000000000001,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "article",
+          "origins": [
+            {
+              "provider": "OpenAlex",
+              "provider_paper_id": "https://openalex.org/W7134985899",
+              "url": "https://doi.org/10.62656/sijss.v24i1.2315"
+            }
+          ],
+          "paper_id": "https://openalex.org/W7134985899",
+          "journal": "South India Journal of Social Sciences",
+          "source_provider": "OpenAlex"
+        },
+        {
+          "id": "https://openalex.org/W4408629911",
+          "title": "Understanding behavioral intentions of UG and PG students in Tier II Indian cities toward AI-technology adoption in higher education: a mixed-methods approach using the SOR model",
+          "url": "https://doi.org/10.1080/23311886.2025.2476044",
+          "authors": [
+            "Prashant Dev Yadav",
+            "Vikas Madhukar",
+            "Ankit Dhamija",
+            "Rishi Manrai"
+          ],
+          "year": 2025,
+          "venue": "Cogent Social Sciences",
+          "abstract": "This study explores the factors influencing AI-Technology adoption among undergraduate and postgraduate students in Tier II cities of Punjab and Haryana, India. A mixed-method approach combined quantitative data from 598 respondents with qualitative insights from personal interviews. Stimulus-Organism-Response (SOR) theory was applied to explain the students\u2019 adoption behavior, and Structural Equation Modeling (SEM) was employed for data analysis. The model demonstrated an explanatory power of 78.5 percent, with social influence emerging as the most critical determinant of behavioral adoption intentions, followed by facilitating conditions. Additionally, the study found that perceived usefulness and students\u2019 attitudes mediated the relationship between perceived credibility and behavioral intentions. The study may lack generalizability, given the diverse backgrounds of students in Tier II cities concerning their understanding of online education and smartphone usage. Future research could incorporate constructs such as risk, learnability, and trialability to enhance the model\u2019s explanatory power. However, this study provides crucial insights for AI companies and policymakers aiming to increase the adoption and utilization of AI-Technology in India. This underscores the importance of building trust in online education and promoting these platforms using targeted marketing strategies. This study contributes significantly to the literature on technology adoption, explicitly focusing on undergraduate and postgraduate students in Tier II Indian cities. This is one of the few empirical studies in this area within the Indian context and offers valuable insights that could help explain technology adoption in online education in other developing countries.",
+          "snippet": "This study explores the factors influencing AI-Technology adoption among undergraduate and postgraduate students in Tier II cities of Punjab and Haryana, India. A mixed-method approach combined quantitative data from 598 respondents with qualitative insights from personal interviews. Stimulus-Organism-Response (SOR) theory was applied to explain the students\u2019 adoption behavior, and Structural Equation Modeling (SEM) ",
+          "citation_count": 8,
+          "doi": "10.1080/23311886.2025.2476044",
+          "open_access_pdf": null,
+          "provider": "OpenAlex",
+          "is_demo": false,
+          "credibility_score": 86,
+          "credibility_label": "High",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available",
+            "Publication venue identified",
+            "Cited by 8 works"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 1.0,
+            "objective_alignment": 0.25,
+            "credibility": 0.86,
+            "recency": 0.8333333333333334,
+            "evidence_availability": 1.0,
+            "total": 0.8123333333333334,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "article",
+          "origins": [
+            {
+              "provider": "OpenAlex",
+              "provider_paper_id": "https://openalex.org/W4408629911",
+              "url": "https://doi.org/10.1080/23311886.2025.2476044"
+            }
+          ],
+          "paper_id": "https://openalex.org/W4408629911",
+          "journal": "Cogent Social Sciences",
+          "source_provider": "OpenAlex"
+        },
+        {
+          "id": "10.21203/rs.3.rs-11132628/v1",
+          "title": "Generative AI Adoption in Statistics and Data Science Higher Education",
+          "url": "https://doi.org/10.21203/rs.3.rs-11132628/v1",
+          "authors": [
+            "Noha Youssef"
+          ],
+          "year": 2026,
+          "venue": "",
+          "abstract": "Abstract Generative AI (GenAI) is increasingly embedded in advanced quantitative STEM learning, where students use it for conceptual explanation, coding, debugging, model interpretation, and analytical writing. Yet the conditions that shape adoption in courses requiring statistical judgment and evidence evaluation remain underexamined. We surveyed 72 senior undergraduates enrolled in advanced statistics and data science courses at a private university in Egypt. An adapted UTAUT2 model was estimated using PLS-SEM and supplemented with descriptive analysis of open-ended responses. Effort expectancy was the strongest predictor of behavioral intention (\u03b2 = 0.562, p &lt; .001), followed by facilitating conditions (\u03b2 = 0.329, p = .003) and self-efficacy (\u03b2 = 0.195, p = .006); behavioral intention strongly predicted self-reported use (\u03b2 = 0.709, p &lt; .001). The model explained 73.2% of behavioral intention and 50.3% of use behavior. Effect sizes and sensitivity analyses indicated that the structural pattern was stable, although discriminant-validity concerns remained for adjacent constructs. Out-of-sample predictive evidence was weak, so the model is interpreted primarily as explanatory. Open-ended responses showed that students valued immediacy and coding support while remaining concerned about inaccurate outputs, overreliance, verification, and policy clarity. The findings distinguish adoption from responsible disciplinary use: ease, support, and confidence encourage uptake, but responsible use additionally requires verification, statistical judgment, evidence evaluation, and transparent disclosure.",
+          "snippet": "Abstract Generative AI (GenAI) is increasingly embedded in advanced quantitative STEM learning, where students use it for conceptual explanation, coding, debugging, model interpretation, and analytical writing. Yet the conditions that shape adoption in courses requiring statistical judgment and evidence evaluation remain underexamined. We surveyed 72 senior undergraduates enrolled in advanced statistics and data scie",
+          "citation_count": 0,
+          "doi": "10.21203/rs.3.rs-11132628/v1",
+          "open_access_pdf": null,
+          "provider": "Crossref",
+          "is_demo": false,
+          "credibility_score": 70,
+          "credibility_label": "Moderate",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 0.7777777777777778,
+            "objective_alignment": 0.25,
+            "credibility": 0.7,
+            "recency": 1.0,
+            "evidence_availability": 1.0,
+            "total": 0.7050000000000001,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [
+            {
+              "given": "Noha",
+              "family": "Youssef"
+            }
+          ],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "posted-content",
+          "origins": [
+            {
+              "provider": "Crossref",
+              "provider_paper_id": "10.21203/rs.3.rs-11132628/v1",
+              "url": "https://doi.org/10.21203/rs.3.rs-11132628/v1"
+            }
+          ],
+          "paper_id": "10.21203/rs.3.rs-11132628/v1",
+          "journal": "",
+          "source_provider": "Crossref"
+        },
+        {
+          "id": "10.35542/osf.io/mq8yg_v1",
+          "title": "Ethical and Technical Challenges of Generative AI Adoption in Higher Education",
+          "url": "https://doi.org/10.35542/osf.io/mq8yg_v1",
+          "authors": [
+            "muskan chawla"
+          ],
+          "year": 2026,
+          "venue": "",
+          "abstract": "Abstract\u2014The rapid rise of generative AI tools like ChatGPT, GitHub Copilot, and DALL-E has presented unique opportunities but also significant risks for institutions of higher learning globally. This paper offers a systematic study of the ethical and technical problems that emerge when integrating generative AI into teaching and learning at universities. We carried out an empirical research using a mixed-methods approach that involved the administration of a standardized questionnaire to 385 educators and students from four universities alongside qualitative content analysis of 40 AI usage guidelines from universities in the period 2023 to 2025. Our findings suggest five major types of challenges: academic integrity threats, algorithmic bias transmission, data protection threats, infrastructure inadequacies, and pedagogical incompatibilities. According to our quantitative analysis, 72.5% of our participants have observed AI content submission without prior declaration, whereas only 34.8% of universities have modified their codes of academic integrity to include provisions against misuse of generative AI. In addition, our technical evaluations of three prevalent LLMs found differences in the quality of their outputs for underrepresented languages based on cultural contexts, with BLEU score variations of up to 18.6 points between English and low-resource languages. We present an AI governance model that integrates policy reform, detection technologies, faculty education, and curriculum transformation to find a middle ground between innovation and accountability. The model was implemented through pilots at two universities for one academic term, resulting in a 41% decrease in AI usage without disclosure and a demonstrable enhancement in critical thinking skills assessments of students.",
+          "snippet": "Abstract\u2014The rapid rise of generative AI tools like ChatGPT, GitHub Copilot, and DALL-E has presented unique opportunities but also significant risks for institutions of higher learning globally. This paper offers a systematic study of the ethical and technical problems that emerge when integrating generative AI into teaching and learning at universities. We carried out an empirical research using a mixed-methods app",
+          "citation_count": 0,
+          "doi": "10.35542/osf.io/mq8yg_v1",
+          "open_access_pdf": null,
+          "provider": "Crossref",
+          "is_demo": false,
+          "credibility_score": 70,
+          "credibility_label": "Moderate",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 0.7777777777777778,
+            "objective_alignment": 0.25,
+            "credibility": 0.7,
+            "recency": 1.0,
+            "evidence_availability": 1.0,
+            "total": 0.7050000000000001,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [
+            {
+              "given": "muskan",
+              "family": "chawla"
+            }
+          ],
+          "volume": "",
+          "issue": "",
+          "pages": "",
+          "source_type": "posted-content",
+          "origins": [
+            {
+              "provider": "Crossref",
+              "provider_paper_id": "10.35542/osf.io/mq8yg_v1",
+              "url": "https://doi.org/10.35542/osf.io/mq8yg_v1"
+            }
+          ],
+          "paper_id": "10.35542/osf.io/mq8yg_v1",
+          "journal": "",
+          "source_provider": "Crossref"
+        },
+        {
+          "id": "10.3390/educsci16071173",
+          "title": "Intergenerational Differences in Generative AI Adoption: A Model Explaining the Roles of AI Competency, Responsible AI Adoption, and Ethical Awareness in Higher Education",
+          "url": "https://doi.org/10.3390/educsci16071173",
+          "authors": [
+            "Mostafa Aboulnour Salem",
+            "Zeyad Aly Khalil"
+          ],
+          "year": 2026,
+          "venue": "Education Sciences",
+          "abstract": "Generative artificial intelligence (GenAI) is rapidly transforming teaching, learning, research, and institutional practices in higher education, increasing the need to understand how university professionals engage with AI technologies in both functional and ethical contexts. This study examined AI adoption among sampled Generation Y (Gen Y) and Generation Z (Gen Z) higher education professionals by investigating the relationships among AI Competency Capability (AICC), AI Utilisation Behaviour (AIUB), Perceived Usability (PU), Perceived Strategic Value (PSV), AI Ethical Awareness (AIEA), AI Self-Efficacy (AISE), Responsible AI Utilisation Behaviour (RAIUB), Academic Engagement (AE), Perceived Performance Outcomes (PPO), and AI Adoption Intention (AAI). Adaptive Structuration Theory (AST) and Dual-Process Theory (DPT) were employed as complementary interpretive perspectives rather than as theories directly tested by the structural model. Data were collected from 870 higher education professionals employed at Saudi Arabian universities and analysed using Partial Least Squares Structural Equation Modelling (PLS-SEM), Partial Least Squares Multi-Group Analysis (PLS-MGA), and the Measurement Invariance of Composite Models (MICOM) procedure. The PLS-MGA identified statistically significant between-group differences only for the relationships between AICC and AIUB, which were numerically larger among the sampled Gen Z participants, and between AIEA and Responsible AIUB, which were numerically larger among the sampled Gen Y participants. All remaining differences represented sample-specific numerical variations rather than statistically confirmed between-group differences. Given the cross-sectional design and differences in age, career stage, institutional role, and professional experience, the findings should be interpreted as sample-specific associations rather than fixed generational characteristics. This study introduces the Gen-AI Dual Competency Alignment Framework (GADCAF) as a provisional conceptual and interpretive framework, intended to guide future research on AI competency, responsible AI utilisation, and organisational AI integration rather than as a validated theoretical model. The findings advance understanding of the complementary functional and ethical dimensions of AI adoption in higher education.",
+          "snippet": "Generative artificial intelligence (GenAI) is rapidly transforming teaching, learning, research, and institutional practices in higher education, increasing the need to understand how university professionals engage with AI technologies in both functional and ethical contexts. This study examined AI adoption among sampled Generation Y (Gen Y) and Generation Z (Gen Z) higher education professionals by investigating th",
+          "citation_count": 3,
+          "doi": "10.3390/educsci16071173",
+          "open_access_pdf": null,
+          "provider": "Crossref",
+          "is_demo": false,
+          "credibility_score": 84,
+          "credibility_label": "High",
+          "quality_signals": [
+            "Indexed scholarly record",
+            "Abstract available",
+            "DOI available",
+            "Publication venue identified",
+            "Cited by 3 works"
+          ],
+          "provenance": "retrieved_metadata",
+          "ranking": {
+            "topic_relevance": 0.7777777777777778,
+            "objective_alignment": 0.0,
+            "credibility": 0.84,
+            "recency": 1.0,
+            "evidence_availability": 1.0,
+            "total": 0.676,
+            "explanation": "Lexical topic/objective overlap, metadata quality, age decay and abstract availability; not a peer-review judgment."
+          },
+          "author_details": [
+            {
+              "given": "Mostafa Aboulnour",
+              "family": "Salem"
+            },
+            {
+              "given": "Zeyad Aly",
+              "family": "Khalil"
+            }
+          ],
+          "volume": "16",
+          "issue": "7",
+          "pages": "1173",
+          "source_type": "journal-article",
+          "origins": [
+            {
+              "provider": "Crossref",
+              "provider_paper_id": "10.3390/educsci16071173",
+              "url": "https://doi.org/10.3390/educsci16071173"
+            }
+          ],
+          "paper_id": "10.3390/educsci16071173",
+          "journal": "Education Sciences",
+          "source_provider": "Crossref"
+        }
+      ],
+      "final_analysis_check": {
+        "evidence": 45,
+        "findings": [
+          {
+            "finding_id": "9347754ccc7a8c45af10d2d40906a798",
+            "statement": "The results reveal a high level of awareness and moderate adoption, influenced by the perception of academic efficiency but restrained by ethical concerns, skills gap, and lack of institutional policy clarity.",
+            "evidence_ids": [
+              "e02ad3868f11d4ec9bdcd58a20e69372"
+            ],
+            "paper_ids": [
+              "https://openalex.org/W7134985899"
+            ],
+            "basis": "author_reported_excerpt"
+          }
+        ],
+        "gaps": [
+          {
+            "gap_id": "12409e167004a995ba9450ff32e6c83a",
+            "category": "future_opportunity",
+            "statement": "Future research could incorporate constructs such as risk, learnability, and trialability to enhance the model\u2019s explanatory power.",
+            "evidence_ids": [
+              "89b6ee233b3be33fa56fffe3faf474a9"
+            ],
+            "paper_ids": [
+              "https://openalex.org/W4408629911"
+            ],
+            "scope": "author_reported_in_source"
+          }
+        ],
+        "traceability_valid": true
+      },
+      "initial_live_supported_gaps": 3
+    }
+  ]
+}

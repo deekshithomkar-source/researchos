@@ -11,3 +11,16 @@ backend/data/*.tmp
 
 .env
 *.log
+
+.npm-cache/
+.venv/
+.python-packages/
+backend/data/users.json
+
+
+# Local databases and private environment overrides
+*.db
+*.db-wal
+*.db-shm
+.env.*
+!.env.example

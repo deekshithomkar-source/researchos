@@ -14,10 +14,10 @@ export default function ResearchHistory({ history, loading, onSelect }) {
 
       <div className="history-list">
         {history.map((item) => (
-          <button className="history-item" key={item.id} onClick={() => onSelect(item.id)}>
+          <button className="history-item" key={item.id} onClick={() => onSelect(item.research_id || item.id)}>
             <span>
               <strong>{item.topic}</strong>
-              <small>{item.academic_level}</small>
+              <small>{item.academic_level} · {item.status || "completed"}{item.partial ? " · partial" : ""}</small>
             </span>
             <time>{new Date(item.created_at).toLocaleDateString()}</time>
           </button>

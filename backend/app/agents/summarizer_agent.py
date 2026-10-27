@@ -6,25 +6,20 @@ class SummarizerAgent:
         if not sources:
             return f"No usable evidence was retrieved for {topic}."
 
-        demo_only = all(source.get("is_demo") for source in sources)
-        evidence_note = (
-            "This is an offline demonstration and must not be treated as a cited literature review."
-            if demo_only
-            else f"This synthesis is based on {len(sources)} scholarly records."
-        )
+        evidence_note = f"Extractive summary of {len(sources)} retrieved scholarly records; this is not a verified claim synthesis."
         insights = []
-        for source in sources[:5]:
+        for index, source in enumerate(sources[:5], start=1):
             sentence = _first_useful_sentence(
-                source.get("abstract") or source.get("snippet") or ""
+                source.get("abstract") or ""
             )
             if sentence:
-                insights.append(sentence)
+                insights.append(f"[{index}] {sentence}")
 
-        return (
-            f"{evidence_note} The collected evidence frames “{topic}” through its "
-            f"foundations, applications, implementation concerns, and open research questions. "
-            f"{' '.join(insights)}"
-        ).strip()
+        if not insights:
+            return f"{evidence_note} No abstracts were available; the report contains metadata only."
+
+        return f"{evidence_note} Abstract excerpts: {' '.join(insights) if insights else 'No abstracts available.'}"
+
 
 
 def _first_useful_sentence(text: str) -> str:

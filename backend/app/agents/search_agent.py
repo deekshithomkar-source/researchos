@@ -1,7 +1,9 @@
 import re
+import asyncio
 
 from app.agents.verifier_agent import VerifierAgent
-from app.services.research_provider import ResilientResearchProvider, ResearchProvider
+from app.services.research_provider import ResearchProvider
+from app.services.provider_services import AcademicSearchService
 
 class SearchAgent:
     def __init__(
@@ -9,7 +11,7 @@ class SearchAgent:
         provider: ResearchProvider | None = None,
         verifier: VerifierAgent | None = None,
     ):
-        self.provider = provider or ResilientResearchProvider()
+        self.service = AcademicSearchService(provider)
         self.verifier = verifier or VerifierAgent()
 
     def collect_findings(
@@ -18,18 +20,25 @@ class SearchAgent:
         questions: list[str],
         source_limit: int = 10,
     ) -> tuple[list[dict], list[dict], str | None]:
-        source_pool = self.provider.search(topic, source_limit)
-        verified_sources = self.verifier.evaluate(source_pool)
-        findings = [
-            {
-                "question": question,
-                "sources": self._best_matches(question, verified_sources),
-            }
-            for question in questions
-        ]
-        self._preserve_source_catalog(findings, verified_sources)
-        warning = getattr(self.provider, "last_warning", None)
-        return findings, verified_sources, warning
+        discovered = asyncio.run(self.discover(topic, source_limit))
+        verified_sources = self.evaluate([source.model_dump() for source in discovered.sources])
+        return self.extract(questions, verified_sources), verified_sources, discovered.warning
+
+    async def discover(self, query: str, limit: int):
+        return await self.service.search(query, limit)
+
+    async def discover_many(self, queries: list[str], limit: int, topic: str):
+        return await self.service.search_many(queries, limit, topic)
+
+    def evaluate(self, sources: list[dict]) -> list[dict]:
+        return self.verifier.evaluate(sources)
+
+    def extract(self, questions: list[str], sources: list[dict]) -> list[dict]:
+        findings = [{'question': question, 'sources': self._best_matches(question, sources)}
+                    for question in questions]
+        if findings:
+            self._preserve_source_catalog(findings, sources)
+        return findings
 
     def _best_matches(
         self,

@@ -14,7 +14,11 @@ class ReportAgent:
         report_type: str,
         citation_style: str,
         provider_warning: str | None = None,
+        analysis=None,
     ) -> str:
+        if analysis is not None:
+            from app.agents.evidence_synthesis import render_report
+            return render_report(topic, report_type, analysis)
         objective_text = objective or (
             f"To critically study {topic}, synthesize available scholarly evidence, "
             "and identify practical implications and research opportunities."
@@ -89,7 +93,7 @@ class ReportAgent:
                 "",
                 (
                     provider_warning
-                    or "Source metadata was retrieved from Semantic Scholar. Verify important claims against the full paper before academic submission."
+                    or "Source metadata provenance is recorded with each reference. Verify important claims against the full paper before academic submission."
                 ),
             ]
         )
@@ -123,10 +127,8 @@ class ReportAgent:
             "## 7. Research Gap",
             "",
             (
-                f"This preliminary evidence map suggests that work on {topic} should be evaluated "
-                "with clearer comparative baselines, context-specific datasets, reproducible methods, "
-                "and longer-term outcome measures. These are candidate gaps inferred from the retrieved "
-                "metadata and abstracts; full-text review is required to confirm them."
+                "No research gaps have been established by this pipeline. Full-text review and "
+                "claim-level analysis are required before asserting a gap."
             ),
             "",
         ]
@@ -134,7 +136,7 @@ class ReportAgent:
         if report_type == "project_proposal":
             sections.extend(
                 [
-                    "## 8. Proposed Solution",
+                    "## 8. Proposed Solution (template recommendation)",
                     "",
                     (
                         f"Develop a modular system for {topic} with separate input, processing, evidence, "
@@ -142,7 +144,7 @@ class ReportAgent:
                         "preserve source provenance, and expose measurable evaluation criteria."
                     ),
                     "",
-                    "## 9. Suggested Architecture",
+                    "## 9. Suggested Architecture (template recommendation)",
                     "",
                     "User Interface → API Layer → Research Planner → Source Retrieval → "
                     "Evidence Verification → Synthesis → Report and History Storage",
@@ -167,7 +169,7 @@ class ReportAgent:
                 "- Add full-text PDF ingestion with permission-aware extraction.",
                 "- Add optional LLM synthesis with claim-level citations.",
                 "- Generate literature survey tables and viva questions from verified evidence.",
-                "- Add user workspaces only after the core research workflow is validated.",
+                "- Extend authenticated workspaces after the core research workflow is validated.",
                 "",
                 f"## {next_number + 2}. Conclusion",
                 "",

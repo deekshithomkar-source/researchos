@@ -1,0 +1,1980 @@
+{
+  "checked_at": "2026-10-27T04:11:32.551746+00:00",
+  "providers": [
+    {
+      "provider": "OpenAlex",
+      "status": "SUCCESS",
+      "count": 5,
+      "duration_ms": 1568,
+      "diagnostics": [
+        {
+          "provider": "OpenAlex",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 1566,
+          "error_code": null,
+          "error_type": null
+        }
+      ],
+      "papers": [
+        {
+          "id": "https://openalex.org/W2895763047",
+          "title": "Artificial intelligence in healthcare",
+          "authors": [
+            "Kun\u2010Hsing Yu",
+            "Andrew L. Beam",
+            "Isaac S. Kohane"
+          ],
+          "year": 2018,
+          "doi": "10.1038/s41551-018-0305-z",
+          "url": "https://doi.org/10.1038/s41551-018-0305-z"
+        },
+        {
+          "id": "https://openalex.org/W2953532875",
+          "title": "The potential for artificial intelligence in healthcare",
+          "authors": [
+            "Thomas H. Davenport",
+            "Ravi Kalakota"
+          ],
+          "year": 2019,
+          "doi": "10.7861/futurehosp.6-2-94",
+          "url": "https://doi.org/10.7861/futurehosp.6-2-94"
+        },
+        {
+          "id": "https://openalex.org/W3038004684",
+          "title": "The rise of artificial intelligence in healthcare applications",
+          "authors": [
+            "Adam Bohr",
+            "Kaveh Memarzadeh"
+          ],
+          "year": 2020,
+          "doi": "10.1016/b978-0-12-818438-7.00002-2",
+          "url": "https://doi.org/10.1016/b978-0-12-818438-7.00002-2"
+        },
+        {
+          "id": "https://openalex.org/W4379470483",
+          "title": "A Review of the Role of Artificial Intelligence in Healthcare",
+          "authors": [
+            "Ahmed Al Kuwaiti",
+            "Khalid Nazer",
+            "Abdullah H. Alreedy",
+            "Shaher D AlShehri",
+            "Afnan Almuhanna",
+            "Arun Vijay Subbarayalu",
+            "Dhoha Al Muhanna",
+            "Fahad Al\u2010Muhanna"
+          ],
+          "year": 2023,
+          "doi": "10.3390/jpm13060951",
+          "url": "https://doi.org/10.3390/jpm13060951"
+        },
+        {
+          "id": "https://openalex.org/W4378470061",
+          "title": "Artificial intelligence in healthcare and education",
+          "authors": [
+            "Man\u00e0s Dave",
+            "Neil Patel"
+          ],
+          "year": 2023,
+          "doi": "10.1038/s41415-023-5845-2",
+          "url": "https://doi.org/10.1038/s41415-023-5845-2"
+        }
+      ]
+    },
+    {
+      "provider": "Crossref",
+      "status": "PARTIAL_RESULTS",
+      "count": 2,
+      "duration_ms": 1187,
+      "diagnostics": [
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 3,
+          "rejection_reasons": {},
+          "duration_ms": 1186,
+          "error_code": null,
+          "error_type": null
+        }
+      ],
+      "papers": [
+        {
+          "id": "10.62830/mmj1-04-6",
+          "title": "Transforming Healthcare: The Role of Artificial Intelligence in Revolutionising Patient Care",
+          "authors": [],
+          "year": null,
+          "doi": "10.62830/mmj1-04-6",
+          "url": "https://doi.org/10.62830/mmj1-04-6"
+        },
+        {
+          "id": "10.1201/9781003426073-1",
+          "title": "Artificial Intelligence for Healthcare Applications",
+          "authors": [
+            "K. Aditya Shastry"
+          ],
+          "year": 2024,
+          "doi": "10.1201/9781003426073-1",
+          "url": "https://doi.org/10.1201/9781003426073-1"
+        }
+      ]
+    },
+    {
+      "provider": "Semantic Scholar",
+      "status": "RATE_LIMITED",
+      "count": 0,
+      "duration_ms": 997,
+      "diagnostics": [
+        {
+          "provider": "Semantic Scholar",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 429,
+          "returned": 0,
+          "valid": 0,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 997,
+          "error_code": "RATE_LIMITED",
+          "error_type": "HTTP_429"
+        }
+      ],
+      "papers": []
+    }
+  ],
+  "runs": [
+    {
+      "level": "Undergraduate",
+      "output": "academic_report",
+      "style": "apa",
+      "research_id": "fd949aa3-d8f4-4de6-a538-37e5f3ecb377",
+      "status": "completed",
+      "duration_ms": 6144,
+      "papers": 5,
+      "evidence": 21,
+      "findings": 0,
+      "gaps": 0,
+      "llm": {
+        "status": "disabled",
+        "method": "llm_selected_verified_excerpts",
+        "observations": [],
+        "sections": [],
+        "diagnostics": [],
+        "omitted_evidence_count": 0,
+        "notice": "LLM disabled; deterministic evidence analysis retained."
+      },
+      "semantic": {
+        "schema_version": 1,
+        "revision": "",
+        "status": "disabled",
+        "claims": [],
+        "comparisons": [],
+        "candidate_gaps": [],
+        "rejected": [],
+        "diagnostics": [],
+        "omitted_evidence_count": 0,
+        "duration_ms": 0,
+        "notice": "LLM disabled; deterministic analysis retained."
+      },
+      "diagnostics": [
+        {
+          "provider": "OpenAlex",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 1556,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 3,
+          "rejection_reasons": {},
+          "duration_ms": 1573,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "fa7bb9192a0b9ff7",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 5,
+          "rejection_reasons": {},
+          "duration_ms": 1155,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "b4d928179228fbf7",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 4,
+          "rejected": 1,
+          "duplicates": 0,
+          "rejection_reasons": {
+            "unrelated_to_topic": 1
+          },
+          "duration_ms": 2185,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Semantic Scholar",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 429,
+          "returned": 0,
+          "valid": 0,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 478,
+          "error_code": "RATE_LIMITED",
+          "error_type": "HTTP_429"
+        }
+      ],
+      "enrichment_status": 200,
+      "modules": {
+        "papers": 5,
+        "sources": 5,
+        "research_gaps": 0,
+        "datasets": 6,
+        "skills": 23,
+        "courses": 2,
+        "projects": 2,
+        "internships": 2,
+        "career_paths": 2,
+        "next_steps": 11
+      },
+      "projects": [
+        {
+          "topic": "Artificial Intelligence in Healthcare",
+          "finding_ids": [],
+          "id": "evidence-map",
+          "title": "Evidence map: Artificial Intelligence in Healthcare",
+          "problem_statement": "Compare the retrieved studies, their methods, and evidence coverage against: Compare methods and evaluation evidence",
+          "technologies": [
+            "Python",
+            "SQLite",
+            "Reference manager"
+          ],
+          "difficulty": "Beginner",
+          "expected_outcome": "A reproducible literature matrix with citations and explicit unknowns. Review requirements: Trace each observation to a cited passage; Distinguish an example from a general conclusion",
+          "skills": [
+            "Scientific vocabulary",
+            "Descriptive statistics",
+            "Guided replication",
+            "Literature review",
+            "Research ethics",
+            "Experimental design",
+            "Reproducibility"
+          ],
+          "paper_ids": [
+            "https://openalex.org/W4378470061",
+            "https://openalex.org/W4379470483",
+            "10.3389/frai.2026.1990455",
+            "https://openalex.org/W2953532875",
+            "10.1007/978-3-031-87869-5_22"
+          ],
+          "gap_ids": [],
+          "dataset_ids": [],
+          "prerequisite": null
+        },
+        {
+          "topic": "Artificial Intelligence in Healthcare",
+          "finding_ids": [],
+          "id": "dataset-audit",
+          "title": "Reproduce a guided example and explain its assumptions: Artificial Intelligence in Healthcare",
+          "problem_statement": "How are the main methods applied and evaluated, and what prerequisite concepts explain them? Objective: Compare methods and evaluation evidence Method: Create a glossary from paper terminology; Annotate one source and reproduce a small supervised example",
+          "technologies": [
+            "Python",
+            "pandas",
+            "Jupyter"
+          ],
+          "difficulty": "Beginner",
+          "expected_outcome": "An annotated notebook and glossary separating observations from assumptions.",
+          "skills": [
+            "Scientific vocabulary",
+            "Descriptive statistics",
+            "Guided replication",
+            "Python",
+            "Data cleaning",
+            "Visualization",
+            "Machine learning",
+            "Model evaluation",
+            "Clinical data literacy",
+            "Patient privacy",
+            "Clinical validation"
+          ],
+          "paper_ids": [
+            "https://openalex.org/W4378470061",
+            "https://openalex.org/W4379470483",
+            "10.3389/frai.2026.1990455",
+            "https://openalex.org/W2953532875",
+            "10.1007/978-3-031-87869-5_22"
+          ],
+          "gap_ids": [],
+          "dataset_ids": [
+            "strova-ai/synthetic-healthcare-admissions",
+            "Nicolybgs/healthcare_data",
+            "blinoff/healthcare_facilities_reviews",
+            "US-Artificial-Intelligence/algemap",
+            "Adel-Elwan/Artificial-intelligence-dataset-for-IR-systems",
+            "vidore/syntheticDocQA_artificial_intelligence_test_captioning"
+          ],
+          "prerequisite": "Review dataset license, consent, and representativeness. Evidence requirements: Trace each observation to a cited passage; Distinguish an example from a general conclusion"
+        }
+      ],
+      "skills": [
+        {
+          "category": "Foundational",
+          "name": "Domain vocabulary: Artificial Intelligence in Healthcare",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Foundational",
+          "name": "Statistics and probability",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Foundational",
+          "name": "Critical reading",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Python",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Data cleaning",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Visualization",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Machine learning",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Model evaluation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Clinical data literacy",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Patient privacy",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Clinical validation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Scientific vocabulary",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Descriptive statistics",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Guided replication",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Literature review",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Research ethics",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Experimental design",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Reproducibility",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Optional later study: Uncertainty analysis",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Optional later study: Bias assessment",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Optional later study: Domain-specific validation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Optional later study: Evaluate methods used in: Artificial intelligence in healthcare and education",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Optional later study: Evaluate methods used in: A Review of the Role of Artificial Intelligence in Healthcare",
+          "basis": "generated_guidance"
+        }
+      ],
+      "courses": [
+        {
+          "level": "Beginner",
+          "reason_for_recommendation": "Develop Python, Programming for Artificial Intelligence in Healthcare. Suggested study depth: Undergraduate. Learn prerequisite vocabulary before algorithms; Use introductory course exercises with a worked example",
+          "id": "6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016",
+          "title": "Introduction to Computer Science and Programming in Python",
+          "provider": "MIT OpenCourseWare",
+          "difficulty": "Beginner",
+          "skills": [
+            "Python",
+            "Programming"
+          ],
+          "duration": null,
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+          "checked_at": "2026-10-27T04:11:43.024569+00:00",
+          "classification_basis": "Suggested difficulty and skill mapping; verified course identity."
+        },
+        {
+          "level": "Intermediate",
+          "reason_for_recommendation": "Develop Machine learning, Model evaluation for Artificial Intelligence in Healthcare. Suggested study depth: Undergraduate. Learn prerequisite vocabulary before algorithms; Use introductory course exercises with a worked example",
+          "id": "6-036-introduction-to-machine-learning-fall-2020",
+          "title": "Introduction to Machine Learning",
+          "provider": "MIT OpenCourseWare",
+          "difficulty": "Intermediate",
+          "skills": [
+            "Machine learning",
+            "Model evaluation"
+          ],
+          "duration": null,
+          "url": "https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/",
+          "checked_at": "2026-10-27T04:11:43.024569+00:00",
+          "classification_basis": "Suggested difficulty and skill mapping; verified course identity."
+        }
+      ],
+      "module_status": {
+        "datasets": "verified",
+        "courses": "verified",
+        "active_internships": "no_verified_matches",
+        "research_gaps": "no_supported_results",
+        "skills": "available",
+        "projects": "available",
+        "internships": "available",
+        "career_paths": "available",
+        "next_steps": "available"
+      },
+      "sections": [
+        "Abstract",
+        "Introduction",
+        "Methodology",
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Literature review",
+        "Key findings",
+        "Research gaps",
+        "Research limitations",
+        "Future scope",
+        "Discussion",
+        "Guided interpretation",
+        "Conclusion"
+      ],
+      "citations": [
+        {
+          "paper_id": "https://openalex.org/W4379470483",
+          "style": "apa",
+          "label": "(Ahmed Al Kuwaiti et al., 2023)",
+          "reference": "Ahmed Al Kuwaiti, Khalid Nazer, Abdullah H. Alreedy, Shaher D AlShehri, Afnan Almuhanna, Arun Vijay Subbarayalu, Dhoha Al Muhanna, & Fahad Al\u2010Muhanna (2023). A Review of the Role of Artificial Intelligence in Healthcare. Journal of Personalized Medicine. https://doi.org/10.3390/jpm13060951",
+          "metadata_missing": [
+            "structured_author_names"
+          ]
+        },
+        {
+          "paper_id": "10.1007/978-3-031-87869-5_22",
+          "style": "apa",
+          "label": "(Fetterman & Fetterman, 2025)",
+          "reference": "Fetterman, D., & Fetterman, D. (2025). Artificial Intelligence, Healthcare, and Evaluation: Altering the Landscape. Handbook of Health Services Evaluation, 413-433. https://doi.org/10.1007/978-3-031-87869-5_22",
+          "metadata_missing": []
+        },
+        {
+          "paper_id": "https://openalex.org/W4378470061",
+          "style": "apa",
+          "label": "(Man\u00e0s Dave & Neil Patel, 2023)",
+          "reference": "Man\u00e0s Dave, & Neil Patel (2023). Artificial intelligence in healthcare and education. BDJ. https://doi.org/10.1038/s41415-023-5845-2",
+          "metadata_missing": [
+            "structured_author_names"
+          ]
+        },
+        {
+          "paper_id": "10.3389/frai.2026.1990455",
+          "style": "apa",
+          "label": "(Stan et al., 2026)",
+          "reference": "Stan, I. E., Stiglic, G., & Juarez, J. M. (2026). Editorial: Explainable artificial intelligence for trustworthy and human-centric healthcare: methods, evaluation, and clinical impact. Frontiers in Artificial Intelligence, 9. https://doi.org/10.3389/frai.2026.1990455",
+          "metadata_missing": []
+        },
+        {
+          "paper_id": "https://openalex.org/W2953532875",
+          "style": "apa",
+          "label": "(Thomas H. Davenport & Ravi Kalakota, 2019)",
+          "reference": "Thomas H. Davenport, & Ravi Kalakota (2019). The potential for artificial intelligence in healthcare. Future Healthcare Journal. https://doi.org/10.7861/futurehosp.6-2-94",
+          "metadata_missing": [
+            "structured_author_names"
+          ]
+        }
+      ],
+      "citation_source_match": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "level": "MCA",
+      "output": "literature_review",
+      "style": "ieee",
+      "research_id": "9f6d4dee-f679-4e0f-96d4-a56ed00beec8",
+      "status": "completed",
+      "duration_ms": 5129,
+      "papers": 5,
+      "evidence": 21,
+      "findings": 0,
+      "gaps": 0,
+      "llm": {
+        "status": "disabled",
+        "method": "llm_selected_verified_excerpts",
+        "observations": [],
+        "sections": [],
+        "diagnostics": [],
+        "omitted_evidence_count": 0,
+        "notice": "LLM disabled; deterministic evidence analysis retained."
+      },
+      "semantic": {
+        "schema_version": 1,
+        "revision": "",
+        "status": "disabled",
+        "claims": [],
+        "comparisons": [],
+        "candidate_gaps": [],
+        "rejected": [],
+        "diagnostics": [],
+        "omitted_evidence_count": 0,
+        "duration_ms": 0,
+        "notice": "LLM disabled; deterministic analysis retained."
+      },
+      "diagnostics": [
+        {
+          "provider": "OpenAlex",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 1538,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 3,
+          "rejection_reasons": {},
+          "duration_ms": 1082,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "fa7bb9192a0b9ff7",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 5,
+          "rejection_reasons": {},
+          "duration_ms": 1175,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "b4d928179228fbf7",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 4,
+          "rejected": 1,
+          "duplicates": 0,
+          "rejection_reasons": {
+            "unrelated_to_topic": 1
+          },
+          "duration_ms": 1792,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Semantic Scholar",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 429,
+          "returned": 0,
+          "valid": 0,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 0,
+          "error_code": "RATE_LIMITED",
+          "error_type": "ResearchProviderError"
+        }
+      ],
+      "enrichment_status": 200,
+      "modules": {
+        "papers": 5,
+        "sources": 5,
+        "research_gaps": 0,
+        "datasets": 6,
+        "skills": 27,
+        "courses": 2,
+        "projects": 2,
+        "internships": 2,
+        "career_paths": 2,
+        "next_steps": 11
+      },
+      "projects": [
+        {
+          "topic": "Artificial Intelligence in Healthcare",
+          "finding_ids": [],
+          "id": "evidence-map",
+          "title": "Evidence map: Artificial Intelligence in Healthcare",
+          "problem_statement": "Compare the retrieved studies, their methods, and evidence coverage against: Compare methods and evaluation evidence",
+          "technologies": [
+            "Python",
+            "SQLite",
+            "Reference manager"
+          ],
+          "difficulty": "Intermediate",
+          "expected_outcome": "A documented search strategy, study-selection ledger and comparative evidence matrix. Review requirements: Locate implementation and evaluation details in the sources; Mark missing algorithms, datasets or metrics as unknown",
+          "skills": [
+            "Software architecture",
+            "Baseline evaluation",
+            "Integration testing",
+            "Literature review",
+            "Research ethics",
+            "Experimental design",
+            "Reproducibility"
+          ],
+          "paper_ids": [
+            "https://openalex.org/W4378470061",
+            "https://openalex.org/W4379470483",
+            "10.3389/frai.2026.1990455",
+            "https://openalex.org/W2953532875",
+            "10.1007/978-3-031-87869-5_22"
+          ],
+          "gap_ids": [],
+          "dataset_ids": [],
+          "prerequisite": null
+        },
+        {
+          "topic": "Artificial Intelligence in Healthcare",
+          "finding_ids": [],
+          "id": "dataset-audit",
+          "title": "Implement and evaluate a reproducible research prototype: Artificial Intelligence in Healthcare",
+          "problem_statement": "Which designs, datasets and evaluation methods support a reproducible software implementation? Objective: Compare methods and evaluation evidence Method: Specify algorithm inputs and system interfaces; Check dataset access, train/test separation and leakage; Define baselines, metrics and integration tests",
+          "technologies": [
+            "Python",
+            "pandas",
+            "Jupyter"
+          ],
+          "difficulty": "Intermediate",
+          "expected_outcome": "A tested prototype specification with baseline metrics, data checks and reproducibility instructions.",
+          "skills": [
+            "Software architecture",
+            "Baseline evaluation",
+            "Integration testing",
+            "Algorithm implementation",
+            "System architecture",
+            "Dataset validation",
+            "Evaluation metrics",
+            "Python",
+            "Data cleaning",
+            "Visualization",
+            "Machine learning",
+            "Model evaluation",
+            "Clinical data literacy",
+            "Patient privacy",
+            "Clinical validation"
+          ],
+          "paper_ids": [
+            "https://openalex.org/W4378470061",
+            "https://openalex.org/W4379470483",
+            "10.3389/frai.2026.1990455",
+            "https://openalex.org/W2953532875",
+            "10.1007/978-3-031-87869-5_22"
+          ],
+          "gap_ids": [],
+          "dataset_ids": [
+            "strova-ai/synthetic-healthcare-admissions",
+            "Nicolybgs/healthcare_data",
+            "blinoff/healthcare_facilities_reviews",
+            "US-Artificial-Intelligence/algemap",
+            "Adel-Elwan/Artificial-intelligence-dataset-for-IR-systems",
+            "vidore/syntheticDocQA_artificial_intelligence_test_captioning"
+          ],
+          "prerequisite": "Review dataset license, consent, and representativeness. Evidence requirements: Locate implementation and evaluation details in the sources; Mark missing algorithms, datasets or metrics as unknown"
+        }
+      ],
+      "skills": [
+        {
+          "category": "Foundational",
+          "name": "Domain vocabulary: Artificial Intelligence in Healthcare",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Foundational",
+          "name": "Statistics and probability",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Foundational",
+          "name": "Critical reading",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Algorithm implementation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "System architecture",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Dataset validation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Evaluation metrics",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Python",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Data cleaning",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Visualization",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Machine learning",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Model evaluation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Clinical data literacy",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Patient privacy",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Clinical validation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Software architecture",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Baseline evaluation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Integration testing",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Literature review",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Research ethics",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Experimental design",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Reproducibility",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Uncertainty analysis",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Bias assessment",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Domain-specific validation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Evaluate methods used in: Artificial intelligence in healthcare and education",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Evaluate methods used in: A Review of the Role of Artificial Intelligence in Healthcare",
+          "basis": "generated_guidance"
+        }
+      ],
+      "courses": [
+        {
+          "level": "Beginner",
+          "reason_for_recommendation": "Develop Python, Programming for Artificial Intelligence in Healthcare. Suggested study depth: MCA. Practice implementing and testing algorithms; Use verified courses to build a reproducible baseline and data pipeline",
+          "id": "6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016",
+          "title": "Introduction to Computer Science and Programming in Python",
+          "provider": "MIT OpenCourseWare",
+          "difficulty": "Beginner",
+          "skills": [
+            "Python",
+            "Programming"
+          ],
+          "duration": null,
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+          "checked_at": "2026-10-27T04:11:53.947032+00:00",
+          "classification_basis": "Suggested difficulty and skill mapping; verified course identity."
+        },
+        {
+          "level": "Intermediate",
+          "reason_for_recommendation": "Develop Machine learning, Model evaluation for Artificial Intelligence in Healthcare. Suggested study depth: MCA. Practice implementing and testing algorithms; Use verified courses to build a reproducible baseline and data pipeline",
+          "id": "6-036-introduction-to-machine-learning-fall-2020",
+          "title": "Introduction to Machine Learning",
+          "provider": "MIT OpenCourseWare",
+          "difficulty": "Intermediate",
+          "skills": [
+            "Machine learning",
+            "Model evaluation"
+          ],
+          "duration": null,
+          "url": "https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/",
+          "checked_at": "2026-10-27T04:11:53.947032+00:00",
+          "classification_basis": "Suggested difficulty and skill mapping; verified course identity."
+        }
+      ],
+      "module_status": {
+        "datasets": "verified",
+        "courses": "verified",
+        "active_internships": "no_verified_matches",
+        "research_gaps": "no_supported_results",
+        "skills": "available",
+        "projects": "available",
+        "internships": "available",
+        "career_paths": "available",
+        "next_steps": "available"
+      },
+      "sections": [
+        "Abstract",
+        "Introduction",
+        "Methodology",
+        "Research overview",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Search and selection",
+        "Literature review",
+        "Methods comparison",
+        "Research gaps",
+        "Research limitations",
+        "Discussion",
+        "Future scope",
+        "Implementation and evaluation plan",
+        "Conclusion"
+      ],
+      "citations": [
+        {
+          "paper_id": "https://openalex.org/W4378470061",
+          "style": "ieee",
+          "label": "[1]",
+          "reference": "[1] Man\u00e0s Dave, Neil Patel, \u201cArtificial intelligence in healthcare and education\u201d, BDJ, 2023. https://doi.org/10.1038/s41415-023-5845-2",
+          "metadata_missing": [
+            "structured_author_names"
+          ]
+        },
+        {
+          "paper_id": "https://openalex.org/W4379470483",
+          "style": "ieee",
+          "label": "[2]",
+          "reference": "[2] Ahmed Al Kuwaiti, Khalid Nazer, Abdullah H. Alreedy, Shaher D AlShehri, Afnan Almuhanna, Arun Vijay Subbarayalu, et al., \u201cA Review of the Role of Artificial Intelligence in Healthcare\u201d, Journal of Personalized Medicine, 2023. https://doi.org/10.3390/jpm13060951",
+          "metadata_missing": [
+            "structured_author_names"
+          ]
+        },
+        {
+          "paper_id": "10.3389/frai.2026.1990455",
+          "style": "ieee",
+          "label": "[3]",
+          "reference": "[3] I. E. Stan, G. Stiglic, J. M. Juarez, \u201cEditorial: Explainable artificial intelligence for trustworthy and human-centric healthcare: methods, evaluation, and clinical impact\u201d, Frontiers in Artificial Intelligence, vol. 9, 2026. https://doi.org/10.3389/frai.2026.1990455",
+          "metadata_missing": []
+        },
+        {
+          "paper_id": "https://openalex.org/W2953532875",
+          "style": "ieee",
+          "label": "[4]",
+          "reference": "[4] Thomas H. Davenport, Ravi Kalakota, \u201cThe potential for artificial intelligence in healthcare\u201d, Future Healthcare Journal, 2019. https://doi.org/10.7861/futurehosp.6-2-94",
+          "metadata_missing": [
+            "structured_author_names"
+          ]
+        },
+        {
+          "paper_id": "10.1007/978-3-031-87869-5_22",
+          "style": "ieee",
+          "label": "[5]",
+          "reference": "[5] D. Fetterman, D. Fetterman, \u201cArtificial Intelligence, Healthcare, and Evaluation: Altering the Landscape\u201d, Handbook of Health Services Evaluation, pp. 413-433, 2025. https://doi.org/10.1007/978-3-031-87869-5_22",
+          "metadata_missing": []
+        }
+      ],
+      "citation_source_match": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "level": "Master's",
+      "output": "project_proposal",
+      "style": "apa",
+      "research_id": "33211e86-5eee-4d28-b465-c40f6dda7fb3",
+      "status": "completed",
+      "duration_ms": 7126,
+      "papers": 5,
+      "evidence": 21,
+      "findings": 0,
+      "gaps": 0,
+      "llm": {
+        "status": "disabled",
+        "method": "llm_selected_verified_excerpts",
+        "observations": [],
+        "sections": [],
+        "diagnostics": [],
+        "omitted_evidence_count": 0,
+        "notice": "LLM disabled; deterministic evidence analysis retained."
+      },
+      "semantic": {
+        "schema_version": 1,
+        "revision": "",
+        "status": "disabled",
+        "claims": [],
+        "comparisons": [],
+        "candidate_gaps": [],
+        "rejected": [],
+        "diagnostics": [],
+        "omitted_evidence_count": 0,
+        "duration_ms": 0,
+        "notice": "LLM disabled; deterministic analysis retained."
+      },
+      "diagnostics": [
+        {
+          "provider": "OpenAlex",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 1510,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 3,
+          "rejection_reasons": {},
+          "duration_ms": 2514,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "fa7bb9192a0b9ff7",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 5,
+          "rejection_reasons": {},
+          "duration_ms": 2281,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "b4d928179228fbf7",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 4,
+          "rejected": 1,
+          "duplicates": 0,
+          "rejection_reasons": {
+            "unrelated_to_topic": 1
+          },
+          "duration_ms": 1967,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Semantic Scholar",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 429,
+          "returned": 0,
+          "valid": 0,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 0,
+          "error_code": "RATE_LIMITED",
+          "error_type": "ResearchProviderError"
+        }
+      ],
+      "enrichment_status": 200,
+      "modules": {
+        "papers": 5,
+        "sources": 5,
+        "research_gaps": 0,
+        "datasets": 6,
+        "skills": 26,
+        "courses": 2,
+        "projects": 2,
+        "internships": 2,
+        "career_paths": 2,
+        "next_steps": 11
+      },
+      "projects": [
+        {
+          "topic": "Artificial Intelligence in Healthcare",
+          "finding_ids": [],
+          "id": "evidence-map",
+          "title": "Evidence map: Artificial Intelligence in Healthcare",
+          "problem_statement": "Compare the retrieved studies, their methods, and evidence coverage against: Compare methods and evaluation evidence",
+          "technologies": [
+            "Python",
+            "SQLite",
+            "Reference manager"
+          ],
+          "difficulty": "Advanced",
+          "expected_outcome": "An evidence-to-requirement map and a proposed evaluation plan; feasibility remains to be tested. Review requirements: Use multiple distinct studies for cross-paper conclusions; Check comparable populations and outcome definitions before comparison",
+          "skills": [
+            "Sensitivity analysis",
+            "Study design comparison",
+            "Uncertainty quantification",
+            "Literature review",
+            "Research ethics",
+            "Experimental design",
+            "Reproducibility"
+          ],
+          "paper_ids": [
+            "https://openalex.org/W4378470061",
+            "https://openalex.org/W4379470483",
+            "10.3389/frai.2026.1990455",
+            "https://openalex.org/W2953532875",
+            "10.1007/978-3-031-87869-5_22"
+          ],
+          "gap_ids": [],
+          "dataset_ids": [],
+          "prerequisite": null
+        },
+        {
+          "topic": "Artificial Intelligence in Healthcare",
+          "finding_ids": [],
+          "id": "dataset-audit",
+          "title": "Compare research methods and design a robustness evaluation: Artificial Intelligence in Healthcare",
+          "problem_statement": "How do study designs, datasets and uncertainty estimates affect agreement between reported results? Objective: Compare methods and evaluation evidence Method: Construct a study-design comparison matrix; Compare populations, measures and limitations; Plan robustness and sensitivity checks",
+          "technologies": [
+            "Python",
+            "pandas",
+            "Jupyter"
+          ],
+          "difficulty": "Advanced",
+          "expected_outcome": "A comparative methods matrix and reproducible sensitivity-analysis protocol.",
+          "skills": [
+            "Sensitivity analysis",
+            "Study design comparison",
+            "Uncertainty quantification",
+            "Python",
+            "Data cleaning",
+            "Visualization",
+            "Machine learning",
+            "Model evaluation",
+            "Clinical data literacy",
+            "Patient privacy",
+            "Clinical validation"
+          ],
+          "paper_ids": [
+            "https://openalex.org/W4378470061",
+            "https://openalex.org/W4379470483",
+            "10.3389/frai.2026.1990455",
+            "https://openalex.org/W2953532875",
+            "10.1007/978-3-031-87869-5_22"
+          ],
+          "gap_ids": [],
+          "dataset_ids": [
+            "strova-ai/synthetic-healthcare-admissions",
+            "Nicolybgs/healthcare_data",
+            "blinoff/healthcare_facilities_reviews",
+            "US-Artificial-Intelligence/algemap",
+            "Adel-Elwan/Artificial-intelligence-dataset-for-IR-systems",
+            "vidore/syntheticDocQA_artificial_intelligence_test_captioning"
+          ],
+          "prerequisite": "Review dataset license, consent, and representativeness. Evidence requirements: Use multiple distinct studies for cross-paper conclusions; Check comparable populations and outcome definitions before comparison"
+        }
+      ],
+      "skills": [
+        {
+          "category": "Foundational",
+          "name": "Domain vocabulary: Artificial Intelligence in Healthcare",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Foundational",
+          "name": "Statistics and probability",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Foundational",
+          "name": "Critical reading",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Python",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Data cleaning",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Visualization",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Machine learning",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Model evaluation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Clinical data literacy",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Patient privacy",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Clinical validation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Sensitivity analysis",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Study design comparison",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Uncertainty quantification",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Literature review",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Research ethics",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Experimental design",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Reproducibility",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Sensitivity analysis",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Study design comparison",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Uncertainty quantification",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Uncertainty analysis",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Bias assessment",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Domain-specific validation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Evaluate methods used in: Artificial intelligence in healthcare and education",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Evaluate methods used in: A Review of the Role of Artificial Intelligence in Healthcare",
+          "basis": "generated_guidance"
+        }
+      ],
+      "courses": [
+        {
+          "level": "Beginner",
+          "reason_for_recommendation": "Develop Python, Programming for Artificial Intelligence in Healthcare. Suggested study depth: Master's. Study research design and uncertainty estimation; Extend course exercises into reproducible method comparisons",
+          "id": "6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016",
+          "title": "Introduction to Computer Science and Programming in Python",
+          "provider": "MIT OpenCourseWare",
+          "difficulty": "Beginner",
+          "skills": [
+            "Python",
+            "Programming"
+          ],
+          "duration": null,
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+          "checked_at": "2026-10-27T04:12:07.296592+00:00",
+          "classification_basis": "Suggested difficulty and skill mapping; verified course identity."
+        },
+        {
+          "level": "Intermediate",
+          "reason_for_recommendation": "Develop Machine learning, Model evaluation for Artificial Intelligence in Healthcare. Suggested study depth: Master's. Study research design and uncertainty estimation; Extend course exercises into reproducible method comparisons",
+          "id": "6-036-introduction-to-machine-learning-fall-2020",
+          "title": "Introduction to Machine Learning",
+          "provider": "MIT OpenCourseWare",
+          "difficulty": "Intermediate",
+          "skills": [
+            "Machine learning",
+            "Model evaluation"
+          ],
+          "duration": null,
+          "url": "https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/",
+          "checked_at": "2026-10-27T04:12:07.296592+00:00",
+          "classification_basis": "Suggested difficulty and skill mapping; verified course identity."
+        }
+      ],
+      "module_status": {
+        "datasets": "verified",
+        "courses": "verified",
+        "active_internships": "no_verified_matches",
+        "research_gaps": "no_supported_results",
+        "skills": "available",
+        "projects": "available",
+        "internships": "available",
+        "career_paths": "available",
+        "next_steps": "available"
+      },
+      "sections": [
+        "Abstract",
+        "Introduction",
+        "Methodology",
+        "Research objective",
+        "Research questions",
+        "Literature review",
+        "Research gaps",
+        "Analysis approach",
+        "Proposed Solution",
+        "Evaluation protocol",
+        "Milestones",
+        "Research limitations",
+        "Discussion",
+        "Future scope",
+        "Methodological comparison and robustness",
+        "Conclusion"
+      ],
+      "citations": [
+        {
+          "paper_id": "https://openalex.org/W4379470483",
+          "style": "apa",
+          "label": "(Ahmed Al Kuwaiti et al., 2023)",
+          "reference": "Ahmed Al Kuwaiti, Khalid Nazer, Abdullah H. Alreedy, Shaher D AlShehri, Afnan Almuhanna, Arun Vijay Subbarayalu, Dhoha Al Muhanna, & Fahad Al\u2010Muhanna (2023). A Review of the Role of Artificial Intelligence in Healthcare. Journal of Personalized Medicine. https://doi.org/10.3390/jpm13060951",
+          "metadata_missing": [
+            "structured_author_names"
+          ]
+        },
+        {
+          "paper_id": "10.1007/978-3-031-87869-5_22",
+          "style": "apa",
+          "label": "(Fetterman & Fetterman, 2025)",
+          "reference": "Fetterman, D., & Fetterman, D. (2025). Artificial Intelligence, Healthcare, and Evaluation: Altering the Landscape. Handbook of Health Services Evaluation, 413-433. https://doi.org/10.1007/978-3-031-87869-5_22",
+          "metadata_missing": []
+        },
+        {
+          "paper_id": "https://openalex.org/W4378470061",
+          "style": "apa",
+          "label": "(Man\u00e0s Dave & Neil Patel, 2023)",
+          "reference": "Man\u00e0s Dave, & Neil Patel (2023). Artificial intelligence in healthcare and education. BDJ. https://doi.org/10.1038/s41415-023-5845-2",
+          "metadata_missing": [
+            "structured_author_names"
+          ]
+        },
+        {
+          "paper_id": "10.3389/frai.2026.1990455",
+          "style": "apa",
+          "label": "(Stan et al., 2026)",
+          "reference": "Stan, I. E., Stiglic, G., & Juarez, J. M. (2026). Editorial: Explainable artificial intelligence for trustworthy and human-centric healthcare: methods, evaluation, and clinical impact. Frontiers in Artificial Intelligence, 9. https://doi.org/10.3389/frai.2026.1990455",
+          "metadata_missing": []
+        },
+        {
+          "paper_id": "https://openalex.org/W2953532875",
+          "style": "apa",
+          "label": "(Thomas H. Davenport & Ravi Kalakota, 2019)",
+          "reference": "Thomas H. Davenport, & Ravi Kalakota (2019). The potential for artificial intelligence in healthcare. Future Healthcare Journal. https://doi.org/10.7861/futurehosp.6-2-94",
+          "metadata_missing": [
+            "structured_author_names"
+          ]
+        }
+      ],
+      "citation_source_match": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "level": "PhD",
+      "output": "comparative_analysis",
+      "style": "ieee",
+      "research_id": "307c63b4-1b2a-4be8-a59e-8ab227b0e691",
+      "status": "completed",
+      "duration_ms": 5095,
+      "papers": 5,
+      "evidence": 21,
+      "findings": 0,
+      "gaps": 0,
+      "llm": {
+        "status": "disabled",
+        "method": "llm_selected_verified_excerpts",
+        "observations": [],
+        "sections": [],
+        "diagnostics": [],
+        "omitted_evidence_count": 0,
+        "notice": "LLM disabled; deterministic evidence analysis retained."
+      },
+      "semantic": {
+        "schema_version": 1,
+        "revision": "",
+        "status": "disabled",
+        "claims": [],
+        "comparisons": [],
+        "candidate_gaps": [],
+        "rejected": [],
+        "diagnostics": [],
+        "omitted_evidence_count": 0,
+        "duration_ms": 0,
+        "notice": "LLM disabled; deterministic analysis retained."
+      },
+      "diagnostics": [
+        {
+          "provider": "OpenAlex",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 1855,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 3,
+          "rejection_reasons": {},
+          "duration_ms": 1864,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "fa7bb9192a0b9ff7",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 5,
+          "rejected": 0,
+          "duplicates": 5,
+          "rejection_reasons": {},
+          "duration_ms": 1438,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Crossref",
+          "query": "[redacted]",
+          "query_hash": "b4d928179228fbf7",
+          "http_status": 200,
+          "returned": 5,
+          "valid": 4,
+          "rejected": 1,
+          "duplicates": 0,
+          "rejection_reasons": {
+            "unrelated_to_topic": 1
+          },
+          "duration_ms": 1347,
+          "error_code": null,
+          "error_type": null
+        },
+        {
+          "provider": "Semantic Scholar",
+          "query": "[redacted]",
+          "query_hash": "c8b23a9b08af47f2",
+          "http_status": 429,
+          "returned": 0,
+          "valid": 0,
+          "rejected": 0,
+          "duplicates": 0,
+          "rejection_reasons": {},
+          "duration_ms": 0,
+          "error_code": "RATE_LIMITED",
+          "error_type": "ResearchProviderError"
+        }
+      ],
+      "enrichment_status": 200,
+      "modules": {
+        "papers": 5,
+        "sources": 5,
+        "research_gaps": 0,
+        "datasets": 6,
+        "skills": 28,
+        "courses": 2,
+        "projects": 2,
+        "internships": 2,
+        "career_paths": 2,
+        "next_steps": 11
+      },
+      "projects": [
+        {
+          "topic": "Artificial Intelligence in Healthcare",
+          "finding_ids": [],
+          "id": "evidence-map",
+          "title": "Evidence map: Artificial Intelligence in Healthcare",
+          "problem_statement": "Compare the retrieved studies, their methods, and evidence coverage against: Compare methods and evaluation evidence",
+          "technologies": [
+            "Python",
+            "SQLite",
+            "Reference manager"
+          ],
+          "difficulty": "Research specialization",
+          "expected_outcome": "A reproducible literature matrix with citations and explicit unknowns. Review requirements: Seek original methods and full text before strong validity claims; Verify comparability of conflicting findings; Do not assert novelty without broader literature review",
+          "skills": [
+            "Causal identification",
+            "Power analysis",
+            "Preregistration",
+            "Novelty assessment",
+            "Literature review",
+            "Research ethics",
+            "Experimental design",
+            "Reproducibility"
+          ],
+          "paper_ids": [
+            "https://openalex.org/W4378470061",
+            "https://openalex.org/W4379470483",
+            "10.3389/frai.2026.1990455",
+            "https://openalex.org/W2953532875",
+            "10.1007/978-3-031-87869-5_22"
+          ],
+          "gap_ids": [],
+          "dataset_ids": [],
+          "prerequisite": null
+        },
+        {
+          "topic": "Artificial Intelligence in Healthcare",
+          "finding_ids": [],
+          "id": "dataset-audit",
+          "title": "Design a falsifiable study addressing a supported limitation: Artificial Intelligence in Healthcare",
+          "problem_statement": "Which assumptions, datasets and threats to validity constrain a defensible original contribution? Objective: Compare methods and evaluation evidence Method: Audit internal and external validity; Examine opposing findings and competing explanations; Specify reproducibility checks and a falsifiable experimental protocol",
+          "technologies": [
+            "Python",
+            "pandas",
+            "Jupyter"
+          ],
+          "difficulty": "Research specialization",
+          "expected_outcome": "A preregistered protocol with competing hypotheses, validity threats and a novelty audit; no novelty claim without further review.",
+          "skills": [
+            "Causal identification",
+            "Power analysis",
+            "Preregistration",
+            "Novelty assessment",
+            "Python",
+            "Data cleaning",
+            "Visualization",
+            "Machine learning",
+            "Model evaluation",
+            "Clinical data literacy",
+            "Patient privacy",
+            "Clinical validation"
+          ],
+          "paper_ids": [
+            "https://openalex.org/W4378470061",
+            "https://openalex.org/W4379470483",
+            "10.3389/frai.2026.1990455",
+            "https://openalex.org/W2953532875",
+            "10.1007/978-3-031-87869-5_22"
+          ],
+          "gap_ids": [],
+          "dataset_ids": [
+            "strova-ai/synthetic-healthcare-admissions",
+            "Nicolybgs/healthcare_data",
+            "blinoff/healthcare_facilities_reviews",
+            "US-Artificial-Intelligence/algemap",
+            "Adel-Elwan/Artificial-intelligence-dataset-for-IR-systems",
+            "vidore/syntheticDocQA_artificial_intelligence_test_captioning"
+          ],
+          "prerequisite": "Review dataset license, consent, and representativeness. Evidence requirements: Seek original methods and full text before strong validity claims; Verify comparability of conflicting findings; Do not assert novelty without broader literature review"
+        }
+      ],
+      "skills": [
+        {
+          "category": "Foundational",
+          "name": "Domain vocabulary: Artificial Intelligence in Healthcare",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Foundational",
+          "name": "Statistics and probability",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Foundational",
+          "name": "Critical reading",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Python",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Data cleaning",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Visualization",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Machine learning",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Model evaluation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Clinical data literacy",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Patient privacy",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Technical",
+          "name": "Clinical validation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Causal identification",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Power analysis",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Preregistration",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Novelty assessment",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Literature review",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Research ethics",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Experimental design",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Research",
+          "name": "Reproducibility",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Causal identification",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Power analysis",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Preregistration",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Novelty assessment",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Uncertainty analysis",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Bias assessment",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Domain-specific validation",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Evaluate methods used in: Artificial intelligence in healthcare and education",
+          "basis": "generated_guidance"
+        },
+        {
+          "category": "Advanced",
+          "name": "Evaluate methods used in: A Review of the Role of Artificial Intelligence in Healthcare",
+          "basis": "generated_guidance"
+        }
+      ],
+      "courses": [
+        {
+          "level": "Beginner",
+          "reason_for_recommendation": "Develop Python, Programming for Artificial Intelligence in Healthcare. Suggested study depth: PhD. Audit reproducibility and competing hypotheses; Use foundational courses only to close prerequisites, then pursue methodological specialization",
+          "id": "6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016",
+          "title": "Introduction to Computer Science and Programming in Python",
+          "provider": "MIT OpenCourseWare",
+          "difficulty": "Beginner",
+          "skills": [
+            "Python",
+            "Programming"
+          ],
+          "duration": null,
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+          "checked_at": "2026-10-27T04:12:19.592442+00:00",
+          "classification_basis": "Suggested difficulty and skill mapping; verified course identity."
+        },
+        {
+          "level": "Intermediate",
+          "reason_for_recommendation": "Develop Machine learning, Model evaluation for Artificial Intelligence in Healthcare. Suggested study depth: PhD. Audit reproducibility and competing hypotheses; Use foundational courses only to close prerequisites, then pursue methodological specialization",
+          "id": "6-036-introduction-to-machine-learning-fall-2020",
+          "title": "Introduction to Machine Learning",
+          "provider": "MIT OpenCourseWare",
+          "difficulty": "Intermediate",
+          "skills": [
+            "Machine learning",
+            "Model evaluation"
+          ],
+          "duration": null,
+          "url": "https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/",
+          "checked_at": "2026-10-27T04:12:19.592442+00:00",
+          "classification_basis": "Suggested difficulty and skill mapping; verified course identity."
+        }
+      ],
+      "module_status": {
+        "datasets": "verified",
+        "courses": "verified",
+        "active_internships": "no_verified_matches",
+        "research_gaps": "no_supported_results",
+        "skills": "available",
+        "projects": "available",
+        "internships": "available",
+        "career_paths": "available",
+        "next_steps": "available"
+      },
+      "sections": [
+        "Abstract",
+        "Introduction",
+        "Methodology",
+        "Research objective",
+        "Research questions",
+        "Analysis approach",
+        "Comparison criteria",
+        "Literature review",
+        "Methods comparison",
+        "Key findings",
+        "Discussion",
+        "Research gaps",
+        "Research limitations",
+        "Future scope",
+        "Validity and experimental design audit",
+        "Conclusion"
+      ],
+      "citations": [
+        {
+          "paper_id": "https://openalex.org/W4378470061",
+          "style": "ieee",
+          "label": "[1]",
+          "reference": "[1] Man\u00e0s Dave, Neil Patel, \u201cArtificial intelligence in healthcare and education\u201d, BDJ, 2023. https://doi.org/10.1038/s41415-023-5845-2",
+          "metadata_missing": [
+            "structured_author_names"
+          ]
+        },
+        {
+          "paper_id": "https://openalex.org/W4379470483",
+          "style": "ieee",
+          "label": "[2]",
+          "reference": "[2] Ahmed Al Kuwaiti, Khalid Nazer, Abdullah H. Alreedy, Shaher D AlShehri, Afnan Almuhanna, Arun Vijay Subbarayalu, et al., \u201cA Review of the Role of Artificial Intelligence in Healthcare\u201d, Journal of Personalized Medicine, 2023. https://doi.org/10.3390/jpm13060951",
+          "metadata_missing": [
+            "structured_author_names"
+          ]
+        },
+        {
+          "paper_id": "10.3389/frai.2026.1990455",
+          "style": "ieee",
+          "label": "[3]",
+          "reference": "[3] I. E. Stan, G. Stiglic, J. M. Juarez, \u201cEditorial: Explainable artificial intelligence for trustworthy and human-centric healthcare: methods, evaluation, and clinical impact\u201d, Frontiers in Artificial Intelligence, vol. 9, 2026. https://doi.org/10.3389/frai.2026.1990455",
+          "metadata_missing": []
+        },
+        {
+          "paper_id": "https://openalex.org/W2953532875",
+          "style": "ieee",
+          "label": "[4]",
+          "reference": "[4] Thomas H. Davenport, Ravi Kalakota, \u201cThe potential for artificial intelligence in healthcare\u201d, Future Healthcare Journal, 2019. https://doi.org/10.7861/futurehosp.6-2-94",
+          "metadata_missing": [
+            "structured_author_names"
+          ]
+        },
+        {
+          "paper_id": "10.1007/978-3-031-87869-5_22",
+          "style": "ieee",
+          "label": "[5]",
+          "reference": "[5] D. Fetterman, D. Fetterman, \u201cArtificial Intelligence, Healthcare, and Evaluation: Altering the Landscape\u201d, Handbook of Health Services Evaluation, pp. 413-433, 2025. https://doi.org/10.1007/978-3-031-87869-5_22",
+          "metadata_missing": []
+        }
+      ],
+      "citation_source_match": true,
+      "snapshot_unchanged": true
+    }
+  ],
+  "security": {
+    "anonymous_history": 401,
+    "anonymous_research_post": 401,
+    "signed_out_history": 401,
+    "cross_user": {
+      "": 404,
+      "/intelligence": 404,
+      "/report/export/pdf": 404
+    },
+    "cross_user_generate": 404,
+    "missing_csrf": 403
+  },
+  "history_contains_all_runs": true,
+  "doi_resolution": [
+    {
+      "doi": "10.1038/s41551-018-0305-z",
+      "http_status": 200,
+      "final_url": "https://www.nature.com/articles/s41551-018-0305-z",
+      "resolved": true
+    },
+    {
+      "doi": "10.7861/futurehosp.6-2-94",
+      "http_status": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S2514664524010592",
+      "resolved": true
+    },
+    {
+      "doi": "10.1016/b978-0-12-818438-7.00002-2",
+      "http_status": 200,
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/B9780128184387000022",
+      "resolved": true
+    },
+    {
+      "doi": "10.3390/jpm13060951",
+      "http_status": 403,
+      "final_url": "https://www.mdpi.com/2075-4426/13/6/951",
+      "resolved": true
+    },
+    {
+      "doi": "10.1038/s41415-023-5845-2",
+      "http_status": 200,
+      "final_url": "https://www.nature.com/articles/s41415-023-5845-2",
+      "resolved": true
+    },
+    {
+      "doi": "10.62830/mmj1-04-6",
+      "http_status": 403,
+      "final_url": "https://www.maxhealthcare.in/max-medical-journal/issue-december-2024/mmj1-04-6",
+      "resolved": true
+    },
+    {
+      "doi": "10.1201/9781003426073-1",
+      "http_status": 403,
+      "final_url": "https://www.taylorfrancis.com/books/9781003426073/chapters/10.1201/9781003426073-1",
+      "resolved": true
+    }
+  ]
+}

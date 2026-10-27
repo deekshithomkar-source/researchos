@@ -1,103 +1,67 @@
-import hashlib
-import json
+"""Database-backed accounts, credential verification, and session lifecycle."""
 import secrets
-from datetime import datetime, timezone
-from pathlib import Path
+from datetime import timedelta
+
+from sqlalchemy import delete
+from sqlalchemy.dialects.sqlite import insert
+from sqlalchemy.exc import IntegrityError
+from fastapi import HTTPException, Request, Response
+
+from app.core.config import settings
+from app.core.security import DUMMY_HASH, hash_password, password_hasher, token_digest, verify_password
+from app.models.user import AuthRateLimit, AuthSession, User, utcnow
+
+COOKIE_NAME = 'researchos_session'
 
 
-DATA_DIR = Path(__file__).resolve().parents[2] / "data"
-USERS_FILE = DATA_DIR / "users.json"
+def throttle_auth(db, request: Request):
+    # Trust the socket peer, not caller-controlled forwarding headers.
+    key = token_digest(request.client.host if request.client else 'unknown')
+    now = utcnow()
+    db.execute(delete(AuthRateLimit).where(AuthRateLimit.expires_at <= now))
+    statement = insert(AuthRateLimit).values(
+        key=key, attempts=1, expires_at=now + timedelta(seconds=settings.auth_window_seconds)
+    ).on_conflict_do_update(index_elements=['key'], set_={'attempts': AuthRateLimit.attempts + 1})
+    db.execute(statement)
+    db.commit()
+    if db.get(AuthRateLimit, key).attempts > settings.auth_attempts:
+        raise HTTPException(429, 'Too many authentication attempts. Try again later.', headers={'Retry-After': str(settings.auth_window_seconds)})
 
 
-def create_user(name: str, email: str, password: str) -> dict:
-    data = _read_users()
-    normalized_email = email.lower()
-
-    if _find_user(data, normalized_email):
-        raise ValueError("USER_EXISTS")
-
-    now = _utc_now()
-    salt = secrets.token_hex(16)
-    user = {
-        "id": secrets.token_hex(8),
-        "name": name.strip(),
-        "email": normalized_email,
-        "password_hash": _hash_password(password, salt),
-        "password_salt": salt,
-        "created_at": now,
-        "updated_at": now,
-    }
-
-    data["users"].append(user)
-    _write_users(data)
-    return _public_user(user)
+def create_user(db, name: str, email: str, password: str) -> User:
+    user = User(name=name.strip(), email=email.strip().lower(), password_hash=hash_password(password))
+    db.add(user)
+    try:
+        db.commit()
+    except IntegrityError as error:
+        db.rollback()
+        raise HTTPException(409, 'Unable to create account. Try signing in.') from error
+    db.refresh(user)
+    return user
 
 
-def authenticate_user(email: str, password: str) -> dict | None:
-    data = _read_users()
-    user = _find_user(data, email.lower())
-
-    if not user:
+def authenticate_user(db, email: str, password: str) -> User | None:
+    user = db.query(User).filter(User.email == email.strip().lower()).first()
+    if not verify_password(password, user.password_hash if user else DUMMY_HASH) or user is None:
         return None
-
-    expected_hash = _hash_password(password, user["password_salt"])
-    if not secrets.compare_digest(expected_hash, user["password_hash"]):
-        return None
-
-    return _public_user(user)
+    if user.password_hash.startswith('legacy$') or password_hasher.check_needs_rehash(user.password_hash):
+        user.password_hash = hash_password(password)
+        db.commit()
+    return user
 
 
-def reset_password(email: str, password: str) -> dict | None:
-    data = _read_users()
-    user = _find_user(data, email.lower())
-
-    if not user:
-        return None
-
-    salt = secrets.token_hex(16)
-    user["password_hash"] = _hash_password(password, salt)
-    user["password_salt"] = salt
-    user["updated_at"] = _utc_now()
-    _write_users(data)
-    return _public_user(user)
-
-
-def _read_users() -> dict:
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-
-    if not USERS_FILE.exists():
-        return {"users": []}
-
-    with USERS_FILE.open("r", encoding="utf-8") as file:
-        data = json.load(file)
-
-    if not isinstance(data, dict) or not isinstance(data.get("users"), list):
-        return {"users": []}
-
-    return data
-
-
-def _write_users(data: dict) -> None:
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    temp_file = USERS_FILE.with_suffix(".tmp")
-
-    with temp_file.open("w", encoding="utf-8") as file:
-        json.dump(data, file, indent=2)
-
-    temp_file.replace(USERS_FILE)
-
-
-def _find_user(data: dict, email: str) -> dict | None:
-    return next((user for user in data["users"] if user.get("email") == email), None)
-
-
-def _hash_password(password: str, salt: str) -> str:
-    return hashlib.sha256(f"{salt}:{password}".encode("utf-8")).hexdigest()
-
-
-def _public_user(user: dict) -> dict:
-    return {"name": user["name"], "email": user["email"]}
-
-
-def _utc_now() -> str:
-    return datetime.now(timezone.utc).isoformat()
+def create_session(db, user: User, request: Request, response: Response) -> AuthSession:
+    old_token = request.cookies.get(COOKIE_NAME)
+    if old_token:
+        db.execute(delete(AuthSession).where(AuthSession.token_hash == token_digest(old_token)))
+    db.execute(delete(AuthSession).where(AuthSession.expires_at <= utcnow()))
+    token = secrets.token_urlsafe(32)
+    session = AuthSession(token_hash=token_digest(token), user_id=user.id,
+                          csrf_token=secrets.token_urlsafe(32),
+                          expires_at=utcnow() + timedelta(hours=settings.session_hours))
+    db.add(session)
+    db.commit()
+    response.set_cookie(COOKIE_NAME, token, max_age=settings.session_hours * 3600,
+                        httponly=True, secure=settings.cookie_secure,
+                        samesite=settings.cookie_samesite, path='/api')
+    return session

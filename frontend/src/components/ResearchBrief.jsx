@@ -68,7 +68,10 @@ export default function ResearchBrief({ onSubmit, loading }) {
             value={academicLevel}
             onChange={(event) => setAcademicLevel(event.target.value)}
           >
+            <option value="Undergraduate">Undergraduate</option>
             <option value="MCA">MCA</option>
+            <option value="Master's">Master's</option>
+            <option value="PhD">PhD</option>
             <option value="BCA">BCA</option>
             <option value="Engineering">Engineering</option>
             <option value="Research Scholar">Research Scholar</option>

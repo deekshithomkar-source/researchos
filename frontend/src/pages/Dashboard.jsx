@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import ResearchBrief from '../components/ResearchBrief.jsx';
 import ResearchWorkspace from '../components/ResearchWorkspace.jsx';
 import ResearchHistory from '../components/ResearchHistory.jsx';
-import { apiRootUrl, checkApiHealth, getHistory, getResearchById, runResearch } from '../services/api.js';
+import { apiRootUrl, apiErrorMessage, checkApiHealth, getCurrentUser, getHistory, getResearchById, runResearch, signoutUser } from '../services/api.js';
+
+const terminal = (run) => ['completed', 'failed'].includes(run.status);
 
 export default function Dashboard() {
   const pageRef = useRef(null);
@@ -11,56 +13,129 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(false);
   const [historyLoading, setHistoryLoading] = useState(true);
   const [apiOnline, setApiOnline] = useState(false);
+  const [authenticated, setAuthenticated] = useState(false);
   const [error, setError] = useState('');
+  const [activeId, setActiveId] = useState(null);
+  const [runState, setRunState] = useState(null);
 
-  async function loadHistory() {
+  function handleError(error, fallback) {
+    if (error.response?.status === 401) {
+      window.location.replace('/auth');
+      return;
+    }
+    setError(apiErrorMessage(error, fallback));
+  }
+
+  async function loadHistory(options = {}) {
     setHistoryLoading(true);
-    const data = await getHistory();
-    setHistory(data);
-    setHistoryLoading(false);
+    try {
+      const data = await getHistory(options);
+      setHistory(data);
+      return data;
+    } finally {
+      setHistoryLoading(false);
+    }
   }
 
   async function handleRunResearch(payload) {
     setLoading(true);
     setError('');
+    setResult(null);
+    setRunState(null);
+    setActiveId(null);
     try {
-      const data = await runResearch(payload);
-      setResult(data);
-      await loadHistory();
+      const run = await runResearch(payload);
+      setRunState(run);
+      setActiveId(run.research_id);
       setApiOnline(true);
-    } catch (err) {
-      const detail = err.response?.data?.detail;
-      setError(typeof detail === 'string' ? detail : 'Unable to run research. Check the backend connection and try again.');
-    } finally {
+      loadHistory().catch((error) => handleError(error, 'Research started, but history could not be refreshed.'));
+    } catch (error) {
+      handleError(error, 'Unable to submit research. Please try again.');
       setLoading(false);
     }
   }
 
-  async function handleSelectHistory(id) {
+  function handleSelectHistory(id) {
     setError('');
-    try {
-      const data = await getResearchById(id);
-      setResult(data);
-    } catch {
-      setError('Unable to load selected research session.');
-    }
+    setResult(null);
+    setRunState(null);
+    setLoading(true);
+    setActiveId(id);
   }
 
   useEffect(() => {
+    const controller = new AbortController();
+    const options = { signal: controller.signal };
     async function boot() {
       try {
-        await checkApiHealth();
+        await getCurrentUser(options);
+        if (controller.signal.aborted) return;
+        setAuthenticated(true);
+        const [, records] = await Promise.all([checkApiHealth(options), getHistory(options)]);
         setApiOnline(true);
-        await loadHistory();
-      } catch {
-        setApiOnline(false);
-        setHistoryLoading(false);
-        setError('Backend is not reachable. Start the API server or set VITE_API_URL for deployment.');
+        if (controller.signal.aborted) return;
+        setHistory(records);
+        const unfinished = records.find((run) => !terminal(run));
+        if (unfinished) {
+          setLoading(true);
+          setActiveId(unfinished.research_id);
+        }
+      } catch (error) {
+        if (!controller.signal.aborted) handleError(error, 'Backend is not reachable. Please try again.');
+      } finally {
+        if (!controller.signal.aborted) setHistoryLoading(false);
       }
     }
-
     boot();
+    return () => controller.abort();
   }, []);
+
+  useEffect(() => {
+    if (!activeId) return undefined;
+    const controller = new AbortController();
+    let timer;
+    let failures = 0;
+    async function poll() {
+      try {
+        const run = await getResearchById(activeId, { signal: controller.signal });
+        if (controller.signal.aborted) return;
+        failures = 0;
+        setRunState(run);
+        setApiOnline(true);
+        if (terminal(run)) {
+          setLoading(false);
+          setResult(run.status === 'completed' || run.sources.length ? run : null);
+          if (run.status === 'failed') setError(run.error_message || 'Research failed.');
+          setActiveId(null);
+          loadHistory().catch((error) => handleError(error, 'Unable to refresh history.'));
+          return;
+        }
+        setLoading(true);
+        timer = window.setTimeout(poll, 1000);
+      } catch (error) {
+        if (controller.signal.aborted) return;
+        failures += 1;
+        if (error.response?.status === 401 || failures >= 3) {
+          setLoading(false);
+          setActiveId(null);
+          handleError(error, 'Progress connection interrupted. Select this run in history to reconnect.');
+        } else {
+          timer = window.setTimeout(poll, 1500);
+        }
+      }
+    }
+    poll();
+    return () => { controller.abort(); window.clearTimeout(timer); };
+  }, [activeId]);
+
+  async function handleSignout() {
+    try {
+      await signoutUser();
+      window.location.assign('/auth');
+    } catch (error) {
+      handleError(error, 'Unable to sign out. Please try again.');
+    }
+  }
 
   useDashboardScrollMotion(pageRef);
 
@@ -72,23 +147,19 @@ export default function Dashboard() {
         </a>
         <div className="topbar-actions">
           <span className={`status-pill ${apiOnline ? 'online' : 'offline'}`}>
-            <span aria-hidden="true" />
-            {apiOnline ? 'API online' : 'API offline'}
+            <span aria-hidden="true" />{apiOnline ? 'API online' : 'API offline'}
           </span>
-          <a className="docs-link" href={`${apiRootUrl}/docs`} target="_blank" rel="noreferrer">
-            API docs
-          </a>
+          <a className="docs-link" href={`${apiRootUrl}/docs`} target="_blank" rel="noreferrer">API docs</a>
+          {authenticated && <button className="secondary-button" onClick={handleSignout}>Sign out</button>}
         </div>
       </header>
-
-      {error && <div className="error">{error}</div>}
-
+      {error && <div className="error" role="alert">{error}</div>}
       <section className="layout">
         <aside className="control-column">
-          <ResearchBrief onSubmit={handleRunResearch} loading={loading} />
+          <ResearchBrief onSubmit={handleRunResearch} loading={loading || !authenticated} />
           <ResearchHistory history={history} loading={historyLoading} onSelect={handleSelectHistory} />
         </aside>
-        <ResearchWorkspace result={result} loading={loading} />
+        <ResearchWorkspace result={result} loading={loading} runState={runState} />
       </section>
     </main>
   );

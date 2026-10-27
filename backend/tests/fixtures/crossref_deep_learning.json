@@ -1,0 +1,66 @@
+﻿{
+    "DOI":  "10.1038/nature14539",
+    "title":  [
+                  "Deep learning"
+              ],
+    "author":  [
+                   {
+                       "given":  "Yann",
+                       "family":  "LeCun",
+                       "sequence":  "first",
+                       "affiliation":  [
+
+                                       ],
+                       "role":  [
+                                    {
+                                        "vocabulary":  "crossref",
+                                        "role":  "author"
+                                    }
+                                ]
+                   },
+                   {
+                       "given":  "Yoshua",
+                       "family":  "Bengio",
+                       "sequence":  "additional",
+                       "affiliation":  [
+
+                                       ],
+                       "role":  [
+                                    {
+                                        "vocabulary":  "crossref",
+                                        "role":  "author"
+                                    }
+                                ]
+                   },
+                   {
+                       "given":  "Geoffrey",
+                       "family":  "Hinton",
+                       "sequence":  "additional",
+                       "affiliation":  [
+
+                                       ],
+                       "role":  [
+                                    {
+                                        "vocabulary":  "crossref",
+                                        "role":  "author"
+                                    }
+                                ]
+                   }
+               ],
+    "published":  {
+                      "date-parts":  [
+                                         [
+                                             2015,
+                                             5,
+                                             27
+                                         ]
+                                     ]
+                  },
+    "container-title":  [
+                            "Nature"
+                        ],
+    "URL":  "https://doi.org/10.1038/nature14539",
+    "abstract":  null,
+    "is-referenced-by-count":  76995,
+    "type":  "journal-article"
+}

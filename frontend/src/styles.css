@@ -3465,3 +3465,7 @@ textarea:focus {
     flex-direction: column;
   }
 }
+
+.landscape-tabs { flex-wrap: wrap; }
+.intelligence-section .source-card { margin-bottom: 1rem; }
+.intelligence-section small { overflow-wrap: anywhere; }

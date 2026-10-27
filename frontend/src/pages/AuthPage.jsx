@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { signupUser, signinUser, apiErrorMessage } from "../services/api.js";
 import {
   ArrowLeft,
   ArrowRight,
@@ -11,6 +12,7 @@ import {
 } from "lucide-react";
 
 export default function AuthPage() {
+  const [submitting, setSubmitting] = useState(false);
   const [mode, setMode] = useState("signup");
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -27,85 +29,27 @@ export default function AuthPage() {
     setSuccess("");
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-
-    const normalizedEmail = email.trim().toLowerCase();
-    const storedAccounts = JSON.parse(localStorage.getItem("researchos_accounts") || "{}");
-    const existingAccount = storedAccounts[normalizedEmail];
-
-    if (!normalizedEmail || !password) {
-      setError(isReset ? "Please enter your email and new password." : "Please enter your email and password.");
-      setSuccess("");
-      return;
-    }
-
-    if (isSignup) {
-      if (!fullName.trim()) {
-        setError("Please enter your full name.");
-        setSuccess("");
-        return;
-      }
-
-      if (existingAccount) {
-        setError("User already exists. Please sign in.");
-        setSuccess("");
-        return;
-      }
-
-      if (password.length < 6) {
-        setError("Password must be at least 6 characters.");
-        setSuccess("");
-        return;
-      }
-
-      storedAccounts[normalizedEmail] = {
-        name: fullName.trim(),
-        email: normalizedEmail,
-        password,
-      };
-
-      localStorage.setItem("researchos_accounts", JSON.stringify(storedAccounts));
-      localStorage.setItem("researchos_active_user", normalizedEmail);
-      window.location.href = "/dashboard";
-      return;
-    }
-
+    if (submitting) return;
+    setError('');
+    setSuccess('');
     if (isReset) {
-      if (!existingAccount) {
-        setError("No account found with this email. Please create an account first.");
-        setSuccess("");
-        return;
-      }
-
-      if (password.length < 6) {
-        setError("New password must be at least 6 characters.");
-        setSuccess("");
-        return;
-      }
-
-      storedAccounts[normalizedEmail] = {
-        ...existingAccount,
-        password,
-      };
-
-      localStorage.setItem("researchos_accounts", JSON.stringify(storedAccounts));
-      setPassword("");
-      setShowPassword(false);
-      setMode("signin");
-      setError("");
-      setSuccess("Password changed successfully. Please sign in with your new password.");
+      setError('Password recovery is not available yet. A verified email recovery flow is required.');
       return;
     }
-
-    if (!existingAccount || existingAccount.password !== password) {
-      setError("Invalid email or password. Please check your details and try again.");
-      setSuccess("");
-      return;
+    setSubmitting(true);
+    try {
+      const payload = { email: email.trim().toLowerCase(), password };
+      if (isSignup) await signupUser({ ...payload, name: fullName.trim() });
+      else await signinUser(payload);
+      setPassword('');
+      window.location.assign('/dashboard');
+    } catch (error) {
+      setError(apiErrorMessage(error, 'Unable to reach the server. Please try again.'));
+    } finally {
+      setSubmitting(false);
     }
-
-    localStorage.setItem("researchos_active_user", normalizedEmail);
-    window.location.href = "/dashboard";
   }
 
   return (
@@ -156,6 +100,8 @@ export default function AuthPage() {
                     value={fullName}
                     onChange={(event) => setFullName(event.target.value)}
                     required={isSignup}
+                    minLength={2}
+                    maxLength={120}
                   />
                 </span>
               </label>
@@ -175,13 +121,16 @@ export default function AuthPage() {
               </span>
             </label>
 
-            <label>
-              {isReset ? "New password" : "Password"}
+            {!isReset && <label>
+              Password
               <span className="auth-password-field">
                 <ShieldCheck size={18} />
                 <input
                   type={showPassword ? "text" : "password"}
-                  placeholder={isReset ? "Enter new password" : "Enter your password"}
+                  placeholder={isSignup ? "At least 12 characters" : "Enter your password"}
+                  minLength={isSignup ? 12 : 1}
+                  maxLength={128}
+                  autoComplete={isSignup ? "new-password" : "current-password"}
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
                   required
@@ -195,16 +144,17 @@ export default function AuthPage() {
                   {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                 </button>
               </span>
-            </label>
+            </label>}
 
+            {isReset && <p className="auth-error" role="status">Password recovery is not available yet. A verified email recovery flow is required.</p>}
             {error && <p className="auth-error" role="alert">{error}</p>}
             {success && <p className="auth-success" role="status">{success}</p>}
 
             {!isReset && (
               <div className="auth-options">
               <label>
-                <input type="checkbox" defaultChecked />
-                {isSignup ? "Agree to secure workspace access" : "Remember this device"}
+                <input type="checkbox" defaultChecked disabled />
+                {isSignup ? "Secure workspace access" : "Session expires automatically"}
               </label>
               {!isSignup && (
                 <button className="auth-inline-action" type="button" onClick={() => handleModeChange("reset")}>
@@ -214,8 +164,8 @@ export default function AuthPage() {
               </div>
             )}
 
-            <button className="auth-submit" type="submit">
-              {isReset ? "Change password" : isSignup ? "Create account" : "Sign in"}
+            <button className="auth-submit" type="submit" disabled={submitting || isReset}>
+              {submitting ? "Please wait..." : isReset ? "Recovery unavailable" : isSignup ? "Create account" : "Sign in"}
               <ArrowRight size={18} />
             </button>
           </form>

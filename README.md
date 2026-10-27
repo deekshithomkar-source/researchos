@@ -16,12 +16,12 @@ history. It is designed as a research workflow—not a general-purpose chatbot.
 - User submits a research topic
 - Agent creates sub-questions
 - Retrieves real scholarly records from Semantic Scholar
-- Falls back to clearly labelled demo evidence when the provider is unavailable
+- Uses real scholarly-provider fallback and reports unavailable or partial evidence
 - Deduplicates and scores sources using transparent metadata signals
 - Generates academic reports, literature reviews, or project proposals
 - Formats references in APA or IEEE style
 - Exports the generated report as Markdown
-- Saves research sessions
+- Saves authenticated, user-owned research runs with background progress
 - Shows previous research history
 
 ## Folder Structure
@@ -147,5 +147,13 @@ SEMANTIC_SCHOLAR_API_KEY=your_key
 ## Deliberate MVP boundary
 
 The current version prioritizes source provenance and a usable report workflow.
-Authentication, vector databases, background queues, full-text PDF extraction,
+Durable production queues, vector databases, full-text PDF extraction,
 plagiarism checking, and PPT generation are later phases—not dependencies of the MVP.
+
+
+## Research engine foundation
+
+Cookie authentication, owned research runs, background processing, progress polling,
+additive migrations, agent contracts and verification are documented in
+[docs/engine-foundation.md](docs/engine-foundation.md). The local background adapter
+is for a single development process; a durable worker is required for multiworker production.
