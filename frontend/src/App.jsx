@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import AuthPage from "./pages/AuthPage";
 import Dashboard from "./pages/Dashboard";
-import ResearchWorkflow from "./components/ResearchWorkflow";
+import MinimalLanding from "./components/MinimalLanding";
 
 function App() {
   useEffect(() => {
@@ -13,6 +13,17 @@ function App() {
   }, []);
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
 
+  useEffect(() => {
+    const titles = {"/auth": "Sign in or join", "/dashboard": "Your research workspace"};
+    const descriptions = {"/auth": "Sign in to ResearchOS or create your research workspace.", "/dashboard": "Explore your research, evidence, reports, and saved history in ResearchOS."};
+    const description = descriptions[path] || "Explore ideas, analyze academic knowledge, and discover evidence-supported research opportunities in one focused workspace.";
+    document.querySelector('meta[name="description"]')?.setAttribute('content', description);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', description);
+    document.title = `${titles[path] || "Great research starts with curiosity"} | ResearchOS`;
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', document.title);
+    document.querySelector('meta[name="robots"]')?.setAttribute("content", path === "/" ? "index, follow" : "noindex, nofollow");
+  }, [path]);
+
   if (path === "/auth") {
     return <AuthPage />;
   }
@@ -23,7 +34,7 @@ function App() {
 
   return (
     <div>
-      <ResearchWorkflow />
+      <MinimalLanding />
     </div>
   );
 }

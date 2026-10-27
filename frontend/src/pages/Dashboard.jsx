@@ -1,4 +1,6 @@
+import { ToastNotification } from '../components/ResearchInteractions';
 import { useEffect, useRef, useState } from 'react';
+import WorkspaceNavigation from '../components/WorkspaceNavigation.jsx';
 import ResearchBrief from '../components/ResearchBrief.jsx';
 import ResearchWorkspace from '../components/ResearchWorkspace.jsx';
 import ResearchHistory from '../components/ResearchHistory.jsx';
@@ -8,6 +10,10 @@ const terminal = (run) => ['completed', 'failed'].includes(run.status);
 
 export default function Dashboard() {
   const pageRef = useRef(null);
+  const [view, setView] = useState('research');
+  const [user, setUser] = useState(null);
+  const submittedRun = useRef(null);
+  const [notification, setNotification] = useState('');
   const [result, setResult] = useState(null);
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -45,6 +51,7 @@ export default function Dashboard() {
     setActiveId(null);
     try {
       const run = await runResearch(payload);
+      submittedRun.current = run.research_id;
       setRunState(run);
       setActiveId(run.research_id);
       setApiOnline(true);
@@ -68,7 +75,8 @@ export default function Dashboard() {
     const options = { signal: controller.signal };
     async function boot() {
       try {
-        await getCurrentUser(options);
+        const session = await getCurrentUser(options);
+        setUser(session.user || session);
         if (controller.signal.aborted) return;
         setAuthenticated(true);
         const [, records] = await Promise.all([checkApiHealth(options), getHistory(options)]);
@@ -103,6 +111,10 @@ export default function Dashboard() {
         setRunState(run);
         setApiOnline(true);
         if (terminal(run)) {
+          if (submittedRun.current === run.research_id) {
+            setNotification(run.status === 'completed' ? 'Research saved. Your results are ready to review.' : 'Research could not finish. Review the error details and retry.');
+            submittedRun.current = null;
+          }
           setLoading(false);
           setResult(run.status === 'completed' || run.sources.length ? run : null);
           if (run.status === 'failed') setError(run.error_message || 'Research failed.');
@@ -137,82 +149,45 @@ export default function Dashboard() {
     }
   }
 
-  useDashboardScrollMotion(pageRef);
+  function showView(nextView, target = 'workspace-main') {
+    setView(nextView);
+    window.setTimeout(() => {
+      const element = document.getElementById(target);
+      element?.scrollIntoView({ block: 'start' });
+      element?.focus({ preventScroll: true });
+    }, 0);
+  }
+
+  function focusResearch() {
+    showView('research', 'topic');
+    document.getElementById('topic')?.scrollIntoView({ block: 'center' });
+    document.getElementById('topic')?.focus({ preventScroll: true });
+  }
 
   return (
-    <main className="app-shell dashboard-shell" ref={pageRef}>
+    <WorkspaceNavigation user={user} authenticated={authenticated} onSignout={handleSignout} onNewResearch={focusResearch} view={view} onNavigate={showView}>
+    <main id="workspace-main" tabIndex={-1} className="app-shell dashboard-shell" ref={pageRef}>
       <header className="topbar">
-        <a className="dashboard-logo" href="/" aria-label="ResearchOS home">
-          <img src="/assets/researchos-logo.svg" alt="ResearchOS" />
-        </a>
+        <span className="ros-breadcrumb">Workspace <span>/</span> {view === 'saved' ? 'Saved works' : 'Overview'}</span>
         <div className="topbar-actions">
-          <span className={`status-pill ${apiOnline ? 'online' : 'offline'}`}>
-            <span aria-hidden="true" />{apiOnline ? 'API online' : 'API offline'}
-          </span>
+          <span className={`status-pill ${apiOnline ? 'online' : 'offline'}`}><span aria-hidden="true" />{apiOnline ? 'API online' : 'API offline'}</span>
           <a className="docs-link" href={`${apiRootUrl}/docs`} target="_blank" rel="noreferrer">API docs</a>
-          {authenticated && <button className="secondary-button" onClick={handleSignout}>Sign out</button>}
+          <button className="secondary-button" onClick={focusResearch}>New research</button>
         </div>
       </header>
+      <section className="ros-welcome"><span className="eyebrow">Your research workspace</span><h1>{view === 'saved' ? 'Saved works' : user?.name ? `Welcome, ${user.name.split(' ')[0]}.` : 'Welcome to your workspace.'}</h1><p>{view === 'saved' ? 'Open a saved research run to review its papers, findings, and report here.' : 'A new question. A fresh perspective. Where will you begin?'}</p></section>
+      <ToastNotification message={notification} onDismiss={() => setNotification('')}/>
       {error && <div className="error" role="alert">{error}</div>}
-      <section className="layout">
-        <aside className="control-column">
+      <section aria-label={view === 'saved' ? 'Saved works' : 'Research workspace'}>
+      {view === 'saved' && <div id="research-history" tabIndex={-1}><ResearchHistory history={history} loading={historyLoading} onSelect={handleSelectHistory} /></div>}
+      <div className={view === 'saved' ? 'layout ros-saved-layout' : 'layout'}>
+        <aside className="control-column" hidden={view === 'saved'}>
           <ResearchBrief onSubmit={handleRunResearch} loading={loading || !authenticated} />
-          <ResearchHistory history={history} loading={historyLoading} onSelect={handleSelectHistory} />
         </aside>
-        <ResearchWorkspace result={result} loading={loading} runState={runState} />
+<div id="research-results" tabIndex={-1} hidden={view === 'saved' && !result && !loading && !runState}><ResearchWorkspace result={result} loading={loading} runState={runState} /></div>
+      </div>
       </section>
     </main>
+    </WorkspaceNavigation>
   );
-}
-
-function useDashboardScrollMotion(pageRef) {
-  useEffect(() => {
-    const page = pageRef.current;
-    if (!page || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
-
-    let lastY = window.scrollY;
-    let ticking = false;
-
-    function updateMotion() {
-      const motionItems = [...page.querySelectorAll('[data-dashboard-motion]')];
-      if (!motionItems.length) return;
-
-      const currentY = window.scrollY;
-      const direction = currentY > lastY ? 'down' : 'up';
-      page.dataset.scrollDirection = direction;
-      lastY = currentY;
-
-      const viewportCenter = window.innerHeight / 2;
-
-      motionItems.forEach((item) => {
-        const rect = item.getBoundingClientRect();
-        const visible = rect.bottom > 0 && rect.top < window.innerHeight;
-        const distance = Math.abs(rect.top + rect.height / 2 - viewportCenter);
-        const strength = Math.max(0, 1 - distance / window.innerHeight);
-        const lift = (direction === 'down' ? -10 : 10) * strength;
-
-        item.classList.toggle('is-dashboard-visible', visible);
-        item.style.setProperty('--dashboard-pop-y', `${lift.toFixed(2)}px`);
-        item.style.setProperty('--dashboard-pop-scale', (1 + strength * 0.012).toFixed(4));
-      });
-
-      ticking = false;
-    }
-
-    function requestUpdate() {
-      if (!ticking) {
-        window.requestAnimationFrame(updateMotion);
-        ticking = true;
-      }
-    }
-
-    updateMotion();
-    window.addEventListener('scroll', requestUpdate, { passive: true });
-    window.addEventListener('resize', requestUpdate);
-
-    return () => {
-      window.removeEventListener('scroll', requestUpdate);
-      window.removeEventListener('resize', requestUpdate);
-    };
-  }, [pageRef]);
 }

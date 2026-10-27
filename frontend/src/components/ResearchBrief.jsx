@@ -98,6 +98,7 @@ export default function ResearchBrief({ onSubmit, loading }) {
         {['apa', 'ieee'].map((style) => (
           <button
             className={citationStyle === style ? 'active' : ''}
+            aria-pressed={citationStyle === style}
             key={style}
             type="button"
             onClick={() => setCitationStyle(style)}
@@ -107,11 +108,12 @@ export default function ResearchBrief({ onSubmit, loading }) {
         ))}
       </div>
 
-      <label htmlFor="source-limit">Source target</label>
-      <div className="source-options landscape-tabs" id="source-limit">
+      <span className="ros-field-label" id="source-limit-label">Source target</span>
+      <div className="source-options landscape-tabs" id="source-limit" role="group" aria-labelledby="source-limit-label">
         {sourceTargets.map((target) => (
           <button
             className={sourceLimit === target ? 'active' : ''}
+            aria-pressed={sourceLimit === target}
             key={target}
             type="button"
             onClick={() => setSourceLimit(target)}

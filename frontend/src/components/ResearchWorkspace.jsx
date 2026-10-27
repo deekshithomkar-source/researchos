@@ -1,3 +1,4 @@
+import { LoadingSkeleton, ToastNotification } from './ResearchInteractions';
 import { exportResearchReport } from '../services/api';
 import IntelligenceSections from './IntelligenceSections';
 import { sectionData } from '../services/result-mapping';
@@ -14,7 +15,7 @@ export default function ResearchWorkspace({ result, loading, runState }) {
   if (loading && !result) {
     return (
       <section className="workspace loading-state dashboard-pop" data-dashboard-motion>
-        <div className="spinner" />
+        <div className="spinner" /><LoadingSkeleton/>
         <h2>{runState?.status_message || 'Starting research'}</h2>
         <div role="status" aria-live="polite">
           <p>{runState?.current_stage?.replaceAll('_', ' ') || 'Submitting your brief'} · {runState?.progress || 0}%</p>
@@ -70,13 +71,17 @@ export default function ResearchWorkspace({ result, loading, runState }) {
   }
 
   async function copyReport() {
-    await navigator.clipboard.writeText(report);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1800);
+    try {
+      await navigator.clipboard.writeText(report);
+      setCopied(true);
+      setExportError('');
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch { setExportError('Copy is unavailable in this browser. Download the report instead.'); }
   }
 
   return (
     <section className="workspace dashboard-pop" data-dashboard-motion>
+      <ToastNotification message={copied ? "Report copied to clipboard." : ""} onDismiss={() => setCopied(false)}/>
       <div className="workspace-header">
         <div>
           <span className="eyebrow">Session #{result.id}</span>
@@ -125,6 +130,16 @@ export default function ResearchWorkspace({ result, loading, runState }) {
             type="button"
             role="tab"
             aria-selected={activeTab === id}
+            tabIndex={activeTab === id ? 0 : -1}
+            onKeyDown={event => {
+              if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+              event.preventDefault();
+              const buttons = [...event.currentTarget.parentElement.querySelectorAll('button')];
+              const index = buttons.indexOf(event.currentTarget);
+              const next = event.key === 'Home' ? 0 : event.key === 'End' ? buttons.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + buttons.length) % buttons.length;
+              buttons[next].focus();
+              buttons[next].click();
+            }}
             onClick={() => setActiveTab(id)}
           >
             {label}

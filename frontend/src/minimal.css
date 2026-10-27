@@ -1,0 +1,344 @@
+/* ResearchOS visual layer. Existing research components and API contracts are retained. */
+:root {
+  --font-display: Manrope, Inter, system-ui, sans-serif;
+  --font-body: Inter, system-ui, sans-serif;
+  --ink: #020D19; --muted: #66717A; --blue: #536F8B;
+  --green: #020D19; --green-dark: #263747;
+  --panel: #fff; --panel-soft: #F8F7F4; --line: #E5E4DE; --line-strong: #d3d4cf;
+  --shadow: 0 3px 16px #020d1905;
+  --space-1: 8px; --space-2: 16px; --space-3: 24px; --space-4: 32px; --space-6: 48px; --space-8: 64px;
+  color: var(--ink); background: #F0EDE4;
+}
+body { background: #F0EDE4; color: var(--ink); }
+h1,h2,h3,h4 { font-family: var(--font-display); }
+button, input, textarea, select { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid #536F8B; outline-offset: 4px; }
+button:disabled { cursor: wait; opacity: .55; }
+.ros-skip { position: fixed; left: 16px; top: -80px; z-index: 200; padding: 16px; background: #fff; border: 2px solid var(--ink); }
+.ros-skip:focus { top: 8px; }
+.ros-brand { display: inline-flex; gap: 10px; align-items: center; text-decoration: none; font-family: var(--font-display); font-weight: 800; font-size: 22px; white-space: nowrap; color: var(--ink); }
+.ros-brand-light { font-weight: 500; }
+.ros-button { display: inline-flex; align-items: center; justify-content: center; gap: 16px; padding: 14px 22px; min-height: 48px; border-radius: 6px; background: var(--ink); color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .18s, transform .18s; }
+.ros-button:hover { background: #263747; transform: translateY(-2px); }
+.ros-text-link { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px 0; }
+.ros-text-link:hover { text-decoration: underline; }
+.ros-landing { color: var(--ink); }
+.ros-nav { position: sticky; top: 0; z-index: 30; background: #F0EDE4f5; border-bottom: 1px solid var(--line); padding: 20px max(24px, calc((100vw - 1240px)/2)); display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+.ros-nav nav { display: flex; align-items: center; gap: 28px; }
+.ros-nav nav>a:not(.ros-button), .ros-footer a { font-size: 13px; text-decoration: none; }
+.ros-nav nav>a:hover:not(.ros-button), .ros-footer nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.ros-nav .ros-button { min-height: 40px; padding: 10px 16px; font-size: 13px; }
+.ros-menu-button { display: none; }
+.ros-main { padding: 0 32px; max-width: 1240px; margin: auto; }
+.ros-hero { text-align: center; padding: 104px 0 64px; animation: ros-enter .5s ease both; }
+.ros-hero .eyebrow { font-size: 11px; letter-spacing: .17em; font-weight: 600; }
+.ros-hero h1 { margin: 24px 0; font-size: clamp(44px, 6vw, 80px); line-height: 1.1; letter-spacing: -.055em; font-weight: 700; }
+.ros-hero h1 span { color: var(--blue); }
+.ros-hero p { max-width: 610px; margin: 0 auto; font-size: 16px; line-height: 1.8; color: var(--muted); }
+.ros-cta-row { display: flex; justify-content: center; align-items: center; gap: 24px; margin-top: 32px; }
+.ros-hero-note { display: block; margin-top: 24px; font-size: 11px; color: var(--muted); }
+.ros-pillars { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 48px; padding: 24px 32px 80px; border-bottom: 1px solid #d9d7d0; }
+.ros-pillars article { min-width: 0; }
+.ros-illustration { display: block; width: 100%; height: 150px; margin: 0 auto 24px; }
+.ros-pillars h2 { font-size: 22px; margin: 0 0 12px; display: flex; align-items: center; justify-content: space-between; font-weight: 650; }
+.ros-pillars h2 span { font-size: 11px; color: var(--blue); }
+.ros-pillars p,.ros-capabilities p,.ros-steps p { font-size: 14px; color: var(--muted); line-height: 1.8; margin: 0; }
+.ros-section { padding: 88px 0 16px; scroll-margin-top: 100px; }
+.ros-section-heading { max-width: 640px; margin: 0 auto 40px; text-align: center; }
+.ros-section-heading h2,.ros-about h2,.ros-final h2 { font-size: clamp(28px,3.3vw,42px); line-height: 1.2; letter-spacing: -.04em; margin: 16px 0; font-weight: 650; }
+.ros-section-heading p { color: var(--muted); font-size: 15px; line-height: 1.8; }
+.ros-preview { border: 1px solid #d4d3cb; border-radius: 10px; background: white; box-shadow: 0 16px 48px #020d1908; overflow: hidden; }
+.ros-preview-bar { padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; border-bottom: 1px solid var(--line); }
+.ros-preview-bar .ros-brand { font-size: 17px; }
+.ros-demo-label { font-size: 11px; color: var(--muted); }
+.ros-preview-grid { display: grid; grid-template-columns: 220px minmax(0,1fr); min-height: 380px; }
+.ros-preview-grid aside { padding: 32px 24px; background: #F8F7F4; border-right: 1px solid var(--line); display: flex; flex-direction: column; align-items: start; gap: 24px; font-size: 13px; }
+.ros-preview-grid aside p { font-size: 12px; color: var(--muted); line-height: 1.7; margin: 0; }
+.ros-preview-grid aside a { display: flex; gap: 8px; font-size: 12px; line-height: 1.5; margin-top: auto; }
+.ros-preview-main { padding: 40px; }
+.ros-preview-main h3 { font-size: 24px; letter-spacing: -.03em; margin: 8px 0 24px; }
+.ros-demo-input { padding: 16px; display: flex; gap: 12px; align-items: center; border: 1px solid var(--line); border-radius: 6px; font-size: 13px; color: var(--muted); }
+.ros-demo-input span { flex: 1; }
+.ros-preview-tabs { display: flex; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid var(--line); margin-top: 24px; }
+.ros-preview-tabs button { min-height: 44px; padding: 10px 4px; font-size: 12px; background: transparent; color: var(--muted); border: 0; border-bottom: 2px solid transparent; border-radius: 0; }
+.ros-preview-tabs button[aria-pressed=true] { color: var(--ink); border-bottom-color: var(--ink); }
+.ros-preview-empty { padding: 24px 0 0; color: var(--muted); }
+.ros-preview-empty h4 { margin: 8px 0; color: var(--ink); font-size: 14px; }
+.ros-preview-empty p { font-size: 12px; line-height: 1.7; max-width: 450px; margin: 0; }
+.ros-capabilities { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; }
+.ros-capabilities article { padding: 28px 24px; background: #F8F7F4; border: 1px solid var(--line); border-radius: 6px; transition: transform .2s; }
+.ros-capabilities article:hover { transform: translateY(-3px); }
+.ros-capabilities article:first-child { grid-column: span 2; }
+.ros-capabilities h3 { font-size: 16px; margin: 20px 0 12px; }
+.ros-capabilities svg { color: var(--blue); }
+.ros-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 40px; }
+.ros-steps article { border-top: 1px solid #c9cbc8; padding-top: 24px; }
+.ros-steps article>span { color: var(--blue); font-size: 13px; }
+.ros-steps h3 { font-size: 24px; margin: 16px 0; }
+.ros-about { text-align: center; max-width: 640px; margin: auto; }
+.ros-about p { color: var(--muted); line-height: 1.9; font-size: 15px; }
+.ros-final { text-align: center; padding: 80px 24px; margin-top: 80px; border-top: 1px solid #d9d7d0; }
+.ros-final p { color: var(--muted); margin: 16px 0 32px; }
+.ros-footer { border-top: 1px solid var(--line); max-width: 1240px; padding: 32px; margin: auto; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+.ros-footer nav { display: flex; gap: 24px; margin-left: auto; flex-wrap: wrap; }
+.ros-footer small { color: var(--muted); font-size: 11px; }
+/* Productivity workspace */
+.ros-app { min-height: 100vh; padding-left: 232px; transition: padding .2s; background: #F8F7F4; }
+.ros-sidebar { position: fixed; inset: 0 auto 0 0; width: 232px; display: flex; flex-direction: column; padding: 32px 16px 24px; background: #F0EDE4; border-right: 1px solid var(--line); z-index: 45; transition: width .2s, transform .2s; }
+.ros-sidebar .ros-brand { margin: 0 8px 24px; font-size: 20px; }
+.ros-sidebar button { display: flex; align-items: center; gap: 12px; background: transparent; color: var(--muted); border: 0; border-radius: 5px; padding: 12px; min-height: 44px; font-size: 13px; width: 100%; text-align: left; }
+.ros-sidebar button:hover { background: #e5e2d9; color: var(--ink); }
+.ros-sidebar button svg { flex-shrink: 0; }
+.ros-sidebar .ros-sidebar-collapse { width: fit-content; margin: 0 0 24px; }
+.ros-sidebar-label { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: .09em; color: var(--muted); margin: 8px 12px 16px; }
+.ros-sidebar nav { display: grid; gap: 8px; }
+.ros-sidebar-bottom { margin-top: auto; padding-top: 32px; }
+.ros-profile { display: flex; align-items: center; gap: 10px; font-size: 12px; padding: 16px 8px; border-top: 1px solid #d9d7d0; }
+.ros-profile>span { display: grid; place-items: center; background: white; border: 1px solid var(--line); height: 32px; min-width: 32px; border-radius: 50%; }
+.ros-profile strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ros-app.is-collapsed { padding-left: 80px; }
+.ros-app.is-collapsed .ros-sidebar { width: 80px; }
+.ros-app.is-collapsed .ros-sidebar .ros-brand>span,.ros-app.is-collapsed .ros-sidebar button>span,.ros-app.is-collapsed .ros-sidebar-label,.ros-app.is-collapsed .ros-profile strong { display: none; }
+.ros-app.is-collapsed .ros-sidebar .ros-brand { margin-left: 11px; }
+.ros-mobile-bar,.ros-sidebar .ros-drawer-close { display: none; }
+.ros-app-content { min-width: 0; }
+.ros-app .dashboard-shell { max-width: 1600px; padding: 0 32px 48px; margin: auto; background: transparent; }
+.ros-app .topbar { min-height: 80px; margin: 0; padding: 16px 0; border-bottom: 1px solid var(--line); gap: 16px; flex-wrap: wrap; }
+.ros-breadcrumb { color: var(--muted); font-size: 12px; }
+.ros-breadcrumb span { margin: 0 12px; color: #a5a9a9; }
+.ros-app .topbar-actions { flex-wrap: wrap; gap: 12px; }
+.ros-app .status-pill { background: transparent; padding: 0; font-size: 10px; }
+.ros-app .docs-link { font-size: 11px; }
+.ros-welcome { padding: 40px 0 32px; }
+.ros-welcome h1 { font-size: clamp(26px,3vw,36px); line-height: 1.25; letter-spacing: -.035em; margin: 12px 0; }
+.ros-welcome p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.7; }
+.ros-app .layout { grid-template-columns: minmax(280px, 340px) minmax(0,1fr); gap: 24px; }
+.ros-app .control-column { position: static; min-width: 0; }
+.ros-app #research-results { min-width: 0; }
+.ros-app .dashboard-pop, .ros-app .dashboard-pop:hover { opacity: 1; transform: none; transition: none; animation: none; }
+.ros-app .panel, .ros-app .workspace { background: white; border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); min-width: 0; }
+.ros-app .panel { padding: 24px; }
+.ros-app .workspace { min-height: 560px; padding: 24px; }
+.ros-app .empty-state { display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; }
+.ros-app .empty-state h2 { font-size: 23px; letter-spacing: -.03em; }
+.ros-app .empty-state p { font-size: 14px; line-height: 1.8; max-width: 420px; color: var(--muted); }
+.ros-app .empty-visual { filter: grayscale(1); opacity: .5; }
+.ros-app .eyebrow { font-size: 10px; font-weight: 600; letter-spacing: .12em; }
+.ros-app .form input,.ros-app .form select,.ros-app .form textarea { width: 100%; min-width: 0; padding: 12px; border: 1px solid var(--line-strong); background: #fff; border-radius: 5px; color: var(--ink); font-size: 13px; }
+.ros-app .form label,.ros-field-label { display: block; font-size: 12px; font-weight: 500; color: var(--ink); margin: 16px 0 8px; }
+.ros-app .form-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.ros-app .form textarea { min-height: 104px; }
+.ros-app .landscape-tabs { display: flex; flex-wrap: wrap; background: #F8F7F4; border: 1px solid var(--line); border-radius: 6px; padding: 4px; gap: 4px; }
+.ros-app .landscape-tabs button { color: var(--muted); min-height: 40px; font-size: 12px; background: transparent; border-radius: 4px; white-space: normal; }
+.ros-app .landscape-tabs button.active { background: white; color: var(--ink); box-shadow: 0 1px 4px #020d1910; }
+.ros-app .source-options button,.ros-app .segmented button { flex: 1; }
+.ros-app .primary-button { background: var(--ink); color: white; box-shadow: none; border: 1px solid var(--ink); font-size: 12px; min-height: 44px; }
+.ros-app .secondary-button { background: white; color: var(--ink); box-shadow: none; border: 1px solid var(--line-strong); font-size: 12px; min-height: 40px; }
+.ros-app .workspace-header { flex-direction: column; align-items: flex-start; }
+.ros-app .workspace-header h2 { font-size: clamp(22px,2.3vw,30px); line-height: 1.25; overflow-wrap: anywhere; }
+.ros-app .result-actions { display: flex; flex-wrap: wrap; max-width: 100%; gap: 8px; }
+.ros-app .result-actions button { padding: 10px 12px; }
+.ros-app .metric { background: #F8F7F4; padding: 12px; }
+.ros-app .metric strong { font-size: 22px; font-weight: 650; color: var(--ink); }
+.ros-app .workspace-section,.ros-app .source-card,.ros-app .history-item { background: #F8F7F4; border-color: var(--line); box-shadow: none; }
+.ros-app .workspace-section p,.ros-app .workspace-section li { line-height: 1.8; }
+.ros-app .workspace pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; line-height: 1.8; }
+.ros-app .workspace a,.ros-app .workspace p { overflow-wrap: anywhere; }
+.ros-app .history-item { padding: 12px; text-align: left; flex-wrap: wrap; gap: 8px; }
+.ros-app .history-item strong { font-weight: 550; font-size: 12px; line-height: 1.6; }
+.ros-app .history-item time { font-size: 10px; color: var(--muted); }
+.ros-app .history-list { max-height: 460px; overflow-y: auto; }
+.ros-app .step-badge { background: #F8F7F4; color: var(--muted); font-size: 12px; }
+.auth-page { background: #F0EDE4; }
+.auth-shell { box-shadow: var(--shadow); border: 1px solid var(--line); }
+.auth-brand-panel { background: #020D19; }
+.auth-submit { background: #020D19; box-shadow: none; }
+@keyframes ros-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (min-width: 1600px) { .ros-app .layout { grid-template-columns: 380px minmax(0,1fr); } }
+@media (max-width: 1150px) {
+ .ros-nav nav { gap: 16px; }
+ .ros-app .layout { grid-template-columns: minmax(0,1fr); }
+ .ros-app .control-column { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; align-items: start; }
+ .ros-app .workspace { min-height: 400px; }
+ .ros-capabilities { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 900px) {
+ .ros-nav { padding: 16px 24px; }
+ .ros-menu-button { display: flex; background: transparent; color: var(--ink); padding: 10px; border: 0; }
+ .ros-nav nav { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 24px; background: #F0EDE4; border-bottom: 1px solid var(--line); }
+ .ros-nav nav.is-open { display: flex; flex-direction: column; align-items: stretch; gap: 8px; }
+ .ros-nav nav a { padding: 12px; }
+ .ros-hero { padding-top: 72px; }
+ .ros-pillars { gap: 24px; padding-left: 0; padding-right: 0; }
+ .ros-app,.ros-app.is-collapsed { padding-left: 0; }
+ .ros-sidebar,.ros-app.is-collapsed .ros-sidebar { width: 260px; transform: translateX(-100%); visibility: hidden; }
+ .ros-sidebar.is-open { transform: translateX(0); visibility: visible; }
+ .ros-app.is-collapsed .ros-sidebar .ros-brand>span,.ros-app.is-collapsed .ros-sidebar button>span,.ros-app.is-collapsed .ros-sidebar-label,.ros-app.is-collapsed .ros-profile strong { display: initial; }
+ .ros-sidebar .ros-sidebar-collapse { display: none; }
+ .ros-sidebar .ros-drawer-close { display: flex; width: auto; margin: 0 0 16px auto; }
+ .ros-mobile-bar { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid var(--line); }
+ .ros-mobile-bar button { background: transparent; border: 0; color: var(--ink); padding: 10px; }
+ .ros-drawer-backdrop { position: fixed; inset: 0; background: #020d1940; z-index: 40; }
+ .ros-preview-grid { grid-template-columns: 180px minmax(0,1fr); }
+ .ros-preview-main { padding: 24px; }
+}
+@media (max-width: 600px) {
+ .ros-main { padding: 0 24px; }
+ .ros-hero { padding: 56px 0 40px; }
+ .ros-hero h1 { font-size: clamp(38px,10vw,58px); }
+ .ros-hero p { font-size: 14px; }
+ .ros-cta-row { flex-direction: column; gap: 8px; }
+ .ros-pillars { grid-template-columns: 1fr; padding-bottom: 40px; gap: 32px; }
+ .ros-pillars article { display: grid; grid-template-columns: 100px minmax(0,1fr); column-gap: 24px; }
+ .ros-illustration { grid-row: span 2; height: 110px; margin: 0; align-self: center; }
+ .ros-pillars h2 { font-size: 20px; }
+ .ros-pillars p { font-size: 13px; }
+ .ros-section { padding-top: 56px; }
+ .ros-preview-bar { flex-wrap: wrap; padding: 16px; }
+ .ros-preview-grid { grid-template-columns: 1fr; }
+ .ros-preview-grid aside { border-right: 0; border-bottom: 1px solid var(--line); gap: 12px; padding: 20px; }
+ .ros-preview-grid aside>span:not(.eyebrow),.ros-preview-grid aside>p { display: none; }
+ .ros-preview-main { padding: 24px 20px; }
+ .ros-preview-main h3 { font-size: 21px; }
+ .ros-demo-input { font-size: 12px; }
+ .ros-demo-input svg { flex-shrink: 0; }
+ .ros-capabilities,.ros-steps { grid-template-columns: 1fr; gap: 16px; }
+ .ros-capabilities article:first-child { grid-column: auto; }
+ .ros-capabilities article { padding: 24px; }
+ .ros-steps article { padding: 24px 0; }
+ .ros-final { padding: 56px 0; margin-top: 40px; }
+ .ros-footer { padding: 24px; gap: 24px; flex-direction: column; align-items: flex-start; }
+ .ros-footer nav { margin-left: 0; gap: 16px; }
+ .ros-app .dashboard-shell { padding: 0 16px 32px; }
+ .ros-app .topbar { padding: 16px 0; }
+ .ros-app .control-column { grid-template-columns: minmax(0,1fr); }
+ .ros-app .layout { gap: 16px; }
+ .ros-app .panel,.ros-app .workspace { padding: 20px; }
+ .ros-app .workspace-section { padding: 16px; }
+ .ros-app .source-grid { grid-template-columns: minmax(0,1fr); }
+ .ros-app .metric { padding: 8px; }
+ .ros-app .metric span { font-size: 10px; }
+ .ros-app .topbar-actions { gap: 12px; }
+ .ros-welcome { padding: 32px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+ *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+.ros-app .topbar { background: transparent; border-radius: 0; box-shadow: none; }
+.ros-app .status-pill,.ros-app .docs-link { border: 0; box-shadow: none; background: transparent; }
+.ros-app .source-options button { flex: 1 1 0; min-width: 0; width: auto; padding: 8px; }
+.ros-app .segmented button { flex: 1 1 0; min-width: 0; }
+.ros-app .form-grid { grid-template-columns: minmax(0,1fr); gap: 0; }
+.ros-app .topbar { border: 0; border-bottom: 1px solid var(--line); }
+/* Educational motion: no dependencies, no simulated research progress. */
+.ros-nav>.ros-brand { animation: ros-enter .5s ease-out both; }
+.ros-hero { position: relative; animation: none; }
+.ros-hero>h1,.ros-hero>p,.ros-hero>.eyebrow,.ros-hero .ros-cta-row>a,.ros-pillars article { animation: ros-enter .6s cubic-bezier(.2,.7,.2,1) both; }
+.ros-hero>.eyebrow { animation-delay: .08s; }
+.ros-hero>h1 { animation-delay: .16s; }
+.ros-hero>p { animation-delay: .24s; }
+.ros-hero .ros-cta-row>a:first-child { animation-delay: .32s; }
+.ros-hero .ros-cta-row>a:last-child { animation-delay: .42s; }
+.ros-pillars article { animation-delay: .48s; }
+.ros-pillars article:nth-child(2) { animation-delay: .56s; }
+.ros-pillars article:nth-child(3) { animation-delay: .64s; }
+.ros-floating { position: absolute; pointer-events: none; color: var(--blue); opacity: .6; animation: ros-float 7s ease-in-out infinite; }
+.ros-floating-book { left: 16px; top: 62%; transform: rotate(-12deg); }
+.ros-floating-idea { right: 24px; top: 65%; animation-delay: -3s; }
+@keyframes ros-float { 0%,100% { transform: translateY(0) rotate(-6deg); } 50% { transform: translateY(-6px) rotate(0); } }
+.ros-feature-trigger { margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; padding: 10px 0; min-height: 44px; font-size: 12px; color: var(--ink); background: transparent; border: 0; }
+.ros-feature-trigger:hover { text-decoration: underline; text-underline-offset: 5px; }
+.ros-modal { width: min(560px,calc(100vw - 32px)); max-height: calc(100dvh - 48px); padding: 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--ink); box-shadow: 0 24px 80px #020d1920; overflow: auto; animation: ros-enter .24s ease-out; }
+.ros-modal::backdrop { background: #020d1955; animation: ros-backdrop .2s ease-out; }
+.ros-modal.is-closing { animation: ros-exit .16s ease-in both; }
+.ros-modal.is-closing::backdrop { animation: ros-backdrop .16s ease-in reverse both; }
+.ros-modal-content { padding: 40px; position: relative; }
+.ros-modal h2 { font-size: 28px; line-height: 1.25; letter-spacing: -.03em; margin: 16px 32px 16px 0; }
+.ros-modal p,.ros-modal li { font-size: 14px; line-height: 1.8; color: var(--muted); }
+.ros-modal ol { padding-left: 20px; }
+.ros-modal li { margin-bottom: 8px; }
+.ros-modal .ros-illustration { margin: 16px 0; height: 140px; }
+.ros-modal-close { position: absolute; top: 16px; right: 16px; display: grid; place-items: center; width: 44px; height: 44px; background: #F8F7F4; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); }
+.ros-modal .ros-preview-disclaimer { font-size: 11px; padding: 16px; background: #F8F7F4; border-radius: 6px; }
+.ros-workflow-controls { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.ros-workflow-controls button { display: flex; align-items: center; gap: 16px; padding: 24px; border: 1px solid var(--line); background: #F8F7F4; color: var(--muted); border-radius: 6px; font-family: var(--font-display); font-size: 20px; transition: background .2s,color .2s; }
+.ros-workflow-controls button span:first-child { font-size: 12px; color: var(--blue); }
+.ros-workflow-controls button span:last-child { margin-left: auto; }
+.ros-workflow-controls button[aria-pressed=true] { background: white; border-color: var(--blue); color: var(--ink); }
+.ros-workflow-detail { display: grid; grid-template-columns: 240px minmax(0,1fr); align-items: center; gap: 40px; padding: 32px; background: #F8F7F4; margin-top: 24px; border-radius: 8px; min-height: 230px; }
+.ros-workflow-detail .ros-illustration { margin: 0; }
+.ros-stage-copy { animation: ros-enter .3s ease-out; }
+.ros-stage-copy h3 { font-size: 24px; margin: 0 0 12px; letter-spacing: -.025em; }
+.ros-stage-copy p { max-width: 600px; margin: 0; line-height: 1.8; font-size: 14px; color: var(--muted); }
+.ros-education { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; }
+.ros-education-art { display: flex; align-items: center; background: #F8F7F4; border-radius: 50% 50% 8px 8px; padding: 40px 16px; }
+.ros-education-art .ros-illustration { width: 50%; height: auto; margin: 0; }
+.ros-education h2 { font-size: clamp(28px,3.3vw,42px); letter-spacing: -.04em; line-height: 1.2; }
+.ros-education p { font-size: 15px; line-height: 1.8; color: var(--muted); }
+.ros-education .ros-education-note { font-size: 12px; }
+.ros-app .history-item { transition: background .18s, border-color .18s; }
+.ros-app .history-item:hover { background: white; border-color: var(--blue); }
+.ros-app .form input,.ros-app .form select,.ros-app .form textarea { transition: border-color .18s, box-shadow .18s; }
+.ros-app .form input:focus,.ros-app .form select:focus,.ros-app .form textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px #536f8b14; }
+.ros-app .workspace { animation: ros-enter .4s ease-out; }
+.ros-app .workspace-section,.ros-app .intelligence-section { animation: ros-enter .3s ease-out; }
+.ros-skeleton { width: 100%; max-width: 400px; display: grid; gap: 12px; padding: 16px 0; }
+.ros-skeleton span { display: block; height: 12px; background: #e5e4de; border-radius: 4px; animation: ros-pulse 1.8s ease-in-out infinite; }
+.ros-skeleton span:nth-child(2) { width: 85%; animation-delay: .12s; }
+.ros-skeleton span:last-child { width: 60%; animation-delay: .24s; }
+.ros-toast-region { position: fixed; bottom: 24px; right: 24px; z-index: 60; max-width: min(440px,calc(100vw - 32px)); }
+.ros-toast { display: flex; align-items: center; gap: 12px; padding: 16px; background: #fff; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 8px 32px #020d1914; animation: ros-enter .25s ease-out; font-size: 13px; line-height: 1.6; color: var(--ink); }
+.ros-toast>svg { flex-shrink: 0; color: var(--blue); }
+.ros-toast button { display: grid; place-items: center; min-width: 40px; min-height: 40px; border: 0; background: #F8F7F4; color: var(--ink); border-radius: 4px; }
+@keyframes ros-pulse { 0%,100% { opacity: .45; } 50% { opacity: .9; } }
+@keyframes ros-backdrop { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ros-exit { to { opacity: 0; transform: translateY(8px); } }
+@media (max-width: 900px) { .ros-floating { display: none; } .ros-education { gap: 32px; } }
+@media (max-width: 600px) {
+ .ros-workflow-controls { grid-template-columns: 1fr; gap: 8px; }
+ .ros-workflow-controls button { padding: 16px; font-size: 18px; }
+ .ros-workflow-detail { grid-template-columns: 1fr; gap: 16px; padding: 24px; min-height: 360px; }
+ .ros-workflow-detail .ros-illustration { height: 130px; }
+ .ros-stage-copy h3 { font-size: 21px; }
+ .ros-education { grid-template-columns: 1fr; }
+ .ros-modal-content { padding: 32px 24px 24px; }
+ .ros-toast-region { bottom: 16px; right: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+.ros-feature-inline { margin-top: 20px; }
+.ros-feature-inline summary { padding: 12px 0; min-height: 44px; font-size: 12px; cursor: pointer; }
+.ros-feature-inline[open] p { animation: ros-enter .2s ease-out; font-size: 12px; padding-top: 8px; }
+.ros-app [hidden] { display: none !important; }
+.ros-app .ros-saved-layout { grid-template-columns: minmax(0,1fr); margin-top: 24px; }
+.ros-app #research-history .history-list { max-height: none; }
+.ros-sidebar button[aria-current=page] { background: #e5e2d9; color: var(--ink); }
+/* Auth fields use one neutral focus indicator on their containing field. */
+.auth-form input[type="text"]:focus-visible,
+.auth-form input[type="email"]:focus-visible,
+.auth-form input[type="password"]:focus-visible { outline: none; }
+.auth-form label span:focus-within {
+  border-color: #66717A;
+  box-shadow: 0 0 0 2px #020d1914;
+}
+/* Short, viewport-triggered illustration sequences; no perpetual large motion. */
+.ros-landing .ros-art-scene { transform-origin: 140px 150px; }
+.ros-landing .ros-illustration[data-visible=true] .ros-art-scene { animation: ros-art-drift 4.8s ease-in-out both; }
+.ros-landing .ros-illustration[data-visible=true] .ros-art-search { animation: ros-art-explore 4s ease-in-out both; }
+.ros-landing .ros-illustration[data-visible=true] .ros-art-chart { animation: ros-art-chart-draw 2.4s ease-out both; }
+.ros-landing .ros-illustration[data-visible=true] .ros-art-rays { animation: ros-art-idea 2.2s ease-in-out 2; }
+.ros-landing .ros-illustration[data-visible=false] g,
+.ros-landing .ros-illustration[data-visible=false] path { animation: none; }
+@keyframes ros-art-drift { 0%,100% { transform: translateY(0) rotate(0); } 35% { transform: translateY(-4px) rotate(-1deg); } 70% { transform: translateY(-2px) rotate(.6deg); } }
+@keyframes ros-art-explore { 0%,100% { transform: translate(0,0); } 40% { transform: translate(-7px,-5px); } 70% { transform: translate(2px,-3px); } }
+@keyframes ros-art-chart-draw { from { stroke-dasharray: 1; stroke-dashoffset: 1; } to { stroke-dasharray: 1; stroke-dashoffset: 0; } }
+@keyframes ros-art-idea { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+ .ros-pillars article .ros-illustration,.ros-education-art .ros-illustration { transition: transform .4s ease-out; }
+ .ros-pillars article:hover .ros-illustration,.ros-education-art .ros-illustration:hover { transform: translateY(-4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+ .ros-landing .ros-illustration,.ros-landing .ros-illustration * { animation: none !important; transition: none !important; transform: none !important; }
+}

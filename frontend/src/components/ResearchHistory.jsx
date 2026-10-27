@@ -1,15 +1,16 @@
+import { LoadingSkeleton } from './ResearchInteractions';
 export default function ResearchHistory({ history, loading, onSelect }) {
   return (
     <section className="panel history dashboard-pop" data-dashboard-motion>
       <div className="panel-heading">
         <div>
-          <span className="eyebrow">Saved work</span>
-          <h2>Recent research</h2>
+          <span className="eyebrow">Research history</span>
+          <h2>Your saved research</h2>
         </div>
         <span className="step-badge">{history.length}</span>
       </div>
 
-      {loading && <p className="muted">Loading sessions...</p>}
+      {loading && <div role="status"><p className="muted">Loading sessions...</p><LoadingSkeleton/></div>}
       {!loading && history.length === 0 && <p className="muted">No research sessions yet.</p>}
 
       <div className="history-list">

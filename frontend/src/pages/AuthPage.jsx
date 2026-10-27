@@ -13,7 +13,7 @@ import {
 
 export default function AuthPage() {
   const [submitting, setSubmitting] = useState(false);
-  const [mode, setMode] = useState("signup");
+  const [mode, setMode] = useState(() => new URLSearchParams(window.location.search).get("mode") === "signin" ? "signin" : "signup");
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
