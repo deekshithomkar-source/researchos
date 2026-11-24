@@ -1,7 +1,8 @@
 """Research persistence and ownership; no HTTP or provider dependencies."""
 import json
-from sqlalchemy import text
+from sqlalchemy import select, text
 from app.models.research import ResearchRun
+from app.models.user import User
 from app.schemas.research import ResearchRequest, ResearchResponse
 
 ACTIVE_STATUSES = ('queued', 'planning', 'searching', 'evaluating', 'validating', 'extracting', 'analyzing', 'synthesizing')
@@ -12,8 +13,10 @@ class TooManyRunsError(RuntimeError):
 
 
 def create_run(db, user_id: str, request: ResearchRequest, max_active: int) -> ResearchRun:
-    # Serialize count + insert across SQLite connections to enforce the admission limit.
-    if db.bind.dialect.name == 'sqlite':
+    # Serialize the active-run count and insert for concurrent requests by this user.
+    if db.get_bind().dialect.name == 'postgresql':
+        db.execute(select(User.id).where(User.id == user_id).with_for_update()).scalar_one()
+    else:
         db.execute(text('BEGIN IMMEDIATE'))
     count = db.query(ResearchRun).filter(ResearchRun.user_id == user_id, ResearchRun.status.in_(ACTIVE_STATUSES)).count()
     if count >= max_active:

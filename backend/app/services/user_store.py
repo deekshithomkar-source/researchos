@@ -3,7 +3,8 @@ import secrets
 from datetime import timedelta
 
 from sqlalchemy import delete
-from sqlalchemy.dialects.sqlite import insert
+from sqlalchemy.dialects.postgresql import insert as postgres_insert
+from sqlalchemy.dialects.sqlite import insert as sqlite_insert
 from sqlalchemy.exc import IntegrityError
 from fastapi import HTTPException, Request, Response
 
@@ -19,6 +20,7 @@ def throttle_auth(db, request: Request):
     key = token_digest(request.client.host if request.client else 'unknown')
     now = utcnow()
     db.execute(delete(AuthRateLimit).where(AuthRateLimit.expires_at <= now))
+    insert = postgres_insert if db.get_bind().dialect.name == "postgresql" else sqlite_insert
     statement = insert(AuthRateLimit).values(
         key=key, attempts=1, expires_at=now + timedelta(seconds=settings.auth_window_seconds)
     ).on_conflict_do_update(index_elements=['key'], set_={'attempts': AuthRateLimit.attempts + 1})
